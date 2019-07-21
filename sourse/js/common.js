@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.CustomInputFile(); 
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1920.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1920.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 

@@ -1,4 +1,24 @@
 mixin footer()
-	+b.FOOTER.footer.block-with-lazy
+	+b.FOOTER.footer.section.block-with-lazy
 		.container
-			h2 footer
+			.row
+				.col-auto
+					+piclazy('good-news-img','jpg','576px','bg')
+				.col
+					.row
+						.col
+							+b.section-title
+								h2 Хорошие новости
+								p Подпишитесь на&nbsp;нашу рассылку и&nbsp;первыми получайте информацию  о&nbsp;скидках, акциях и&nbsp;новых продуктах.
+						.col
+							+form-wrap() 
+								+input('  Ваш e-mail*','email')  
+								+e.btn(type="submit") Подписаться
+
+							.small Нажимая на&nbsp;кнопку &laquo;Подписаться&raquo; или &laquo;Отправить&raquo; , я&nbsp;даю согласие  на&nbsp;обработку своих персональных данных и&nbsp;соглашаюсь  с&nbsp; 
+								a(href="#") Политикой конфиденциальности
+					.row
+						.col
+							+e.copy © 2019 «live in motion!»
+						.col
+							+soc()

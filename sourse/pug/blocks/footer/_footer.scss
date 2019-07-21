@@ -1,7 +1,23 @@
 .footer {
-		
+  padding-top: rem(80);
+  .row{
+    @include roww(32);
+  }  
+  h2{
+    // margin-bottom: rem(10);
+  }
+  &__copy{
+    @extend .small;
+    color: #828282;
+  }
+  .form-wrap{
+    margin-bottom: rem(65);
+  }
 
-
+  .soc{
+    // justify-content: space-between;
+    justify-content: space-around;
+  }
 // 
 @include media-breakpoint-up(xl) {}
 
