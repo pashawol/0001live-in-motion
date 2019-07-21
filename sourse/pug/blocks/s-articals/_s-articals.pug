@@ -1,0 +1,22 @@
+mixin s-articals()
+	// start s-articals
+	+b.SECTION.s-articals.section.block-with-lazy#s-articals&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Сделано с любовью
+				
+			.row
+				mixin item(i,t1, p)
+					+e.col.col-sm-6
+						+e.item()
+							+e.img-wrap
+								+piclazy('made-'+i,'jpg',0,'bg') 
+							+e.title= t1
+							.small= p
+					// /+e.col.col-sm-6
+				+item('1','Удобство и практичность','Подбор ткани для каждого изделия')
+				+item('2','Совершенство в деталях','Контроль производства на каждом этапе')
+				+item('3','Яркая индивидуальность','Авторские принты')
+				+item('4','Соотношение цены и качества','Производство в России')
+			+e.btn(href="#") Узнать подробнее
+	// end s-articals

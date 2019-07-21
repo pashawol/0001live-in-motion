@@ -1,0 +1,27 @@
+mixin prod(i,t)
+	+b.item-prod()
+		+e.img-wrap(href="#")
+			+piclazy('prod-'+i,'jpg','576px','bg') 
+		+e.title.small= t 
+		+e.sizes
+			+e.size-item.bg-success S
+			+e.size-item M
+			+e.size-item L
+			+e.size-item XL
+		.strong 4567 ₽ 
+mixin s-prod()
+	// start s-prod
+	+b.SECTION.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши товары
+				
+			.row
+				+e.col.col-md-4.col-6
+					+prod('1','Футболка мужская "Даунхилл"  ')
+				+e.col.col-md-4.col-6
+					+prod('2','Худи женское "organic design and the wooden architecture of russia"  ')
+				+e.col.col-md-4.col-6
+					+prod('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
+			+e.btn-more.btn-outline(href="#") Смотреть все
+	// end s-prod

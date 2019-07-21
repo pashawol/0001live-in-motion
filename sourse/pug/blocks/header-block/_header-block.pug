@@ -1,0 +1,20 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		+e.slider.slider--js.swiper-container
+			.swiper-wrapper
+				- for (var x = 0; x < 3; x++)
+					+e.slide.swiper-slide
+						+pic('header-sl','','576px','bg')
+						.container
+							+e.text-block
+								+e.logo(href="#")
+									+icon('logo')
+								+e.title live in motion!
+								p Одежда для тренировок и&nbsp;активного отдыха, которая будет вас радовать и&nbsp;вдохновлять на&nbsp;новые победы
+								+e.btn.btn-primary(href="#") Купить
+								+e.btn.btn-outline(href="#") Lookbook
+		+e.slider-control
+			.swiper-pagination
+			.swiper-counter
+	// end header-block
