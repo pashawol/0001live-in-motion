@@ -3,6 +3,9 @@
   .row{
     @include roww(32);
   }  
+  picture{
+    max-width: 458px;
+  }
   h2{
     // margin-bottom: rem(10);
   }
