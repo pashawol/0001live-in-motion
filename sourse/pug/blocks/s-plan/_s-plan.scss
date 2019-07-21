@@ -1,4 +1,16 @@
 .s-plan {
+
+	picture{
+		margin-bottom: rem(30);
+	}
+
+	@include media-breakpoint-up(lg) {
+
+		.container{
+			margin-right: 0;
+			max-width: 770px;
+		}
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

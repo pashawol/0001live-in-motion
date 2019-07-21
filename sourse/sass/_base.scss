@@ -17,7 +17,7 @@ html {
 } 
 
 .header-block__slide{
-	// height: 1000px !important;
+	height: 1000px !important;
 	// padding-top: 160px !important;
 }
 
@@ -536,7 +536,9 @@ picture{
 	font-family: 'object-fit: cover; object-position: top;';
 }
 
-
+.btn{
+	width: rem(262);
+}
 .btn-primary{
 	@extend .btn;
 	@extend .btn-primary;

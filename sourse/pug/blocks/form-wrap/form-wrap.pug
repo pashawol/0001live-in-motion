@@ -6,7 +6,7 @@ mixin form-head()
 mixin input(pl,  t, p )
 	mixin t(t='text',pl, name= t)
 		if t== "textarea"
-			+e.TEXTAREA.input.form-control( placeholder= pl name= name)&attributes(attributes)  
+			+e.TEXTAREA.input.form-control( placeholder= pl )&attributes(attributes)  
 		else
 			+e.INPUT.input(type= t placeholder= pl name= name)&attributes(attributes) 
 	+e.input-wrap

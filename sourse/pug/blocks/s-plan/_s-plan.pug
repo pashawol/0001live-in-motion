@@ -2,8 +2,9 @@ mixin s-plan()
 	// start s-plan
 	+b.SECTION.s-plan.section.block-with-lazy#s-plan&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-plan
-				
-			.row
+			+piclazy('plan-img','jpg','576px','bg')
+			+b.section-title
+				h2 Планы развития
+			p В планах – пополнение ассортимента новыми предметами одежды с оригинальными принтами. Мы верим, что от экипировки зависит не только настроение, но и эффективность тренировок. Следите за нашими обновлениями!
+			+e.btn.btn-primary(href="#") Узнать больше
 	// end s-plan

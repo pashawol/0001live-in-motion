@@ -1,4 +1,10 @@
 .s-form {
+	.section-title{
+		padding-bottom: 10px;
+	}
+	picture{
+		height: 100%;
+	}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

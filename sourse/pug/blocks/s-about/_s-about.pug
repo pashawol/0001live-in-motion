@@ -2,8 +2,13 @@ mixin s-about()
 	// start s-about
 	+b.SECTION.s-about.section.block-with-lazy#s-about&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-about
 				
 			.row
+				.col-auto
+					+piclazy('about-img','png','0')
+				.col
+					+b.section-title
+						h2 О бренде
+					p live in&nbsp;motion! &mdash;&nbsp;линия одежды для спорта и&nbsp;активного отдыха. Мы&nbsp;считаем, что экипировка должна быть удобной, практичной, красивой  и&nbsp;вдохновлять на&nbsp;новые достижения, поэтому разрабатываем ее&nbsp;с&nbsp;большим вниманием к&nbsp;каждой детали.
+					+e.btn(href="#") Узнать больше
 	// end s-about

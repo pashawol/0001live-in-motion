@@ -1,20 +1,28 @@
 .form-wrap{
- 	&__input-wrap{
-			@extend .form-group;
-			
+	&__input-wrap{
+		@extend .form-group;
+		
+		margin-bottom: rem(19);
 		}
 		&__input{
 			@extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		//  text-transform: uppercase;
  	}
  	&__btn{
- 		cursor: pointer;
+		 cursor: pointer;
+		 @extend .btn-primary;
+		 width: 100%;
+		 display: block;
  	}
  	label{
  		width: 100%;
  		display: block;
- 	}
+	 }
+	 textarea{
+		 height: rem(202);
+	 }
 }
 
 

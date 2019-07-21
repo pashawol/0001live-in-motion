@@ -384,24 +384,50 @@
         </div>
       </section>
       <!-- end s-prod-->
-      <div class="block-wrapper">
+      <div class="block-wrapper container p-"> 
         <!-- start s-about-->
         <section class="s-about section block-with-lazy" id="s-about">
           <div class="container">
-            <div class="section-title text-center">
-              <h2>s-about</h2>
+            <div class="row">
+              <div class="col-auto">
+                <!-- picture.lazy-->
+                <picture class="lazy">
+                  <!-- webp images-->
+                  <source srcset="#" data-srcset="img/@2x/webp/about-img.webp " media="(min-width: 0)" type="image/webp"/>
+                  <source srcset="#" data-srcset="img/@1x/webp/about-img.webp " type="image/webp"/>
+                  <!-- /webp images -->
+                  <source srcset="#" data-srcset="img/@2x/about-img.png" media="(min-width: 0)" type="image/png"/>
+                  <source srcset="#" data-srcset="img/@1x/about-img.png" type="image/png"/><img src="#" data-src="img/@2x/about-img.png" alt=""/>
+                </picture>
+                <!-- /picture.lazy-->
+              </div>
+              <div class="col">
+                <div class="section-title">
+                  <h2>О бренде</h2>
+                </div>
+                <p>live in&nbsp;motion! &mdash;&nbsp;линия одежды для спорта и&nbsp;активного отдыха. Мы&nbsp;считаем, что экипировка должна быть удобной, практичной, красивой  и&nbsp;вдохновлять на&nbsp;новые достижения, поэтому разрабатываем ее&nbsp;с&nbsp;большим вниманием к&nbsp;каждой детали.</p><a class="s-about__btn" href="#">Узнать больше</a>
+              </div>
             </div>
-            <div class="row"></div>
           </div>
         </section>
         <!-- end s-about-->
         <!-- start s-plan-->
         <section class="s-plan section block-with-lazy" id="s-plan">
           <div class="container">
-            <div class="section-title text-center">
-              <h2>s-plan</h2>
+            <!-- picture.lazy-->
+            <picture class="lazy">
+              <!-- webp images-->
+              <source srcset="#" data-srcset="img/@2x/webp/plan-img.webp " media="(min-width: 576px)" type="image/webp"/>
+              <source srcset="#" data-srcset="img/@1x/webp/plan-img.webp " type="image/webp"/>
+              <!-- /webp images -->
+              <source srcset="#" data-srcset="img/@2x/plan-img.jpg" media="(min-width: 576px)" type="image/jpg"/>
+              <source srcset="#" data-srcset="img/@1x/plan-img.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/plan-img.jpg" alt=""/>
+            </picture>
+            <!-- /picture.lazy-->
+            <div class="section-title">
+              <h2>Планы развития</h2>
             </div>
-            <div class="row"></div>
+            <p>В планах – пополнение ассортимента новыми предметами одежды с оригинальными принтами. Мы верим, что от экипировки зависит не только настроение, но и эффективность тренировок. Следите за нашими обновлениями!</p><a class="s-plan__btn btn-primary" href="#">Узнать больше</a>
           </div>
         </section>
         <!-- end s-plan-->
@@ -409,10 +435,44 @@
       <!-- start s-form-->
       <div class="s-form section block-with-lazy" id="s-form">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-form</h2>
+          <div class="row">
+            <div class="col-4">
+              <div class="section-title">
+                <h2>Поделиться идеей</h2>
+                <p>Если у&nbsp;вас есть пожелания по&nbsp;ассортименту и&nbsp;принтам&nbsp;&mdash; поделитесь, и&nbsp;мы&nbsp;возьмем  ваши идеи на&nbsp;вооружение.</p>
+              </div>
+              <div class="form-wrap">
+                <form>
+                  <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="Ваше имя*" name="text"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="  Ваш телефон" name="tel"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="email" placeholder="  Ваш e-mail*" name="email"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap">
+                    <textarea class="form-control" placeholder="Ваша идея"></textarea>
+                  </div>
+                  <button class="form-wrap__btn" type="submit">Отправить
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col">
+              <!-- picture.lazy-->
+              <picture class="lazy">
+                <!-- webp images-->
+                <source srcset="#" data-srcset="img/@2x/webp/form-img.webp " media="(min-width: 576px)" type="image/webp"/>
+                <source srcset="#" data-srcset="img/@1x/webp/form-img.webp " type="image/webp"/>
+                <!-- /webp images -->
+                <source srcset="#" data-srcset="img/@2x/form-img.jpg" media="(min-width: 576px)" type="image/jpg"/>
+                <source srcset="#" data-srcset="img/@1x/form-img.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/form-img.jpg" alt=""/>
+              </picture>
+              <!-- /picture.lazy-->
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-form-->
