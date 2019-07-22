@@ -4,8 +4,9 @@ mixin s-about()
 		.container
 				
 			.row
-				.col-auto
-					+piclazy('about-img','png','0')
+				.col-lg-auto
+					+e.img-wrap
+						+piclazy('','about-img','png')
 				.col
 					+b.section-title
 						h2 О бренде

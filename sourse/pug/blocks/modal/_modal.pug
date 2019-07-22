@@ -33,14 +33,12 @@ mixin modal()
 	//- 			br 
 
 	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
-		.text-center
-			+e.title.h3.ttu Обратный звонок
-			p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
-		+input("text","Ваше Имя")(required) 
-		+input("tel","Ваш телефон")(required)
-		//- +input("email","Ваше email")(required)
-		//- +text( "Комментарий")
-		+e.INPUT.btn.btn.btn-block.btn-warning.mb-4(type="submit" value="Рассчитать") 
-		+polite()
+		+b.section-title.text-center
+			h2 Форма связи
+			p Оставьте ваши контактные данные и&nbsp;мы&nbsp;перезвоним  в&nbsp;ближайшее время
+		+input('Ваше имя*')
+		+input('  Ваш телефон','tel')
+		+input('  Ваш e-mail*','email')  
+		+e.btn(type="submit") Отправить
 	// #modal-call
 	// modal

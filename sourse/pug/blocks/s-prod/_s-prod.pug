@@ -1,7 +1,7 @@
 mixin prod(i,t)
 	+b.item-prod()
 		+e.img-wrap(href="#")
-			+piclazy('prod-'+i,'jpg','576px','bg') 
+			+piclazy('bg', 'prod-'+i) 
 		+e.title.small= t 
 		+e.sizes
 			+e.size-item.bg-success S

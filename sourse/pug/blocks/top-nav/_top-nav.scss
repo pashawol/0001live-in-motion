@@ -1,16 +1,31 @@
 .top-nav {
-	position: absolute;
+	// position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100vw;
+	width: 100%;
 	font-size: $small;
-	padding-top: rem(22);
-	padding-bottom: rem(22);
-	z-index: 200;
-	@include media-breakpoint-up(xl) {
+	&__head{
 
-		padding-right: 17px;
+		padding-top: rem(22);
+		padding-bottom: rem(22);
 	}
+	z-index: 1002;
+	@include mt;
+	.container{
+		position: relative;
+		z-index: 200;
+	}
+	&.fixed{
+		.top-nav__head{
+			padding-top: rem(0);
+		padding-bottom: rem(0);
+
+		}
+		background-color: #ffffff;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+	}
+ 
 	.row{
 		align-items: center;
 	}
@@ -42,10 +57,10 @@
 	&__basket{
 		@extend .btn-primary;
 		@extend .btn;
-		color: #ffffff;
 		height: rem(64);
-		padding: 0;
 		width: rem(64);
+		color: #ffffff;
+		padding: 0;
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
@@ -57,6 +72,22 @@
 			// margin-left: rem(29);
 		}
 	}
+	&__logo{
+		.icon{
+			font-size: rem(90);
+			color: $success;
+		}
+		display: inline-block;
+		padding-top: rem(5);
+		padding-bottom: rem(5);
+	}
+	
+	&.fixed &__logo .icon{
+		
+		font-size: rem(50);
+		}
+
+
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -93,7 +124,28 @@
 
 	@include media-breakpoint-down(xs) {}
 }
+body.fixed .top-nav{
+	&__head{
+		position: relative;
+		z-index: 300;
+		background-color: $primary;
+	}
+	.toggle-menu-mobile,
+	&__basket{
+		background-color: $primary !important;
+		border-color: $primary !important;
 
+		.icon {
+			color: transparent;
+			stroke: $body-color!important;
+			stroke-width: 2px;
+			font-size: .77273rem;
+		}
+	}
+	&__logo .icon { 
+    color: $body-color!important;
+}
+}
 // мобильное меню
 
 // мобильное меню
@@ -101,15 +153,20 @@ $h: em(2);
 
 .toggle-menu-mobile {
 	display: block;
-	height: $h* 14;
-	margin-top: 15px;
+	@extend .btn-primary;
+	@extend .btn;
+	height: rem(64);
+	width: rem(64); 
 	margin-left: 0;
-	position: fixed;
-	z-index: 999 !important;
+	position: relative;
+	z-index: 100 ;
 	right: 0;
-	padding: 3px;
-	border-radius: 5px;
-	top: $h;
+	// padding: 3px;
+	padding-top: rem(23);
+	padding-left: rem(16);
+	cursor: pointer;
+	// border-radius: 5px;
+	// top: $h;
 
 
 	span:after,
@@ -117,11 +174,11 @@ $h: em(2);
 		content: "";
 		position: absolute;
 		left: 0;
-		top: $h*2;
+		top: $h*3;
 	}
 
 	span:after {
-		top: $h * 4;
+		top: $h * 6;
 	}
 
 	span {
@@ -133,17 +190,17 @@ $h: em(2);
 	span:after,
 	span:before {
 		// width: 32px;
-		font-size: 32px;
+		font-size: rem(30);
 		width: 1em;
-		height: $h;
-		background-color: $primary;
+		height: 2px;
+		background-color: #fff;
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		border-radius: 6px;
 	}
 
 	&.on {
-		opacity: 0;
+		// opacity: 0;
 	}
 
 	&.on span {
@@ -151,33 +208,41 @@ $h: em(2);
 	}
 
 	&.on span:before {
-		transform: rotate(45deg) translate(em(-1), 0px);
+		transform: rotate(45deg) translate(em(0), 0px);
+		background-color: $body-color;
 	}
 
 	&.on span:after {
 		transform: rotate(-45deg) translate(em(3), em(-4));
+		background-color: $body-color;
 	}
 }
 
 .menu-mobile {
 	position: fixed !important;
-	z-index: 999;
-	max-width: 85%;
+	z-index: 100;
+	// max-width: 85%;
 	height: 101vh;
-	width: 280px;
+	width: 100%;
 	top: 0;
 	// left: 0;
 	right: 0;
-	transform: translate(100%, 0);
+	transform: translate(0, 100%);
 	@include mt(.6);
 	will-change: transform;
 
 	&__inner {
-		background-color: #c3c3c3;
-		padding: 5% 0;
+		background-color: $primary;
+		padding-top: 100px;
+		padding-left: 15px;
+		padding-right: 15px;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: rem(40);
 	}
 
 	&.active {
@@ -218,19 +283,37 @@ $h: em(2);
 
 	ul {
 		position: relative;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	li {
 		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
+		margin: 0; 
 
 		a {
 			// font-size: 16px;
 
 			padding: 10px;
-			display: block;
+			// display: block;
+			display: inline-block;
+			font-weight: bold;
+			@extend .text-body;
  
+		}
+	}
+	.soc{
+		// justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-between;
+		max-width: rem(210);
+		margin-bottom: rem(30);
+		&__item{
+
 		}
 	}
 }

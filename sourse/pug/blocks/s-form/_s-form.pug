@@ -3,7 +3,9 @@ mixin s-form()
 	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
 		.container
 			.row
-				.col-4
+				+e.col.col.order-md-last
+					+piclazy('bg','form-img')
+				.col-lg-4.col-md-5
 					+b.section-title
 						h2 Поделиться идеей
 						p Если у&nbsp;вас есть пожелания по&nbsp;ассортименту и&nbsp;принтам&nbsp;&mdash; поделитесь, и&nbsp;мы&nbsp;возьмем  ваши идеи на&nbsp;вооружение.
@@ -11,9 +13,6 @@ mixin s-form()
 						+input('Ваше имя*')
 						+input('  Ваш телефон','tel')
 						+input('  Ваш e-mail*','email') 
-						+e.input-wrap
-							textarea.form-control(placeholder="Ваша идея"  )
+						+input('Ваша идея','textarea')(required)
 						+e.btn(type="submit") Отправить
-				.col
-					+piclazy('form-img','jpg','576px','bg')
 	// end s-form

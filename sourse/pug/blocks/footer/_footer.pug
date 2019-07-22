@@ -2,23 +2,27 @@ mixin footer()
 	+b.FOOTER.footer.section.block-with-lazy
 		.container
 			.row
-				.col-auto
-					+piclazy('good-news-img','jpg','576px','bg')
-				.col
+				.col-xl-auto.col-lg-4.col-md-5
+					+piclazy('bg','good-news-img','jpg',0)
+					.d-lg-none.d-md-block.d-none
+						+soc()
+						+e.copy © 2019 «live in motion!» 
+				+e.col.col
 					.row
-						.col
+						.col-lg
 							+b.section-title
 								h2 Хорошие новости
 								p Подпишитесь на&nbsp;нашу рассылку и&nbsp;первыми получайте информацию  о&nbsp;скидках, акциях и&nbsp;новых продуктах.
-						.col
+						.col-lg
 							+form-wrap() 
 								+input('  Ваш e-mail*','email')  
 								+e.btn(type="submit") Подписаться
-
+								+b.alert--success.small Вы успешно подписаны!
+								// +b.alert--danger.small Вы были подписаны ранее
 							.small Нажимая на&nbsp;кнопку &laquo;Подписаться&raquo; или &laquo;Отправить&raquo; , я&nbsp;даю согласие  на&nbsp;обработку своих персональных данных и&nbsp;соглашаюсь  с&nbsp; 
 								a(href="#") Политикой конфиденциальности
-					.row
-						.col
-							+e.copy © 2019 «live in motion!»
-						.col
+					.row.d-md-none.d-lg-flex
+						.col-md
 							+soc()
+						.col-md.align-self-end.order-md-first
+							+e.copy © 2019 «live in motion!»

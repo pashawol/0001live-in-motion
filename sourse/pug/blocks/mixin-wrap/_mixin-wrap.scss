@@ -1,11 +1,11 @@
  
 	  
 .soc{
-	margin: 0 rem(-5px);
 	display: flex;
+	margin: 0 rem(-5px);
 	&__item{
-		text-decoration: none !important;
 		margin: 0 rem(5px);
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: block;

@@ -1,26 +1,36 @@
 
 mixin mob-mnu()
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
+	+b.menu-mobile--js.d-xl-none
+		//- +b.toggle-menu-mobile--js
+		//- 	span
 		+e.inner
 		
 			+mnu()
 			.text-right
+			+e.footer
+				+soc()
+				a.strong.text-body.small(href="tel:8(800)7750077") 8 (800) 77 500 77
+				.small с 18:00 до 20:00 ежедневно
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col
-					+mnu()
-				.col-auto
-					+e.link(href="tel:88007750077") 8 800 77 500 77
-						+icon('tel')
-				.col-auto
-					+e.basket(href="#")
-						+icon('basket')
+		+e.head
+			.container
+				.row
+					.col-auto.d-xl-none
+						+b.toggle-menu-mobile--js
+							span
+					.col.d-xl-none.text-center
+						+e.logo(href="#")
+							+icon('logo')
+					.col.d-none.d-xl-block
+						+mnu()
+					.col-auto.d-none.d-xl-block
+						+e.link(href="tel:88007750077") 8 800 77 500 77
+							+icon('tel')
+					.col-auto
+						+e.basket(href="#")
+							+icon('basket')
+		+mob-mnu()
 	// end top-nav

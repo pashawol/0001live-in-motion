@@ -1,9 +1,21 @@
 .s-form {
 	.section-title{
-		padding-bottom: 10px;
+		padding-bottom: rem(30);
+		h2{
+			padding-bottom: rem(20);
+
+		}
 	}
 	picture{
 		height: 100%;
+	}
+	&__col{
+		
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+			// height: 100%;
+		}
+		margin-bottom: 2rem;
 	}
 	//
 	@include media-breakpoint-up(xl) {}

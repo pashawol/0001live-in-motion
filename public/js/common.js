@@ -23,23 +23,7 @@ jQuery(document).ready(function ($) {
 	// /добавляет подложку для pixel perfect
 
 
-	
-	// var url = document.location.href;
-	// $.each($(".top-nav__nav a "), function () {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
  
-	// /закрыть/открыть мобильное меню
 
 	function heightses() {
 
@@ -50,17 +34,20 @@ jQuery(document).ready(function ($) {
 		// 
 		// скрывает моб меню
 
-		var topH = $("header ").innerHeight();
-
-		$(window).scroll(function () {
+		var topH = 	$('.top-nav  ').innerHeight();
+		function navFixed(){
 			if ($(this).scrollTop() > topH) {
 				$('.top-nav  ').addClass('fixed');
 			} else {
 				$('.top-nav  ').removeClass('fixed');
 			}
+		}
+		navFixed()
+		$(window).scroll(function () {
+			navFixed()
 		});
 		// конец добавил
-		if (window.matchMedia("(min-width: 992px)").matches) {
+		if (window.matchMedia("(min-width: 1200px)").matches) {
 
 			btnToggle.removeClass("on");
 			// $("body").removeClass("fixed");
@@ -77,7 +64,7 @@ jQuery(document).ready(function ($) {
 	heightses();
  
 	// листалка по стр
-	$(" .top-nav li a, .scroll-link").click(function () {
+	$(" .scroll-link").click(function () {
 	       var elementClick = $(this).attr("href");
 	       var destination = $(elementClick).offset().top;
 
@@ -97,7 +84,17 @@ jQuery(document).ready(function ($) {
 				el: $('.header-block').find('.swiper-pagination'),
 				clickable: true,
 			},
-			onslideChange: swiperCounter,
+			on: {
+
+				slideChange: function () {
+					setTimeout(function () {
+						swiperCounter()
+					 
+					}, 10);
+				},
+
+			},
+		 
 			navigation: {
 				nextEl: $('.header-block').find('.swiper-button-next'),
 				prevEl: $('.header-block').find('.swiper-button-prev'),
@@ -109,7 +106,7 @@ jQuery(document).ready(function ($) {
 
 		function swiperCounter() {
 
-			$(".swiper-counter").text((swiper2.activeIndex) + '/ ' + (swiper2.slides.length - 1) )
+			$(".swiper-counter").text((swiper2.realIndex + 1) + '/ ' + (swiper2.slides.length  - $('.header-block .swiper-slide-duplicate').length) )
 			// console.log(swiper2.activeIndex)
 		}
 		swiperCounter() 
@@ -130,7 +127,7 @@ JSCCommon = {
 
 			overflowY: 'auto',
 
-			closeBtnInside: true,
+			closeBtnInside: false,
 			preloader: false,
 
 			midClick: true,
@@ -179,35 +176,7 @@ JSCCommon = {
 			$("body, html").toggleClass("fixed");
 			return false;
 		});
-		// $('.menu-mobile--js ul li a').on('click', function () {
-		// 	$(".menu-mobile--js .toggle-mnu").click();
-		// });
-
-		$(document).mouseup(function (e) {
-			var container = $(".menu-mobile--js.active");
-			if (container.has(e.target).length === 0) {
-				btnToggle.removeClass("on");
-				// $("body").toggleClass("fixed");
-				menu.removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-		});
-		// закрыть меню при горизонтальном свайпе
-		$('.menu-mobile--js.active').swipe({
-			swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-				if (direction == 'left') {
-					btnToggle.removeClass("on");
-					$(".menu-mobile--js.active").removeClass("active");
-					$("body, html").removeClass("fixed");
-				}
-				if (direction == 'right') {
-					btnToggle.removeClass("on");
-					$(".menu-mobile--js.active").removeClass("active");
-					$("body, html").removeClass("fixed");
-				}
-			},
-			triggerOnTouchEnd: false,
-		});
+ 
 	},
 	// /mobileMenu
 

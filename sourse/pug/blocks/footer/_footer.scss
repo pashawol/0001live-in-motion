@@ -1,10 +1,20 @@
 .footer {
   padding-top: rem(80);
   .row{
-    @include roww(32);
+    @include media-breakpoint-up(xl) {
+
+      @include roww(32);
+    }
   }  
   picture{
-    max-width: 458px;
+    @include media-breakpoint-up(lg){
+      max-width: 458px;
+      height: 100%;
+      // padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    margin-bottom: 1rem;
+    height: auto;
   }
   h2{
     // margin-bottom: rem(10);
@@ -14,12 +24,33 @@
     color: #828282;
   }
   .form-wrap{
-    margin-bottom: rem(65);
+    @include media-breakpoint-up(lg) {
+
+      margin-bottom: rem(65);
+    }
+    margin-bottom: rem(30);
   }
 
   .soc{
+    margin: 0 rem(-20px);
+	&__item{
+    margin: 0 rem(20px);
+  }
     // justify-content: space-between;
-    justify-content: space-around;
+    @include media-breakpoint-up(lg) {
+      max-width: none; 
+      padding-top: rem(10);
+      padding-bottom: 0;
+      justify-content: space-around;
+    }
+    padding-top: rem(30);
+    padding-bottom: rem(20);
+  }
+
+  &__col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 // 
 @include media-breakpoint-up(xl) {}
