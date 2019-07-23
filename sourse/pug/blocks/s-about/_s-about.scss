@@ -87,6 +87,9 @@
 		z-index: -1;
 		display: block;
 		background: linear-gradient(180deg, #96CD2E 100%, #32CC91 0%); 
+		@include bgs;
+		// background-image: url() 
+		@include bg('grad-bg.jpg');
 		// left: (555px /2);
 		// right: 100%;
 		right: 100%;
