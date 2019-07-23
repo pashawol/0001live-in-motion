@@ -1,6 +1,6 @@
 mixin s-articals()
 	// start s-articals
-	+b.SECTION.s-articals.section.block-with-lazy#s-articals&attributes(attributes)
+	+b.SECTION.s-articals--main.section.block-with-lazy#s-articals&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 Сделано с любовью
@@ -9,7 +9,7 @@ mixin s-articals()
 				mixin item(i,t1, p)
 					+e.col.col-sm-6
 						+e.item()
-							+e.img-wrap
+							+e.img-wrap--main
 								+piclazy('bg','made-'+i,'jpg',0) 
 							+e.title= t1
 							.small= p
@@ -20,3 +20,25 @@ mixin s-articals()
 				+item('4','Соотношение цены и качества','Производство в России')
 			+e.btn(href="#") Узнать подробнее
 	// end s-articals
+
+mixin s-articals2()
+	// start s-articals
+	+b.SECTION.s-articals.section.block-with-lazy#s-articals&attributes(attributes)
+		.container
+		 
+			.row
+				mixin item(i)
+					+e.col.col-4.text-center
+						+e.item()
+							+e.img-wrap
+								+piclazy('bg','q-'+i) 
+							block
+					// /+e.col
+				+item('1','')
+					+e.title 14&nbsp;дней на&nbsp;возврат
+				+item('2','')
+					+e.title Удобные способы оплаты
+				+item('3','Доставка по всему миру') 
+					+e.title Доставка по&nbsp;всему миру
+	// end s-articals
+

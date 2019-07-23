@@ -1,7 +1,7 @@
 .s-articals {
  
-	&__img-wrap{
-		margin-bottom: rem(10);
+	&__img-wrap--main{
+
 		@include block(457,280);
 		picture{
 			position: absolute;
@@ -11,6 +11,9 @@
 			height: 100%;
 		}
 	}
+	&__img-wrap{
+		margin-bottom: rem(10);
+	}
 	&__col{
 		margin-bottom: 42px;
 		@include media-breakpoint-up(sm) {
@@ -19,7 +22,7 @@
 		text-align: center;
 	}
 	@include media-breakpoint-up(lg) {
-		.container{
+	&--main	.container{
 			max-width: (945px + $grid-gutter-width);
 		}
 	}

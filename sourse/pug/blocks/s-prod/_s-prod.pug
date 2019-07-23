@@ -9,6 +9,18 @@ mixin prod(i,t)
 			+e.size-item L
 			+e.size-item XL
 		.strong 4567 ₽ 
+mixin prod-n(i,t)
+	+b.item-prod()
+		+e.img-wrap(href="#")
+			+piclazy('bg', 'prod-'+i) 
+		+e.title.small= t 
+		+e.sizes
+			+e.size-item.bg-success S
+			+e.size-item M
+			+e.size-item L
+			+e.size-item XL
+		.strong 4567 ₽ 
+
 mixin s-prod()
 	// start s-prod
 	+b.SECTION.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
@@ -26,3 +38,21 @@ mixin s-prod()
 						+prod('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
 			+e.btn-more.btn-outline(href="#") Смотреть все
 	// end s-prod
+
+mixin s-prod-2()
+	// start s-prod
+	+b.SECTION.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
+		.container
+			
+			.row
+				 
+				- for (var x = 0; x < 3; x++)
+					+e.col.col-md-4.col-6
+						+prod-n('1','Футболка мужская "Даунхилл"  ')
+					+e.col.col-md-4.col-6
+						+prod-n('2','Худи женское "organic design and the wooden architecture of russia"  ')
+					+e.col.col-md-4.col-6
+						+prod-n('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
+			+e.btn-more.btn-outline.w-100(href="#") Показать ещё 9 товаров
+	// end s-prod
+

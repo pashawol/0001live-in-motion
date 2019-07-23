@@ -123,11 +123,13 @@ jQuery(document).ready(function ($) {
 		// var swiper3 = new Swiper($(this).find('.slider--js2'), slider);
 
 		function swiperCounter() {
+				if($(".swiper-counter")) {
 
-			$(".swiper-counter").text((swiper2.realIndex + 1) + '/ ' + (swiper2.slides.length  - $('.header-block .swiper-slide-duplicate').length) )
-			// console.log(swiper2.activeIndex)
+					$(".swiper-counter").text((swiper2.realIndex + 1) + '/ ' + (swiper2.slides.length  - $('.header-block .swiper-slide-duplicate').length) )
+					// console.log(swiper2.activeIndex)
+				}
 		}
-		swiperCounter() 
+		// swiperCounter() 
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX

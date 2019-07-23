@@ -1,7 +1,11 @@
 .header{
 	
   // 
-  @include media-breakpoint-up(xl) {}
+  @include media-breakpoint-up(xl) {
+
+    min-height: rem(120);
+  }
+  min-height: rem(150);
 
   @include media-breakpoint-up(lg) {}
 
