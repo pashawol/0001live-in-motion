@@ -9,14 +9,13 @@
 		width: rem(263);
 		margin-bottom: rem(29);
 	}
-	&__col{
+	&__slide{
+		height: auto;
 		margin-bottom: rem(32);
 	}
 	@include media-breakpoint-down(sm) {
 
-		&--main &__col:last-child{
-			display: none;
-		}
+	 
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

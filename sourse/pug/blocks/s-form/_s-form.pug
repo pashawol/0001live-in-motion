@@ -11,8 +11,8 @@ mixin s-form()
 						p Если у&nbsp;вас есть пожелания по&nbsp;ассортименту и&nbsp;принтам&nbsp;&mdash; поделитесь, и&nbsp;мы&nbsp;возьмем  ваши идеи на&nbsp;вооружение.
 					+form-wrap()
 						+input('Ваше имя*')
-						+input('  Ваш телефон','tel')
+						+input('  Ваш телефон','tel')(required)
 						+input('  Ваш e-mail*','email') 
-						+input('Ваша идея','textarea')(required)
+						+input('Ваша идея','textarea')
 						+e.btn(type="submit") Отправить
 	// end s-form

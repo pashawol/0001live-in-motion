@@ -1,7 +1,7 @@
 mixin prod(i,t)
 	+b.item-prod()
 		+e.img-wrap(href="#")
-			+piclazy('bg', 'prod-'+i) 
+			+pic('bg', 'prod-'+i) 
 		+e.title.small= t 
 		+e.sizes
 			+e.size-item.bg-success S
@@ -16,12 +16,13 @@ mixin s-prod()
 			+b.section-title.text-center
 				h2 Наши товары
 				
-			.row
-				+e.col.col-md-4.col-6
-					+prod('1','Футболка мужская "Даунхилл"  ')
-				+e.col.col-md-4.col-6
-					+prod('2','Худи женское "organic design and the wooden architecture of russia"  ')
-				+e.col.col-md-4.col-6
-					+prod('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+prod('1','Футболка мужская "Даунхилл"  ')
+					+e.slide.swiper-slide
+						+prod('2','Худи женское "organic design and the wooden architecture of russia"  ')
+					+e.slide.swiper-slide
+						+prod('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
 			+e.btn-more.btn-outline(href="#") Смотреть все
 	// end s-prod

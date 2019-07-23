@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
 
 		var topH = 	$('.top-nav  ').innerHeight();
 		function navFixed(){
-			if ($(this).scrollTop() > topH) {
+			if ($(this).scrollTop() > 0) {
 				$('.top-nav  ').addClass('fixed');
 			} else {
 				$('.top-nav  ').removeClass('fixed');
@@ -73,12 +73,30 @@ jQuery(document).ready(function ($) {
 	       return false;
 	   }); 
 	// slider
- 
-		var slider = {
-			slidesPerView: 1, 
-			spaceBetween: 0,
+	var swiper3 = new Swiper($('.s-prod__slider--js'), {
+		slidesPerView: 2, 
+		spaceBetween: 30,  
+		loop: true,
+		watchOverflow: true,
+		breakpointsInverse: true,
+		breakpoints: {
+		 
+			992: {
+				slidesPerView: 3
+			}
+		 
+		}
+	});
+	var slider = {
+		slidesPerView: 1, 
+		spaceBetween: 0,
+		watchOverflow: true,
 			lazy: {
 				loadPrevNext: true,
+			},
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
 			},
 			pagination: {
 				el: $('.header-block').find('.swiper-pagination'),
@@ -207,7 +225,7 @@ JSCCommon = {
 	// /CustomYoutubeBlock
 	inputMask: function () {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
+		$('input[type="tel"]').attr("pattern", "[+]7 [(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7 (999) 999-99-99");
 	}
 	// /inputMask
 

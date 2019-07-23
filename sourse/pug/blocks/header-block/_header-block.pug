@@ -19,15 +19,30 @@ mixin header-block()
 				+piclazy('','head-mobile')
 		.d-none.d-xl-block
 			+e.slider.slider--js.swiper-container
-				.swiper-wrapper
-					- for (var x = 0; x < 3; x++)
-						+e.slide.swiper-slide
-							+pic('bg','header-sl')
-							.container
-								+text-block()
-									+e.logo(href="#")
-										+icon('logo')
-			+e.slider-control
-				.swiper-pagination
-				.swiper-counter
+				.swiper-wrapper 
+					+e.slide.swiper-slide
+						+pic('bg','header-sl')
+						.container
+							+text-block()
+								+e.logo(href="#")
+									+icon('logo')
+					
+					+e.slide.swiper-slide
+						+pic('bg','header-sl2')
+						.container
+							+text-block()
+								+e.logo(href="#")
+									+icon('logo')
+
+					+e.slide.swiper-slide
+						+pic('bg','header-sl')
+						.container
+							+text-block()
+								+e.logo(href="#")
+									+icon('logo')
+					
+			.container
+				+e.slider-control
+					.swiper-pagination
+					.swiper-counter
 	// end header-block

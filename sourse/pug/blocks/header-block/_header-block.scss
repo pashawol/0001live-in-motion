@@ -4,11 +4,15 @@
 		// height: 400px;
 		position: relative;
 		padding-bottom: rem(56); 
+
+		.container{
+			position: relative;
+		}
 		&__slide{
 			background-color: #f2f2f4;
 			position: relative;
 			z-index: 2;
-			height: 100vh;
+			// height: 100vh;
 			min-height: 100vh;
 			display: flex;
 			// align-items: center;
@@ -100,22 +104,30 @@
 
 		&__slider-control{
 			// position: absolute;
-			right: 15px;
+			// right: 15px;
+			left: 0;
 			// top: 0;
 			@include a-cent(y);
 			z-index: 200;
 			text-align: center;
 			font-weight: bold;
 			font-size: $small;
+			display: flex;
+			@include media-breakpoint-up(xxl) {
+
+				bottom: rem(80);
+			}
+			bottom: rem(40);
+			top: auto;
+			align-items: center;
 		}
 		.swiper-pagination{
-			display: flex;
-			flex-direction: column;
+			// flex-direction: column;
 			position: static;
 			&-bullet{
-				margin-bottom: 1rem;
+				// margin-bottom: 1rem;
 				background: none;
-				display: block;
+				// display: block;
 				width: rem(30);
 				height: rem(30);
 				border: 1px solid transparent;
@@ -127,10 +139,10 @@
 					width: rem(6);
 					height: rem(6);
 					border-radius: 50%;
-					background-color: $body-color;
+					background-color: #939394;
 				}
 				&-active{
-					border-color: $body-color;
+					border-color: #939394;
 				}
 			}
 			
@@ -180,4 +192,24 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+}
+
+.swiper-counter{
+	white-space: nowrap;
+	margin-bottom: 0.3rem;
+	color: #939394;
+	position: relative;
+	padding-left: rem(50);
+	margin-left: rem(20);
+	&::before{
+		content: '';
+		@include a-cent(y);
+		left: 0;
+		width: rem(32px);
+		height: 1px;
+		opacity: 0.5;
+		background-color: #939394;
+		// left: -100px;
+
+	}
 }
