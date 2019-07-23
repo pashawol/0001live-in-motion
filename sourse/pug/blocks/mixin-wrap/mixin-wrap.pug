@@ -119,43 +119,43 @@ mixin mnu()
 //- picture with lazy
 mixin piclazy(bg, i, exp="jpg", media='576px')
 	// picture.lazy
-	picture
+	picture.lazy
 		// webp images
-		//- if media !== 0
-		//- 	source(srcset="#" data-srcset=`img/@2x/webp/${i}.webp ` media=`(min-width: ${media})`, type="image/webp" )
+		if media !== 0
+			source(srcset="#" data-srcset=`img/@2x/webp/${i}.webp ` media=`(min-width: ${media})`, type="image/webp" )
 		
-		//- 	source(srcset="#" data-srcset=`img/@1x/webp/${i}.webp `  , type="image/webp")
-		//- else
-		//- 	source(srcset="#" data-srcset=`img/@2x/webp/${i}.webp `   type="image/webp" ) 
-		//- // /webp images 
-		//- if media !==0
-		//- 	source(srcset="#" data-srcset=`img/@2x/${i}.${exp}` media=`(min-width: ${media})`, type=`image/${exp}` )
-			 
-		//- 	source(srcset="#" data-srcset=`img/@1x/${i}.${exp}`   type=`image/${exp}`) 
-		//- else
-		//- 	source(srcset="#" data-srcset=`img/@2x/${i}.${exp}`  type=`image/${exp}` )
-		if bg == 'bg' 
-			img.object-fit-js(srс=`img/@2x/${i}.${exp}`, alt="") 
+			source(srcset="#" data-srcset=`img/@1x/webp/${i}.webp `  , type="image/webp")
 		else
-			img(src=`img/@2x/${i}.${exp}`, alt="") 
+			source(srcset="#" data-srcset=`img/@2x/webp/${i}.webp `   type="image/webp" ) 
+		// /webp images 
+		if media !==0
+			source(srcset="#" data-srcset=`img/@2x/${i}.${exp}` media=`(min-width: ${media})`, type=`image/${exp}` )
+			 
+			source(srcset="#" data-srcset=`img/@1x/${i}.${exp}`   type=`image/${exp}`) 
+		else
+			source(srcset="#" data-srcset=`img/@2x/${i}.${exp}`  type=`image/${exp}` )
+		if bg == 'bg' 
+			img.object-fit-js(src=`#` data-src=`img/@2x/${i}.${exp}`, alt="") 
+		else
+			img(src=`#` data-src=`img/@2x/${i}.${exp}`, alt="") 
 	// /picture.lazy
 
 	
 mixin pic(bg, i, exp="jpg", media='576px' )
 	// picture
 	picture
-		//- // webp images
-		//- if media !== "0"
-		//- 	source(srcset=`img/@2x/webp/${i}.webp ` media=`(min-width: ${media} )`, type="image/webp" )
-		//- 	// crop 2x
-		//- 	source(srcset=`img/@1x/webp/${i}.webp `  type="image/webp")
-		//- else
-		//- 	source(srcset=`img/@2x/webp/${i}.webp `  type="image/webp")  
-		//- // /webp images 
-		//- if media !== "0"
-		//- 	source(srcset=`img/@2x/${i}.${exp}` media=`(min-width:  ${media})` type=`image/${exp}` )
-		//- 	// crop 2x
-		//- 	source(srcset=`img/@1x/${i}.${exp}`   type=`image/${exp}`) 
+		// webp images
+		if media !== "0"
+			source(srcset=`img/@2x/webp/${i}.webp ` media=`(min-width: ${media} )`, type="image/webp" )
+			// crop 2x
+			source(srcset=`img/@1x/webp/${i}.webp `  type="image/webp")
+		else
+			source(srcset=`img/@2x/webp/${i}.webp `  type="image/webp")  
+		// /webp images 
+		if media !== "0"
+			source(srcset=`img/@2x/${i}.${exp}` media=`(min-width:  ${media})` type=`image/${exp}` )
+			// crop 2x
+			source(srcset=`img/@1x/${i}.${exp}`   type=`image/${exp}`) 
 	 
 		if bg == 'bg' 
 			img.object-fit-js(src=`img/@2x/${i}.${exp}`, alt="") 

@@ -113,8 +113,13 @@
             </div>
             <div class="header-block__img-wrap text-center">
               <!-- picture.lazy-->
-              <picture>
-                <!-- webp images--><img src="img/@2x/head-mobile.jpg" alt=""/>
+              <picture class="lazy">
+                <!-- webp images-->
+                <source srcset="#" data-srcset="img/@2x/webp/head-mobile.webp " media="(min-width: 576px)" type="image/webp"/>
+                <source srcset="#" data-srcset="img/@1x/webp/head-mobile.webp " type="image/webp"/>
+                <!-- /webp images -->
+                <source srcset="#" data-srcset="img/@2x/head-mobile.jpg" media="(min-width: 576px)" type="image/jpg"/>
+                <source srcset="#" data-srcset="img/@1x/head-mobile.jpg" type="image/jpg"/><img src="#" data-src="img/@2x/head-mobile.jpg" alt=""/>
               </picture>
               <!-- /picture.lazy-->
             </div>
@@ -124,7 +129,15 @@
               <div class="swiper-wrapper">
                 <div class="header-block__slide swiper-slide">
                   <!-- picture-->
-                  <picture><img class="object-fit-js" src="img/@2x/header-sl.jpg" alt=""/>
+                  <picture>
+                    <!-- webp images-->
+                    <source srcset="img/@2x/webp/header-sl.webp " media="(min-width: 576px )" type="image/webp"/>
+                    <!-- crop 2x-->
+                    <source srcset="img/@1x/webp/header-sl.webp " type="image/webp"/>
+                    <!-- /webp images -->
+                    <source srcset="img/@2x/header-sl.jpg" media="(min-width:  576px)" type="image/jpg"/>
+                    <!-- crop 2x-->
+                    <source srcset="img/@1x/header-sl.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/header-sl.jpg" alt=""/>
                   </picture>
                   <!-- /picture-->
                   <div class="container">
@@ -142,7 +155,15 @@
                 </div>
                 <div class="header-block__slide swiper-slide">
                   <!-- picture-->
-                  <picture><img class="object-fit-js" src="img/@2x/header-sl.jpg" alt=""/>
+                  <picture>
+                    <!-- webp images-->
+                    <source srcset="img/@2x/webp/header-sl.webp " media="(min-width: 576px )" type="image/webp"/>
+                    <!-- crop 2x-->
+                    <source srcset="img/@1x/webp/header-sl.webp " type="image/webp"/>
+                    <!-- /webp images -->
+                    <source srcset="img/@2x/header-sl.jpg" media="(min-width:  576px)" type="image/jpg"/>
+                    <!-- crop 2x-->
+                    <source srcset="img/@1x/header-sl.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/header-sl.jpg" alt=""/>
                   </picture>
                   <!-- /picture-->
                   <div class="container">
@@ -160,7 +181,15 @@
                 </div>
                 <div class="header-block__slide swiper-slide">
                   <!-- picture-->
-                  <picture><img class="object-fit-js" src="img/@2x/header-sl.jpg" alt=""/>
+                  <picture>
+                    <!-- webp images-->
+                    <source srcset="img/@2x/webp/header-sl.webp " media="(min-width: 576px )" type="image/webp"/>
+                    <!-- crop 2x-->
+                    <source srcset="img/@1x/webp/header-sl.webp " type="image/webp"/>
+                    <!-- /webp images -->
+                    <source srcset="img/@2x/header-sl.jpg" media="(min-width:  576px)" type="image/jpg"/>
+                    <!-- crop 2x-->
+                    <source srcset="img/@1x/header-sl.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/header-sl.jpg" alt=""/>
                   </picture>
                   <!-- /picture-->
                   <div class="container">
@@ -199,8 +228,13 @@
                 <div class="s-style__col col-6">
                   <div class="s-style__item"><a class="s-style__img-wrap" href="#">
                     <!-- picture.lazy-->
-                    <picture>
-                      <!-- webp images--><img class="object-fit-js" srс="img/@2x/style-1.jpg" alt=""/>
+                    <picture class="lazy">
+                      <!-- webp images-->
+                      <source srcset="#" data-srcset="img/@2x/webp/style-11.webp " media="(min-width: 576px)" type="image/webp"/>
+                      <source srcset="#" data-srcset="img/@1x/webp/style-11.webp " type="image/webp"/>
+                      <!-- /webp images -->
+                      <source srcset="#" data-srcset="img/@2x/style-11.jpg" media="(min-width: 576px)" type="image/jpg"/>
+                      <source srcset="#" data-srcset="img/@1x/style-11.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/style-11.jpg" alt=""/>
                     </picture>
                     <!-- /picture.lazy--><span class="s-style__btn">Одежда для мужчин</span></a>
                     <div class="strong">Для мужчин</div>
@@ -211,8 +245,13 @@
                 <div class="s-style__col col-6">
                   <div class="s-style__item"><a class="s-style__img-wrap" href="#">
                     <!-- picture.lazy-->
-                    <picture>
-                      <!-- webp images--><img class="object-fit-js" srс="img/@2x/style-2.jpg" alt=""/>
+                    <picture class="lazy">
+                      <!-- webp images-->
+                      <source srcset="#" data-srcset="img/@2x/webp/style-21.webp " media="(min-width: 576px)" type="image/webp"/>
+                      <source srcset="#" data-srcset="img/@1x/webp/style-21.webp " type="image/webp"/>
+                      <!-- /webp images -->
+                      <source srcset="#" data-srcset="img/@2x/style-21.jpg" media="(min-width: 576px)" type="image/jpg"/>
+                      <source srcset="#" data-srcset="img/@1x/style-21.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/style-21.jpg" alt=""/>
                     </picture>
                     <!-- /picture.lazy--><span class="s-style__btn">Одежда для женщин</span></a>
                     <div class="strong">Для женщин</div>
@@ -235,8 +274,11 @@
                   <div class="s-articals__item">
                     <div class="s-articals__img-wrap">
                       <!-- picture.lazy-->
-                      <picture>
-                        <!-- webp images--><img class="object-fit-js" srс="img/@2x/made-1.jpg" alt=""/>
+                      <picture class="lazy">
+                        <!-- webp images-->
+                        <source srcset="#" data-srcset="img/@2x/webp/made-1.webp " type="image/webp"/>
+                        <!-- /webp images -->
+                        <source srcset="#" data-srcset="img/@2x/made-1.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/made-1.jpg" alt=""/>
                       </picture>
                       <!-- /picture.lazy-->
                     </div>
@@ -250,8 +292,11 @@
                   <div class="s-articals__item">
                     <div class="s-articals__img-wrap">
                       <!-- picture.lazy-->
-                      <picture>
-                        <!-- webp images--><img class="object-fit-js" srс="img/@2x/made-2.jpg" alt=""/>
+                      <picture class="lazy">
+                        <!-- webp images-->
+                        <source srcset="#" data-srcset="img/@2x/webp/made-2.webp " type="image/webp"/>
+                        <!-- /webp images -->
+                        <source srcset="#" data-srcset="img/@2x/made-2.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/made-2.jpg" alt=""/>
                       </picture>
                       <!-- /picture.lazy-->
                     </div>
@@ -265,8 +310,11 @@
                   <div class="s-articals__item">
                     <div class="s-articals__img-wrap">
                       <!-- picture.lazy-->
-                      <picture>
-                        <!-- webp images--><img class="object-fit-js" srс="img/@2x/made-3.jpg" alt=""/>
+                      <picture class="lazy">
+                        <!-- webp images-->
+                        <source srcset="#" data-srcset="img/@2x/webp/made-3.webp " type="image/webp"/>
+                        <!-- /webp images -->
+                        <source srcset="#" data-srcset="img/@2x/made-3.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/made-3.jpg" alt=""/>
                       </picture>
                       <!-- /picture.lazy-->
                     </div>
@@ -280,8 +328,11 @@
                   <div class="s-articals__item">
                     <div class="s-articals__img-wrap">
                       <!-- picture.lazy-->
-                      <picture>
-                        <!-- webp images--><img class="object-fit-js" srс="img/@2x/made-4.jpg" alt=""/>
+                      <picture class="lazy">
+                        <!-- webp images-->
+                        <source srcset="#" data-srcset="img/@2x/webp/made-4.webp " type="image/webp"/>
+                        <!-- /webp images -->
+                        <source srcset="#" data-srcset="img/@2x/made-4.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/made-4.jpg" alt=""/>
                       </picture>
                       <!-- /picture.lazy-->
                     </div>
@@ -305,8 +356,13 @@
             <div class="s-prod__col col-md-4 col-6">
               <div class="item-prod"><a class="item-prod__img-wrap" href="#">
                 <!-- picture.lazy-->
-                <picture>
-                  <!-- webp images--><img class="object-fit-js" srс="img/@2x/prod-1.jpg" alt=""/>
+                <picture class="lazy">
+                  <!-- webp images-->
+                  <source srcset="#" data-srcset="img/@2x/webp/prod-1.webp " media="(min-width: 576px)" type="image/webp"/>
+                  <source srcset="#" data-srcset="img/@1x/webp/prod-1.webp " type="image/webp"/>
+                  <!-- /webp images -->
+                  <source srcset="#" data-srcset="img/@2x/prod-1.jpg" media="(min-width: 576px)" type="image/jpg"/>
+                  <source srcset="#" data-srcset="img/@1x/prod-1.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/prod-1.jpg" alt=""/>
                 </picture>
                 <!-- /picture.lazy--></a>
                 <div class="item-prod__title small">Футболка мужская &quot;Даунхилл&quot;  
@@ -327,8 +383,13 @@
             <div class="s-prod__col col-md-4 col-6">
               <div class="item-prod"><a class="item-prod__img-wrap" href="#">
                 <!-- picture.lazy-->
-                <picture>
-                  <!-- webp images--><img class="object-fit-js" srс="img/@2x/prod-2.jpg" alt=""/>
+                <picture class="lazy">
+                  <!-- webp images-->
+                  <source srcset="#" data-srcset="img/@2x/webp/prod-2.webp " media="(min-width: 576px)" type="image/webp"/>
+                  <source srcset="#" data-srcset="img/@1x/webp/prod-2.webp " type="image/webp"/>
+                  <!-- /webp images -->
+                  <source srcset="#" data-srcset="img/@2x/prod-2.jpg" media="(min-width: 576px)" type="image/jpg"/>
+                  <source srcset="#" data-srcset="img/@1x/prod-2.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/prod-2.jpg" alt=""/>
                 </picture>
                 <!-- /picture.lazy--></a>
                 <div class="item-prod__title small">Худи женское &quot;organic design and the wooden architecture of russia&quot;  
@@ -349,8 +410,13 @@
             <div class="s-prod__col col-md-4 col-6">
               <div class="item-prod"><a class="item-prod__img-wrap" href="#">
                 <!-- picture.lazy-->
-                <picture>
-                  <!-- webp images--><img class="object-fit-js" srс="img/@2x/prod-3.jpg" alt=""/>
+                <picture class="lazy">
+                  <!-- webp images-->
+                  <source srcset="#" data-srcset="img/@2x/webp/prod-3.webp " media="(min-width: 576px)" type="image/webp"/>
+                  <source srcset="#" data-srcset="img/@1x/webp/prod-3.webp " type="image/webp"/>
+                  <!-- /webp images -->
+                  <source srcset="#" data-srcset="img/@2x/prod-3.jpg" media="(min-width: 576px)" type="image/jpg"/>
+                  <source srcset="#" data-srcset="img/@1x/prod-3.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/prod-3.jpg" alt=""/>
                 </picture>
                 <!-- /picture.lazy--></a>
                 <div class="item-prod__title small">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design
@@ -380,8 +446,13 @@
               <div class="col-lg-auto">
                 <div class="s-about__img-wrap">
                   <!-- picture.lazy-->
-                  <picture>
-                    <!-- webp images--><img src="img/@2x/about-img.png" alt=""/>
+                  <picture class="lazy">
+                    <!-- webp images-->
+                    <source srcset="#" data-srcset="img/@2x/webp/about-img.webp " media="(min-width: 576px)" type="image/webp"/>
+                    <source srcset="#" data-srcset="img/@1x/webp/about-img.webp " type="image/webp"/>
+                    <!-- /webp images -->
+                    <source srcset="#" data-srcset="img/@2x/about-img.png" media="(min-width: 576px)" type="image/png"/>
+                    <source srcset="#" data-srcset="img/@1x/about-img.png" type="image/png"/><img src="#" data-src="img/@2x/about-img.png" alt=""/>
                   </picture>
                   <!-- /picture.lazy-->
                 </div>
@@ -400,8 +471,13 @@
         <section class="s-plan section block-with-lazy" id="s-plan">
           <div class="container">
             <!-- picture.lazy-->
-            <picture>
-              <!-- webp images--><img class="object-fit-js" srс="img/@2x/plan-img.jpg" alt=""/>
+            <picture class="lazy">
+              <!-- webp images-->
+              <source srcset="#" data-srcset="img/@2x/webp/plan-img.webp " media="(min-width: 576px)" type="image/webp"/>
+              <source srcset="#" data-srcset="img/@1x/webp/plan-img.webp " type="image/webp"/>
+              <!-- /webp images -->
+              <source srcset="#" data-srcset="img/@2x/plan-img.jpg" media="(min-width: 576px)" type="image/jpg"/>
+              <source srcset="#" data-srcset="img/@1x/plan-img.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/plan-img.jpg" alt=""/>
             </picture>
             <!-- /picture.lazy-->
             <div class="section-title">
@@ -418,8 +494,13 @@
           <div class="row">
             <div class="s-form__col col order-md-last">
               <!-- picture.lazy-->
-              <picture>
-                <!-- webp images--><img class="object-fit-js" srс="img/@2x/form-img.jpg" alt=""/>
+              <picture class="lazy">
+                <!-- webp images-->
+                <source srcset="#" data-srcset="img/@2x/webp/form-img1.webp " media="(min-width: 576px)" type="image/webp"/>
+                <source srcset="#" data-srcset="img/@1x/webp/form-img1.webp " type="image/webp"/>
+                <!-- /webp images -->
+                <source srcset="#" data-srcset="img/@2x/form-img1.jpg" media="(min-width: 576px)" type="image/jpg"/>
+                <source srcset="#" data-srcset="img/@1x/form-img1.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/form-img1.jpg" alt=""/>
               </picture>
               <!-- /picture.lazy-->
             </div>
@@ -456,8 +537,11 @@
           <div class="row">
             <div class="col-xl-auto col-lg-4 col-md-5">
               <!-- picture.lazy-->
-              <picture>
-                <!-- webp images--><img class="object-fit-js" srс="img/@2x/good-news-img.jpg" alt=""/>
+              <picture class="lazy">
+                <!-- webp images-->
+                <source srcset="#" data-srcset="img/@2x/webp/good-news-img.webp " type="image/webp"/>
+                <!-- /webp images -->
+                <source srcset="#" data-srcset="img/@2x/good-news-img.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/good-news-img.jpg" alt=""/>
               </picture>
               <!-- /picture.lazy-->
               <div class="d-lg-none d-md-block d-none">

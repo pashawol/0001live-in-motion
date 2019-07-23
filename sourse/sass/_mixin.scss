@@ -1,22 +1,5 @@
 
 
-@include font-face ("roboto", "../fonts/Roboto-Regular/Roboto-Regular", $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Bold/Roboto-Bold", bold, $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Medium/Roboto-Medium", 500, $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Black/Roboto-Black", 900, $file-formats: woff2 woff ttf);
-
-
-$default-font: "roboto";
-
-$def: #373a41;
-$em-base: 16px;
-$small: rem(14);
-$url: '../img/';
-$path2: '@2x/';
-$path1: '@1x/';
- 
-
-
 // mixin для Фона
 @mixin bg($src,$media:xy , $path:xy){
   @if $media == xy{
