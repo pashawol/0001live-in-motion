@@ -37,3 +37,28 @@
 	}
 }
 
+
+.count-block{
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	&__btn{
+		padding: rem(5.01) rem(5);
+		cursor: pointer;
+	}
+	input{
+		font-weight: bold;
+		text-align: center;
+		width: auto;
+		border: none;
+		outline: none !important;
+		// width: rem(40);
+		max-width: rem(40);
+		// width: auto;
+		flex-grow: 1;
+		font-size: 1rem;
+		padding: 0;
+		height: auto;
+		display: inline-block;
+	}
+}

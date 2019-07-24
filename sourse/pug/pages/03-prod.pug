@@ -8,9 +8,11 @@ include ../blocks/s-articals/_s-articals.pug
 include ../blocks/s-prod/_s-prod.pug
 include ../blocks/s-about/_s-about.pug
 include ../blocks/s-plan/_s-plan.pug
+include ../blocks/prod-head/_prod-head.pug
+include ../blocks/prod-body/_prod-body.pug
 
 block title
-	title title
+	title Товар
 
 block pagecontent
 	//- .container
@@ -31,37 +33,8 @@ block pagecontent
 			//- +top-line()
 			+top-nav()
 			//- +header-block()
-		+b.page-title
-			.container
-				.row
-					.col-xl-auto.text-xl-left.text-center
-						h1 Магазин 
-						.row.row--sm.justify-content-center
-							.col-sm-auto.col-4
-								+e.btn-head.active(href="#") всё
-							.col-sm-auto.col-4
-								+e.btn-head(href="#") для мужчин
-							.col-sm-auto.col-4
-								+e.btn-head(href="#") для женщин
-					.col
-						.row.justify-content-xl-between.justify-content-center
-							+e.item.col-md-auto.col-4
-								+e.color(style="background-color: #ffcf2b;")
-								.small Материалы из&nbsp;Европы
-							
-							+e.item.col-md-auto.col-4 
-								+e.color(style="background-color: #e13eaf;")
-								.small Авторские принты
-							
-							+e.item.col-md-auto.col-4
-								+e.color(style="background-color: #32cc91;")
-								.small Контроль качества
-								
-
-
-		//- +s-style
-		+s-prod-2()
-		+s-articals2
+		+prod-head
+		+prod-body
 		//- .block-wrapper.container.p-0
 		//- 	+s-about
 		//- 	+s-plan

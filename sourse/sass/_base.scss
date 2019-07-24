@@ -59,12 +59,12 @@ body {
 		width: 100%;
 		height: 100%;
 		@include mt;
-		background-color: #000000;
+		// background-color: #000000;
 		opacity: 0;
 		z-index: -1;
 		top: 0;
 	}
-
+	&.basket-fix,
 	&.fixed {
 		overflow: hidden;
 		position: absolute;
@@ -468,8 +468,7 @@ input::-webkit-inner-spin-button {
 }
 
 .swiper-button-hand{
-	width: 45px;
-	height: 16px;
+	 
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
@@ -477,14 +476,20 @@ input::-webkit-inner-spin-button {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
+	width: rem(19px);
+	height: rem(38px);
 	&-next{
-		// background-image: url(../img/arr-right.png);
+		background-image: url(../img/svg/chevron-right.svg);
 		right: 0;
 	}
 	&-prev{
 		left: 0;
+		background-image: url(../img/svg/chevron-left.svg);
 		// background-image: url(../img/arr-left.png);
 
+	}
+	&:hover{
+		opacity: 0.7;
 	}
 
 }

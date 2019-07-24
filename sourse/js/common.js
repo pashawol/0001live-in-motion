@@ -16,7 +16,12 @@ jQuery(document).ready(function ($) {
 	JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask(); 
+	JSCCommon.moreLine(); 
  
+
+	$(".prod-head__group-title--js").click(function(){
+		$(this).next().slideToggle();
+	})
 	// добавляет подложку для pixel perfect
 	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1920.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
@@ -28,6 +33,8 @@ jQuery(document).ready(function ($) {
 
 		var w = $(window).width();
 
+		$(".prod-head__slider-sm").css("max-height", ($(".prod-head__slider").height() - 20))
+		$(".toggle-block").css("padding-top", ($(".top-nav").height()))
 		// $(".main-wrapper").css("margin-bottom", $('footer').height())
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
 		// 
@@ -134,8 +141,68 @@ jQuery(document).ready(function ($) {
 					$(".swiper-counter").text((swiper2.realIndex + 1) + ' / ' + (swiper2.slides.length  - $('.header-block .swiper-slide-duplicate').length) )
 					// console.log(swiper2.activeIndex)
 				}
+		} 
+
+		
+		var galleryThumbs = new Swiper('.gallery-thumbs', {
+      // spaceBetween: 10,
+      slidesPerView: 4,
+			loop: true,
+			spaceBetween: 10,
+      // freeMode: true,
+      // loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+			loopedSlides: 5, //looped slides should be the same
+			direction: 'vertical',
+		});
+
+		
+		var galleryTop = undefined;
+function initSwiper() {
+	var screenWidth = $(window).width();
+    if(screenWidth < 1200 && galleryTop == undefined) {          
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      loop:true,
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+		});
+		// galleryTop.controller.control = galleryThumbs;
+		// galleryThumbs.controller.control = galleryTop;
+ 
+	} else if (screenWidth > 1199 && galleryTop != undefined) {
+		galleryTop.destroy();
+		galleryTop = undefined;
+		jQuery('.gallery-top .swiper-wrapper').removeAttr('style');
+		jQuery('.gallery-top .swiper-slide').removeAttr('style');            
+}     
+}
+var prodBodySl = new Swiper('.prod-body__slider--js', { 
+	loop: true,
+	freeModeMomentum: true,
+	slidesPerView: 'auto',
+	// spaceBetween: 30,
+	freeMode: true,
+	watchOverflow: true, 
+	navigation: {
+		nextEl: $('.prod-body').find('.swiper-button-next'),
+		prevEl: $('.prod-body').find('.swiper-button-prev'),
+	},
+	breakpoints: {
+ 
+		992: {
+			// slidesPerView: 3
 		}
-		// swiperCounter() 
+	 
+	},
+});
+
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
@@ -203,6 +270,15 @@ JSCCommon = {
 			return false;
 		});
  
+		$(".toggle-basket").click(function () {
+
+			// btnToggle.toggleClass("on");
+			// $("body").toggleClass("fixed");
+			$(".toggle-block").toggleClass("active");
+			$("body, html").toggleClass("basket-fix");
+			return false;
+		});
+ 
 	},
 	// /mobileMenu
 
@@ -216,16 +292,21 @@ JSCCommon = {
 
 		});
 	},
-	// /табы  . 
-
- 
+	// /табы  .  
 	// /CustomYoutubeBlock
 	inputMask: function () {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+]7 [(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7 (999) 999-99-99");
-	}
+	},
 	// /inputMask
-
+	moreLine: function(){
+		$('.text-more').moreLines({
+			linecount: 7,                  
+			buttontxtmore: "Подробнее",     	// Add your inner text for button
+			buttontxtless: "Скрыть",     	// Add your inner text for button
+			animationspeed: 250             	// Type your custom speed animation, by defaul is 'auto' auto = 1
+		});
+	}
 };
 
 // JSCCommon.LazyFunction();

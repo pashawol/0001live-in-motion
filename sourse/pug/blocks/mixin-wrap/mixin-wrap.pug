@@ -69,10 +69,8 @@ mixin pugin()
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
 //- arrow for swiper-slider
 mixin arrow()
-	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
-	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev  
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next 
 //- /arrow for swiper-slider
 		
  
@@ -179,3 +177,22 @@ mixin pic(bg, i, exp="jpg", media='576px' )
 	+piclazy('consult','png')
 
 
+mixin size()
+	+b.FORM.sizes-block
+		+e.LABEL.size-item 
+			input(type="radio" name='size' checked)
+			+e.SPAN.lab S
+		+e.LABEL.size-item 
+			input(type="radio" name='size')
+			+e.SPAN.lab M
+		+e.LABEL.size-item 
+			input(type="radio" name='size')
+			+e.SPAN.lab L
+		+e.LABEL.size-item 
+			input(type="radio" name='size')
+			+e.SPAN.lab XL
+mixin count-block()
+	+b.count-block
+		+e.btn -
+		input.form-control(type="number" value="2") 
+		+e.btn +

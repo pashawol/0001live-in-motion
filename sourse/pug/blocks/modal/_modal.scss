@@ -32,6 +32,7 @@ a {
 
 .mfp-close {
  color: #000000;
+ outline: none !important;
 }
 
 @include media-breakpoint-up(sm) { 

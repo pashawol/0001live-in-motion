@@ -1,17 +1,4 @@
-mixin size()
-	+b.FORM.sizes-block
-		+e.LABEL.size-item 
-			input(type="radio" name='size' checked)
-			+e.SPAN.lab S
-		+e.LABEL.size-item 
-			input(type="radio" name='size')
-			+e.SPAN.lab M
-		+e.LABEL.size-item 
-			input(type="radio" name='size')
-			+e.SPAN.lab L
-		+e.LABEL.size-item 
-			input(type="radio" name='size')
-			+e.SPAN.lab XL
+
 mixin prod(i,t,s="sl")
 	+b.item-prod()
 		+e.img-wrap(href="#")
@@ -26,7 +13,7 @@ mixin prod(i,t,s="sl")
 
 mixin s-prod()
 	// start s-prod
-	+b.SECTION.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
+	+b.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 Наши товары
@@ -44,7 +31,7 @@ mixin s-prod()
 
 mixin s-prod-2()
 	// start s-prod
-	+b.SECTION.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
+	+b.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
 		.container
 			
 			.row

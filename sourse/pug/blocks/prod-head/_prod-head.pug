@@ -1,0 +1,76 @@
+mixin title()
+	+e.title-block&attributes(attributes)
+		+breadcrumb("Магазин",'Для мужчин')
+		.row
+			.col
+				+e.title Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in&nbsp;motion design
+			.col-auto
+				.strong 4567 ₽ 
+mixin prod-head()
+	// start prod-head
+	+b.prod-head&attributes(attributes)
+		.container
+			.d-none
+			+title()(class="d-xl-none")
+			+e.row.row
+				.col-xl-8
+					.row
+						+e.slider-wrap.co-xl-12
+							+e.slider.gallery-top.swiper-container
+								.swiper-wrapper 
+									mixin img(i)
+										+e.slide.swiper-slide
+											+e.img-wrap
+												+pic('bg','card-'+i)
+									each int in [1,2,3,4]
+										+img(int) 
+						.col
+							+e.slider-sm.gallery-thumbs.swiper-container.d-xl-none
+								.swiper-wrapper 
+									mixin img(i)
+										+e.slide--sm.swiper-slide
+											+e.img-wrap
+												+pic('bg','card-'+i)
+									each int in [1,2,3,4]
+										+img(int) 
+				.col-xl-4
+					+title()(class="d-xl-block d-none")
+					.row.small.pb-2
+						.col Выберите размер
+						.col-auto.text-secondary Подбор размера
+					+size()
+					+e.count-block
+						.row
+							.col.small Количество:
+							.col-4
+								+count-block
+					+e.btn.btn-primary(href="#") Добавить в корзину
+					+e.group
+						+e.group-title Описание:
+						+e.group-block
+							.small.text-more Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					// /+e.group
+					
+					+e.group
+						+e.group-title--toggle.--js Уход за изделием:
+						+e.group-block--hidden.--js
+							mixin gr-i(i,t,p)
+								+e.group-item.small
+									+e.icon-wrap
+										img(src=`img/svg/icon-${i}.svg`, alt="")
+									+e.text
+										.ttu.text-secondary= t
+										= p
+							+gr-i("1","Стирка","Стирка запрещена")
+							+gr-i("2","Отбеливание","Не отбеливать")
+							+gr-i("3","сушка","Вертикальная сушка без отжима")
+							+gr-i("4","глаженье","Глаженье при максимальной температуре на более 200 С")
+					// /+e.group
+					
+					+e.group
+						+e.group-title--toggle.--js Оплата и доставка:
+						+e.group-block--hidden.--js
+							.small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					// /+e.group
+
+	// end prod-head

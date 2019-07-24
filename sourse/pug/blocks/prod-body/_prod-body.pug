@@ -1,0 +1,22 @@
+mixin prod-body()
+	// start prod-body
+	+b.SECTION.prod-body.section.block-with-lazy#prod-body&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Качество в деталях
+		+e.slider-wrap
+			.container
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin item(i,t)
+							+e.slide.swiper-slide  
+								+e.img-wrap
+									+pic('bg','quality-'+i) 
+								+e.title= t
+								p.small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							// /+e.slide.swiper-slide 
+						+item('1','Идеальное качество швов')
+						+item('2','Невыцветающая ткань')
+						+item('3','Усиленная конструкция молнии')
+			+arrow()
+	// end prod-body
