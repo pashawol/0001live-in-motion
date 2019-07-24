@@ -78,7 +78,7 @@ fieldset:disabled a.btn {
     content: "";
     position: absolute;
     z-index: -1;
-    background: #FF9D2B;
+    background: #FFB72B;
     height: 0;
     width: 200%;
     padding-bottom: 200%;
@@ -96,11 +96,11 @@ fieldset:disabled a.btn {
       bottom: -50px;
   }
   }
-  &:active,
-  &.active {
-    background-color: #FF9D2B;
-    border-color: #FF9D2B;
-  }
+  // &:active,
+  // &.active {
+  //   background-color: #FF9D2B;
+  //   border-color: #FF9D2B;
+  // }
 }
 
 .btn-outline{
@@ -112,10 +112,10 @@ fieldset:disabled a.btn {
     
     opacity: 0.6;
   }
-  &:active,
-  &.active {
-    opacity: 0.4; 
-  }
+  // &:active,
+  // &.active {
+  //   opacity: 0.4; 
+  // }
 }
 
 

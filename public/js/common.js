@@ -16,8 +16,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask(); 
-
-	JSCCommon.CustomInputFile(); 
+ 
 	// добавляет подложку для pixel perfect
 	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1920.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
@@ -33,9 +32,16 @@ jQuery(document).ready(function ($) {
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
 		// 
 		// скрывает моб меню
-
-		var topH = 	$('.top-nav  ').innerHeight();
+		// }
+		// var topH = 	$('.top-nav  ').innerHeight();
 		function navFixed(){
+			var topH = 	$('header').height();
+			if ($(this).scrollTop() > topH) {
+				$('.btn-top').addClass('active');
+				console.log(topH)
+			} else {
+				$('.btn-top').removeClass('active');
+			}
 			if ($(this).scrollTop() > 0) {
 				$('.top-nav  ').addClass('fixed');
 			} else {
@@ -125,7 +131,7 @@ jQuery(document).ready(function ($) {
 		function swiperCounter() {
 				if($(".swiper-counter")) {
 
-					$(".swiper-counter").text((swiper2.realIndex + 1) + '/ ' + (swiper2.slides.length  - $('.header-block .swiper-slide-duplicate').length) )
+					$(".swiper-counter").text((swiper2.realIndex + 1) + ' / ' + (swiper2.slides.length  - $('.header-block .swiper-slide-duplicate').length) )
 					// console.log(swiper2.activeIndex)
 				}
 		}
@@ -212,17 +218,6 @@ JSCCommon = {
 	},
 	// /табы  . 
 
- 
-	// /nlineSVG
-	CustomInputFile: function CustomInputFile() {
-		var file = $(".add-file input[type=file]");
-		file.change(function () {
-			var filename = $(this).val().replace(/.*\\/, "");
-			var name = $(".add-file__filename  ");
-			name.text(filename);
-
-		});
-	},
  
 	// /CustomYoutubeBlock
 	inputMask: function () {

@@ -1,25 +1,28 @@
-mixin prod(i,t)
+mixin size()
+	+b.FORM.sizes-block
+		+e.LABEL.size-item 
+			input(type="radio" name='size' checked)
+			+e.SPAN.lab S
+		+e.LABEL.size-item 
+			input(type="radio" name='size')
+			+e.SPAN.lab M
+		+e.LABEL.size-item 
+			input(type="radio" name='size')
+			+e.SPAN.lab L
+		+e.LABEL.size-item 
+			input(type="radio" name='size')
+			+e.SPAN.lab XL
+mixin prod(i,t,s="sl")
 	+b.item-prod()
 		+e.img-wrap(href="#")
-			+pic('bg', 'prod-'+i) 
+			if s == "sl"
+				+pic('bg', 'prod-'+i) 
+			else
+				+piclazy('bg', 'prod-'+i) 
 		+e.title.small= t 
-		+e.sizes
-			+e.size-item.bg-success S
-			+e.size-item M
-			+e.size-item L
-			+e.size-item XL
+		+size()
 		.strong 4567 ₽ 
-mixin prod-n(i,t)
-	+b.item-prod()
-		+e.img-wrap(href="#")
-			+piclazy('bg', 'prod-'+i) 
-		+e.title.small= t 
-		+e.sizes
-			+e.size-item.bg-success S
-			+e.size-item M
-			+e.size-item L
-			+e.size-item XL
-		.strong 4567 ₽ 
+ 
 
 mixin s-prod()
 	// start s-prod
@@ -31,11 +34,11 @@ mixin s-prod()
 			+e.slider--js.swiper-container
 				.swiper-wrapper
 					+e.slide.swiper-slide
-						+prod('1','Футболка мужская "Даунхилл"  ')
+						+prod('1','Футболка мужская "Даунхилл"  ',"")
 					+e.slide.swiper-slide
-						+prod('2','Худи женское "organic design and the wooden architecture of russia"  ')
+						+prod('2','Худи женское "organic design and the wooden architecture of russia"  ',"")
 					+e.slide.swiper-slide
-						+prod('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
+						+prod('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design',"")
 			+e.btn-more.btn-outline(href="#") Смотреть все
 	// end s-prod
 
@@ -48,11 +51,11 @@ mixin s-prod-2()
 				 
 				- for (var x = 0; x < 3; x++)
 					+e.col.col-md-4.col-6
-						+prod-n('1','Футболка мужская "Даунхилл"  ')
+						+prod('1','Футболка мужская "Даунхилл"  ')
 					+e.col.col-md-4.col-6
-						+prod-n('2','Худи женское "organic design and the wooden architecture of russia"  ')
+						+prod('2','Худи женское "organic design and the wooden architecture of russia"  ')
 					+e.col.col-md-4.col-6
-						+prod-n('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
+						+prod('3','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
 			+e.btn-more.btn-outline.w-100(href="#") Показать ещё 9 товаров
 	// end s-prod
 
