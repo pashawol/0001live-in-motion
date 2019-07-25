@@ -167,6 +167,7 @@
 	&__delete{
 		cursor: pointer;
 		position: absolute;
+		z-index: 20;
 		@include media-breakpoint-up(md) {
 			
 		}
@@ -259,12 +260,36 @@
 		&__size{
 			padding-bottom: rem(15);
 			@include media-breakpoint-up(lg) {
-
+				
 			}
 			padding-top: rem(12);
 		}
 		.btn-sm{
 			width: rem(175);
+		}
+		
+		
+		&__total-wrap{
+			@include media-breakpoint-up(md) {
+				.container{
+					padding: 0;
+				}
+			}
+			@include media-breakpoint-down(xs) {
+				.basket__total-title{
+					display: block;
+				}
+			}
+			@include media-breakpoint-down(sm) {
+			position: fixed;
+				left: 0;
+				bottom: 0;
+				background-color: #ffffff;
+				width: 100%;
+				z-index: 200;
+				padding: 5px 0;
+				box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+			}
 		}
 }
 

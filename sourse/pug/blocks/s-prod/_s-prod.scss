@@ -91,7 +91,10 @@
 	width: 100%;
 	padding-bottom: rem(12);
 	&__size-item{
-		max-width: rem(142px);
+		@include media-breakpoint-up(sm) {
+
+		}
+		max-width: rem(172px);
 		flex-grow: 1;
 		cursor: pointer;
 	}

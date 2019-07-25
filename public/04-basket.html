@@ -101,9 +101,7 @@
               <!-- +b.basket-->
               <div class="basket">
                 <div class="row align-items-center">
-                  <div class="col">
-                    <div class="basket__clear-btn small text-secondary">Очистить корзину
-                    </div>
+                  <div class="col"><a class="basket__clear-btn small text-secondary" href="#"> Очистить корзину</a>
                   </div>
                   <div class="col-auto">
                     <div class="basket__close-btn toggle-basket">
@@ -321,8 +319,10 @@
                 </div>
                 <!-- /+e.item-->
                 <div class="basket__total">
-                  <div class="row align-items-center text-md-left text-center">
-                    <div class="col strong">Итого: 12567 ₽</div>
+                  <div class="row align-items-center">
+                    <div class="col strong"> <span class="basket__total-title">Итого: </span> 
+                      12567 ₽
+                    </div>
                     <div class="col-md-auto"><a class="basket__btn btn-primary" href="#">Оформить заказ</a>
                     </div>
                   </div>
@@ -342,11 +342,9 @@
             <!-- +b.basket-->
             <div class="basket">
               <div class="row align-items-center">
-                <div class="col">
-                  <div class="basket__clear-btn small text-secondary">Очистить корзину
-                  </div>
+                <div class="col"><a class="basket__clear-btn small text-secondary" href="#"> Очистить корзину</a>
                 </div>
-                <div class="col-auto"><a class="basket__clear-btn small text-secondary" href="#">Очистить корзину</a>
+                <div class="col-auto"><a class="basket__clear-btn small text-secondary" href="#">Вернуться в каталог</a>
                 </div>
               </div>
               <div class="basket__item">
@@ -557,13 +555,19 @@
               </div>
               <!-- /+e.item-->
               <div class="basket__total">
-                <div class="row align-items-center text-md-left text-center">
-                  <div class="col"><a class="basket__btn btn-outline btn-sm" href="#">Добавить товары</a>
+                <div class="row align-items-center">
+                  <div class="col text-md-left text-center"><a class="basket__btn btn-outline btn-sm" href="#">Добавить товары</a>
                   </div>
                   <div class="col-md-auto">
-                    <div class="row align-items-center">
-                      <div class="col strong">Итого: 12567 ₽</div>
-                      <div class="col-md-auto"><a class="basket__btn btn-primary" href="#">Оформить заказ</a>
+                    <div class="basket__total-wrap">
+                      <div class="container">
+                        <div class="row align-items-center">
+                          <div class="col strong"> <span class="basket__total-title">Итого: </span> 
+                            12567 ₽
+                          </div>
+                          <div class="col-auto"><a class="basket__btn btn-primary" href="#">Оформить заказ</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -654,6 +658,8 @@
         <svg class="icon icon-top ">
           <use xlink:href="img/svg/sprite.svg#top"></use>
         </svg>Наверх</a>
+        <!-- Блок только в корзине-->
+        <div class="basket-footer"></div>
       </div>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">

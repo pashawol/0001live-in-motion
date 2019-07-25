@@ -94,6 +94,13 @@
 @include media-breakpoint-down(xs) {}
 }
 
+.basket-footer{
+  @include media-breakpoint-down(sm) {
+    min-height: 1px;
+    padding-bottom: 90px;
+  }
+
+}
 .btn-top{
   position: fixed;
   bottom: rem(100);
