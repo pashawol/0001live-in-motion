@@ -40,9 +40,13 @@
 		}
 	 
 		&:hover{
-			&::after{
+			@include media-breakpoint-up(xl) {
+
+				
+				&::after{
 				opacity: 1;
 			}
+		}
 			.s-style__btn{
 				opacity: 1;
 			}

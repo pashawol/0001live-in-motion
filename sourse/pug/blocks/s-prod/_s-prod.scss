@@ -55,7 +55,17 @@
 		@include block(360,300);
 		margin-bottom: 12px;
 		display: block;
+		overflow: hidden;
+		@include media-breakpoint-up(xl) {
+
+			&:hover{
+				picture{
+					transform: scale(1.1);
+				}
+			}
+		}
 		picture{
+			transition: all 1s ease-out;
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -81,7 +91,7 @@
 	width: 100%;
 	padding-bottom: rem(12);
 	&__size-item{
-		max-width: rem(122px);
+		max-width: rem(142px);
 		flex-grow: 1;
 		cursor: pointer;
 	}

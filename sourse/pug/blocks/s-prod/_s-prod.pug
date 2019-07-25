@@ -13,7 +13,7 @@ mixin prod(i,t,s="sl")
 
 mixin s-prod()
 	// start s-prod
-	+b.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
+	+b.s-prod.section.block-with-lazy(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )#s-prod&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 Наши товары
@@ -31,7 +31,7 @@ mixin s-prod()
 
 mixin s-prod-2()
 	// start s-prod
-	+b.s-prod.section.block-with-lazy#s-prod&attributes(attributes)
+	+b.s-prod.section.block-with-lazy(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )#s-prod&attributes(attributes)
 		.container
 			
 			.row

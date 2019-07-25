@@ -202,7 +202,10 @@ var prodBodySl = new Swiper('.prod-body__slider--js', {
 	 
 	},
 });
-
+var wow = new WOW({
+	mobile: false
+});
+wow.init();
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX

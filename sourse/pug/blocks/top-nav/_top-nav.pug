@@ -35,41 +35,6 @@ mixin top-nav()
 							+e.basket-count 12
 		+mob-mnu()
 		+b.toggle-block
-			+e.close-block.toggle-basket
-			+b.basket
-				.row.align-items-center
-					.col
-						+e.clear-btn.small.text-secondary Очистить корзину
-					.col-auto
-						+e.close-btn.toggle-basket
-							+icon('close')
-				mixin item(x,t)
-					+e.item
-						.row
-							.col-auto
-								+e.img-wrap
-									+pic('bg', 'prod-sm-'+x,'jpg','0')
-							+e.col.col
-								+e.delete
-									+icon("delete")
-								+e.title
-									a.text-body.small(href="#")= t
-								+e.size.ttu.small
-									span.text-secondary Размер: 
-									| 
-									|  S
-								.row.align-items-center
-									.col-auto
-										+count-block()
-									.col.small ( 3000 ₽  X2 )
-									.col-auto.strong 3000 ₽
-					// /+e.item
-				+item('1','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
-				+item('2','Футболка мужская "Даунхилл"  ')
-				+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
-				+e.total
-					.row.align-items-center
-						.col.strong Итого: 12567 ₽
-						.col-auto
-							+e.btn.btn-primary(href="#") Оформить заказ
+			//- +e.close-block.toggle-basket
+			+basket()
 	// end top-nav

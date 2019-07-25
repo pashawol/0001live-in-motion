@@ -1,5 +1,7 @@
 .footer {
+  @include media-breakpoint-up(xl) {
   padding-top: rem(80);
+  }
   .row{
     @include media-breakpoint-up(xl) {
 

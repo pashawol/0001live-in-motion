@@ -74,6 +74,7 @@ fieldset:disabled a.btn {
 .btn-primary{
   background-color: $primary;
   border-color: $primary;
+  border: none !important;
   &::before {
     content: "";
     position: absolute;
@@ -89,11 +90,15 @@ fieldset:disabled a.btn {
     // margin-left: -75%;
     transform: translateX(-50%);
 }
+@include media-breakpoint-up(xl) {
+
+  
   &:hover{
     // background-color: #FFB72B;
     border-color: #FFB72B;
     &::before {
       bottom: -50px;
+    }
   }
   }
   // &:active,
@@ -107,10 +112,13 @@ fieldset:disabled a.btn {
   background-color: transparent;
   border-color: $body-color !important;
   color: $body-color !important;
-  
-  &:hover{
+  @include media-breakpoint-up(xl) {
+
     
-    opacity: 0.6;
+    &:hover{
+    
+      opacity: 0.6;
+    }
   }
   // &:active,
   // &.active {

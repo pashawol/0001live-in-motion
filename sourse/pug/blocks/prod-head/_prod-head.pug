@@ -16,11 +16,11 @@ mixin prod-head()
 				.col-xl-8
 					.row
 						+e.slider-wrap.co-xl-12
-							+e.slider.gallery-top.swiper-container
+							+e.slider.gallery-top.swiper-container.gal
 								.swiper-wrapper 
 									mixin img(i)
 										+e.slide.swiper-slide
-											+e.img-wrap
+											+e.img-wrap(href=`img/@2x/card-${i}.jpg`)
 												+pic('bg','card-'+i)
 									each int in [1,2,3,4]
 										+img(int) 
@@ -35,15 +35,17 @@ mixin prod-head()
 										+img(int) 
 				.col-xl-4
 					+title()(class="d-xl-block d-none")
-					.row.small.pb-2
-						.col Выберите размер
-						.col-auto.text-secondary Подбор размера
-					+size()
-					+e.count-block
-						.row
-							.col.small Количество:
-							.col-4
-								+count-block
+					+e.size-wrap
+						.row.small.pb-2
+							.col Выберите размер
+							.col-auto
+								a(href="#").text-secondary Подбор размера
+						+size()
+						+e.count-block
+							.row
+								.col.small Количество:
+								.col-auto
+									+count-block
 					+e.btn.btn-primary(href="#") Добавить в корзину
 					+e.group
 						+e.group-title Описание:

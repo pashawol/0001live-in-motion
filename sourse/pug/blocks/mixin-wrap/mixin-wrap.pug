@@ -1,4 +1,6 @@
+- const dur= .5;
 //- svg-sprite
+
 mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
@@ -78,7 +80,7 @@ mixin arrow()
 mixin soc()
 	+b.soc
 		mixin item()
-			+e.A.item(href="" target="_blank")
+			+e.A.item(href="№" target="_blank")
 				block
 		+item()
 			+icon('fb')
@@ -196,3 +198,71 @@ mixin count-block()
 		+e.btn -
 		input.form-control(type="number" value="2") 
 		+e.btn +
+
+
+mixin basket(page)
+	// +b.basket
+	+b.basket
+		.row.align-items-center
+			.col
+				+e.clear-btn.small.text-secondary Очистить корзину
+			.col-auto
+				if page
+					+e.clear-btn.small.text-secondary(href="#") Очистить корзину
+				else
+					+e.close-btn.toggle-basket
+						+icon('close')
+		mixin item(x,t)
+			+e.item
+				.row
+					.col-md-auto
+						.row
+							.col-auto
+								+e.img-wrap
+									+pic('bg', 'prod-sm-'+x)
+							.col.d-md-none
+								+e.title
+									a.text-body.small(href="#")= t
+								+e.size.ttu.small
+									span.text-secondary Размер: 
+									| 
+									|  S
+					+e.col.col
+						+e.delete
+							+icon("delete")
+						.row
+							+e.col-12.col-lg-4.col.d-none.d-md-block
+								+e.title
+									a.text-body.small(href="#")= t
+							+e.col-12.col-xl-7.col
+								.row
+									+e.col-12.col-xl-4.col-auto.d-none.d-md-block
+										+e.size.ttu.small
+											span.text-secondary Размер: 
+											| 
+											|  S
+									.col.text-lg-left.text-center
+										.row.align-items-center
+											.col-lg-auto.col-md-12.col-auto.mb-2
+												+count-block()
+											.col-md.col-auto.small.mb-2 ( 3000 ₽  X2 )
+											.col-lg-auto.col-md-12.col-auto.strong.mb-2 3000 ₽
+			// /+e.item
+		+item('1','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
+		+item('2','Футболка мужская "Даунхилл"  ')
+		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
+		+e.total
+			.row.align-items-center.text-md-left.text-center
+				if page
+					.col
+						+e.btn.btn-outline.btn-sm(href="#") Добавить товары
+					.col-md-auto
+						.row.align-items-center
+							.col.strong Итого: 12567 ₽
+							.col-md-auto
+								+e.btn.btn-primary(href="#") Оформить заказ
+				else 
+					.col.strong Итого: 12567 ₽
+					.col-md-auto
+						+e.btn.btn-primary(href="#") Оформить заказ
+	// /+b.basket

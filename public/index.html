@@ -79,13 +79,13 @@
               </ul>
               <div class="text-right"></div>
               <div class="menu-mobile__footer">
-                <div class="soc"><a class="soc__item" href="" target="_blank">
+                <div class="soc"><a class="soc__item" href="№" target="_blank">
                   <svg class="icon icon-fb ">
                     <use xlink:href="img/svg/sprite.svg#fb"></use>
-                  </svg></a><a class="soc__item" href="" target="_blank">
+                  </svg></a><a class="soc__item" href="№" target="_blank">
                   <svg class="icon icon-insta ">
                     <use xlink:href="img/svg/sprite.svg#insta"></use>
-                  </svg></a><a class="soc__item" href="" target="_blank">
+                  </svg></a><a class="soc__item" href="№" target="_blank">
                   <svg class="icon icon-vk ">
                     <use xlink:href="img/svg/sprite.svg#vk"></use>
                   </svg></a>
@@ -96,8 +96,7 @@
           </div>
           <!--  мобильное меню-->
           <div class="toggle-block">
-            <div class="toggle-block__close-block toggle-basket">
-            </div>
+            <!-- +b.basket-->
             <div class="basket">
               <div class="row align-items-center">
                 <div class="col">
@@ -114,15 +113,31 @@
               </div>
               <div class="basket__item">
                 <div class="row">
-                  <div class="col-auto">
-                    <div class="basket__img-wrap">
-                      <!-- picture-->
-                      <picture>
-                        <!-- webp images-->
-                        <source srcset="img/@2x/webp/prod-sm-1.webp " type="image/webp"/>
-                        <!-- /webp images --><img class="object-fit-js" src="img/@2x/prod-sm-1.jpg" alt=""/>
-                      </picture>
-                      <!-- /picture-->
+                  <div class="col-md-auto">
+                    <div class="row">
+                      <div class="col-auto">
+                        <div class="basket__img-wrap">
+                          <!-- picture-->
+                          <picture>
+                            <!-- webp images-->
+                            <source srcset="img/@2x/webp/prod-sm-1.webp " media="(min-width: 576px )" type="image/webp"/>
+                            <!-- crop 2x-->
+                            <source srcset="img/@1x/webp/prod-sm-1.webp " type="image/webp"/>
+                            <!-- /webp images -->
+                            <source srcset="img/@2x/prod-sm-1.jpg" media="(min-width:  576px)" type="image/jpg"/>
+                            <!-- crop 2x-->
+                            <source srcset="img/@1x/prod-sm-1.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-1.jpg" alt=""/>
+                          </picture>
+                          <!-- /picture-->
+                        </div>
+                      </div>
+                      <div class="col d-md-none">
+                        <div class="basket__title"><a class="text-body small" href="#">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design</a>
+                        </div>
+                        <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+                           S
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="basket__col col">
@@ -131,23 +146,35 @@
                         <use xlink:href="img/svg/sprite.svg#delete"></use>
                       </svg>
                     </div>
-                    <div class="basket__title"><a class="text-body small" href="#">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design</a>
-                    </div>
-                    <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-                       S
-                    </div>
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <div class="count-block">
-                          <div class="count-block__btn">-
+                    <div class="row">
+                      <div class="basket__col-12 col-lg-4 col d-none d-md-block">
+                        <div class="basket__title"><a class="text-body small" href="#">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design</a>
+                        </div>
+                      </div>
+                      <div class="basket__col-12 col-xl-7 col">
+                        <div class="row">
+                          <div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+                            <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+                               S
+                            </div>
                           </div>
-                          <input class="form-control" type="number" value="2"/>
-                          <div class="count-block__btn">+
+                          <div class="col text-lg-left text-center">
+                            <div class="row align-items-center">
+                              <div class="col-lg-auto col-md-12 col-auto mb-2">
+                                <div class="count-block">
+                                  <div class="count-block__btn">-
+                                  </div>
+                                  <input class="form-control" type="number" value="2"/>
+                                  <div class="count-block__btn">+
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+                              <div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col small">( 3000 ₽  X2 )</div>
-                      <div class="col-auto strong">3000 ₽</div>
                     </div>
                   </div>
                 </div>
@@ -155,15 +182,31 @@
               <!-- /+e.item-->
               <div class="basket__item">
                 <div class="row">
-                  <div class="col-auto">
-                    <div class="basket__img-wrap">
-                      <!-- picture-->
-                      <picture>
-                        <!-- webp images-->
-                        <source srcset="img/@2x/webp/prod-sm-2.webp " type="image/webp"/>
-                        <!-- /webp images --><img class="object-fit-js" src="img/@2x/prod-sm-2.jpg" alt=""/>
-                      </picture>
-                      <!-- /picture-->
+                  <div class="col-md-auto">
+                    <div class="row">
+                      <div class="col-auto">
+                        <div class="basket__img-wrap">
+                          <!-- picture-->
+                          <picture>
+                            <!-- webp images-->
+                            <source srcset="img/@2x/webp/prod-sm-2.webp " media="(min-width: 576px )" type="image/webp"/>
+                            <!-- crop 2x-->
+                            <source srcset="img/@1x/webp/prod-sm-2.webp " type="image/webp"/>
+                            <!-- /webp images -->
+                            <source srcset="img/@2x/prod-sm-2.jpg" media="(min-width:  576px)" type="image/jpg"/>
+                            <!-- crop 2x-->
+                            <source srcset="img/@1x/prod-sm-2.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-2.jpg" alt=""/>
+                          </picture>
+                          <!-- /picture-->
+                        </div>
+                      </div>
+                      <div class="col d-md-none">
+                        <div class="basket__title"><a class="text-body small" href="#">Футболка мужская &quot;Даунхилл&quot;  </a>
+                        </div>
+                        <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+                           S
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="basket__col col">
@@ -172,23 +215,35 @@
                         <use xlink:href="img/svg/sprite.svg#delete"></use>
                       </svg>
                     </div>
-                    <div class="basket__title"><a class="text-body small" href="#">Футболка мужская &quot;Даунхилл&quot;  </a>
-                    </div>
-                    <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-                       S
-                    </div>
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <div class="count-block">
-                          <div class="count-block__btn">-
+                    <div class="row">
+                      <div class="basket__col-12 col-lg-4 col d-none d-md-block">
+                        <div class="basket__title"><a class="text-body small" href="#">Футболка мужская &quot;Даунхилл&quot;  </a>
+                        </div>
+                      </div>
+                      <div class="basket__col-12 col-xl-7 col">
+                        <div class="row">
+                          <div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+                            <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+                               S
+                            </div>
                           </div>
-                          <input class="form-control" type="number" value="2"/>
-                          <div class="count-block__btn">+
+                          <div class="col text-lg-left text-center">
+                            <div class="row align-items-center">
+                              <div class="col-lg-auto col-md-12 col-auto mb-2">
+                                <div class="count-block">
+                                  <div class="count-block__btn">-
+                                  </div>
+                                  <input class="form-control" type="number" value="2"/>
+                                  <div class="count-block__btn">+
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+                              <div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col small">( 3000 ₽  X2 )</div>
-                      <div class="col-auto strong">3000 ₽</div>
                     </div>
                   </div>
                 </div>
@@ -196,15 +251,31 @@
               <!-- /+e.item-->
               <div class="basket__item">
                 <div class="row">
-                  <div class="col-auto">
-                    <div class="basket__img-wrap">
-                      <!-- picture-->
-                      <picture>
-                        <!-- webp images-->
-                        <source srcset="img/@2x/webp/prod-sm-3.webp " type="image/webp"/>
-                        <!-- /webp images --><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
-                      </picture>
-                      <!-- /picture-->
+                  <div class="col-md-auto">
+                    <div class="row">
+                      <div class="col-auto">
+                        <div class="basket__img-wrap">
+                          <!-- picture-->
+                          <picture>
+                            <!-- webp images-->
+                            <source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
+                            <!-- crop 2x-->
+                            <source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
+                            <!-- /webp images -->
+                            <source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
+                            <!-- crop 2x-->
+                            <source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
+                          </picture>
+                          <!-- /picture-->
+                        </div>
+                      </div>
+                      <div class="col d-md-none">
+                        <div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+                        </div>
+                        <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+                           S
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="basket__col col">
@@ -213,36 +284,49 @@
                         <use xlink:href="img/svg/sprite.svg#delete"></use>
                       </svg>
                     </div>
-                    <div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-                    </div>
-                    <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-                       S
-                    </div>
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <div class="count-block">
-                          <div class="count-block__btn">-
+                    <div class="row">
+                      <div class="basket__col-12 col-lg-4 col d-none d-md-block">
+                        <div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+                        </div>
+                      </div>
+                      <div class="basket__col-12 col-xl-7 col">
+                        <div class="row">
+                          <div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+                            <div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+                               S
+                            </div>
                           </div>
-                          <input class="form-control" type="number" value="2"/>
-                          <div class="count-block__btn">+
+                          <div class="col text-lg-left text-center">
+                            <div class="row align-items-center">
+                              <div class="col-lg-auto col-md-12 col-auto mb-2">
+                                <div class="count-block">
+                                  <div class="count-block__btn">-
+                                  </div>
+                                  <input class="form-control" type="number" value="2"/>
+                                  <div class="count-block__btn">+
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+                              <div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col small">( 3000 ₽  X2 )</div>
-                      <div class="col-auto strong">3000 ₽</div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- /+e.item-->
               <div class="basket__total">
-                <div class="row align-items-center">
+                <div class="row align-items-center text-md-left text-center">
                   <div class="col strong">Итого: 12567 ₽</div>
-                  <div class="col-auto"><a class="basket__btn btn-primary" href="#">Оформить заказ</a>
+                  <div class="col-md-auto"><a class="basket__btn btn-primary" href="#">Оформить заказ</a>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- /+b.basket-->
           </div>
         </div>
         <!-- end top-nav-->
@@ -368,7 +452,7 @@
       </header>
       <!-- end HEADER.header-->
       <!-- start s-style-->
-      <section class="s-style section block-with-lazy" id="s-style">
+      <section class="s-style section block-with-lazy wow fadeInUp" id="s-style" data-wow-duration="1s">
         <div class="container">
           <div class="section-title">
             <h2>Найди свой стиль</h2>
@@ -415,7 +499,7 @@
       </section>
       <!-- end s-style-->
       <!-- start s-articals-->
-      <div class="s-articals s-articals--main section block-with-lazy" id="s-articals">
+      <div class="s-articals s-articals--main section block-with-lazy wow fadeInUp" data-wow-duration="1s" id="s-articals">
         <div class="container">
           <div class="section-title text-center">
             <h2>Сделано с любовью</h2>
@@ -498,7 +582,7 @@
       </div>
       <!-- end s-articals-->
       <!-- start s-prod-->
-      <div class="s-prod section block-with-lazy" id="s-prod">
+      <div class="s-prod section block-with-lazy wow fadeInUp" data-wow-duration="1s" id="s-prod">
         <div class="container">
           <div class="section-title text-center">
             <h2>Наши товары</h2>
@@ -605,7 +689,7 @@
       <!-- end s-prod-->
       <div class="block-wrapper container p-0">
         <!-- start s-about-->
-        <section class="s-about section block-with-lazy" id="s-about">
+        <section class="s-about section block-with-lazy wow fadeInUp" id="s-about" data-wow-duration="1s">
           <div class="container">
             <div class="row">
               <div class="col-lg-auto">
@@ -633,7 +717,7 @@
         </section>
         <!-- end s-about-->
         <!-- start s-plan-->
-        <section class="s-plan section block-with-lazy" id="s-plan">
+        <section class="s-plan section block-with-lazy wow fadeInUp" id="s-plan" data-wow-duration="1s">
           <div class="container">
             <!-- picture.lazy-->
             <picture class="lazy">
@@ -654,7 +738,7 @@
         <!-- end s-plan-->
       </div>
       <!-- start s-form-->
-      <div class="s-form section block-with-lazy" id="s-form">
+      <div class="s-form section block-with-lazy wow fadeInUp" id="s-form" data-wow-duration="1s">
         <div class="container">
           <div class="row">
             <div class="s-form__col col order-md-last">
@@ -697,7 +781,7 @@
         </div>
       </div>
       <!-- end s-form-->
-      <footer class="footer section block-with-lazy">
+      <footer class="footer section block-with-lazy wow fadeInUp" data-wow-duration="1s">
         <div class="container">
           <div class="row">
             <div class="col-xl-auto col-lg-4 col-md-5">
@@ -710,13 +794,13 @@
               </picture>
               <!-- /picture.lazy-->
               <div class="d-lg-none d-md-block d-none">
-                <div class="soc"><a class="soc__item" href="" target="_blank">
+                <div class="soc"><a class="soc__item" href="№" target="_blank">
                   <svg class="icon icon-fb ">
                     <use xlink:href="img/svg/sprite.svg#fb"></use>
-                  </svg></a><a class="soc__item" href="" target="_blank">
+                  </svg></a><a class="soc__item" href="№" target="_blank">
                   <svg class="icon icon-insta ">
                     <use xlink:href="img/svg/sprite.svg#insta"></use>
-                  </svg></a><a class="soc__item" href="" target="_blank">
+                  </svg></a><a class="soc__item" href="№" target="_blank">
                   <svg class="icon icon-vk ">
                     <use xlink:href="img/svg/sprite.svg#vk"></use>
                   </svg></a>
@@ -749,18 +833,18 @@
                       </div>
                     </form>
                   </div>
-                  <div class="small">Нажимая на&nbsp;кнопку &laquo;Подписаться&raquo; или &laquo;Отправить&raquo;, я&nbsp;даю согласие  на&nbsp;обработку своих персональных данных и&nbsp;соглашаюсь  с&nbsp; <a href="#">Политикой конфиденциальности</a></div>
+                  <div class="small">Нажимая на&nbsp;кнопку &laquo;Подписаться&raquo; или &laquo;Отправить&raquo;, я&nbsp;даю согласие  на&nbsp;обработку своих персональных данных и&nbsp;соглашаюсь  с&nbsp; <a href="#">Политикой конфиденциальности</a>.</div>
                 </div>
               </div>
               <div class="row d-md-none d-lg-flex">
                 <div class="col-md">
-                  <div class="soc"><a class="soc__item" href="" target="_blank">
+                  <div class="soc"><a class="soc__item" href="№" target="_blank">
                     <svg class="icon icon-fb ">
                       <use xlink:href="img/svg/sprite.svg#fb"></use>
-                    </svg></a><a class="soc__item" href="" target="_blank">
+                    </svg></a><a class="soc__item" href="№" target="_blank">
                     <svg class="icon icon-insta ">
                       <use xlink:href="img/svg/sprite.svg#insta"></use>
-                    </svg></a><a class="soc__item" href="" target="_blank">
+                    </svg></a><a class="soc__item" href="№" target="_blank">
                     <svg class="icon icon-vk ">
                       <use xlink:href="img/svg/sprite.svg#vk"></use>
                     </svg></a>
@@ -815,6 +899,7 @@
     <!-- for svg libs-->
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <script src="libs/jquery.morelines.min.js"></script>
+    <script src="libs/wow.min.js"></script>
     <!-- /for svg libs-->
     <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="libs/jquery.inputmask.bundle.min.js"></script>

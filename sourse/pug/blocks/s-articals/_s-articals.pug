@@ -1,6 +1,6 @@
 mixin s-articals()
 	// start s-articals
-	+b.s-articals--main.section.block-with-lazy#s-articals&attributes(attributes)
+	+b.s-articals--main.section.block-with-lazy(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )#s-articals&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 Сделано с любовью
@@ -23,12 +23,12 @@ mixin s-articals()
 
 mixin s-articals2()
 	// start s-articals
-	+b.s-articals.section.block-with-lazy#s-articals&attributes(attributes)
+	+b.s-articals.section.block-with-lazy#s-articals(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )&attributes(attributes)
 		.container
 		 
 			.row
 				mixin item(i)
-					+e.col.col-4.text-center
+					+e.col--card.col-4.text-center
 						+e.item()
 							+e.img-wrap
 								+piclazy('bg','q-'+i) 
