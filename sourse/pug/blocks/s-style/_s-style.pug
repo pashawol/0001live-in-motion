@@ -10,7 +10,8 @@ mixin s-style()
 					+e.col.col-6
 						+e.item()
 							+e.img-wrap(href="#")
-								+piclazy('bg','style-'+i) 
+								+piclazy('bg','style-'+i+ '-not-active')(class="not-active")
+								+piclazy('bg','style-'+i ) 
 								//- +e.btn= t2
 							.strong= t1
 							p= p

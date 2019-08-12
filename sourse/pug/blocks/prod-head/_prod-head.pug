@@ -12,16 +12,23 @@ mixin prod-head()
 		.container
 			.d-none
 			+title()(class="d-xl-none")
+			
 			+e.row.row
-				.col-xl-8
+				+e.col-left.col-xl-8
 					.row
 						+e.slider-wrap.co-xl-12
 							+e.slider.gallery-top.swiper-container.gal
 								.swiper-wrapper 
 									mixin img(i)
 										+e.slide.swiper-slide
-											+e.img-wrap(href=`img/@2x/card-${i}.jpg`)
-												+pic('bg','card-'+i)
+											+e.img-wrap( href=`img/@2x/card-${i}.jpg`)
+												//- +pic('bg',)
+												picture&attributes(attributes)
+													source(srcset=`img/@2x/webp/card-${i}.webp ` media=`(min-width: 576px )`, type="image/webp")
+													source(srcset=`img/@1x/webp/card-${i}.webp `  type="image/webp")
+													source(srcset=`img/@2x/card-${i}.jpg` media=`(min-width:  576px )` type=`image/jpg` )
+													img.zoom-img-js.object-fit-js(src=`img/@2x/card-${i}.jpg`, alt="")
+											.show-zoom-img-js
 									each int in [1,2,3,4]
 										+img(int) 
 						.col

@@ -114,6 +114,9 @@
 				&::after{
 				display: none;
 				}
+				&:hover{
+					opacity: 0.75;
+				}
 			}
 		.icon{
 			color: transparent;

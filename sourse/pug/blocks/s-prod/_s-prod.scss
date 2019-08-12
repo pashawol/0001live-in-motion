@@ -50,7 +50,7 @@
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	color: #000000;
+	// color: #000000;
 	&__img-wrap{
 		margin-bottom: rem(10);
 		@include block(360,300);

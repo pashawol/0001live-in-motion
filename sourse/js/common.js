@@ -17,6 +17,7 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.inputMask(); 
 	JSCCommon.moreLine(); 
+	JSCCommon.zhowZoomIng(); 
  
 
 	$(".prod-head__group-title--js").click(function(){
@@ -309,6 +310,16 @@ JSCCommon = {
 			buttontxtless: "Скрыть",     	// Add your inner text for button
 			animationspeed: 250             	// Type your custom speed animation, by defaul is 'auto' auto = 1
 		});
+	},
+	zhowZoomIng: function(){
+		$(".zoom-img-js").each(function(){
+
+			new ImageZoom($(this), {
+				target: {
+				right: 25
+			}
+		})
+	})
 	}
 };
 

@@ -1,6 +1,21 @@
+.zoomable{
+	@include media-breakpoint-up(xl){
+
+		z-index: 1000;
+	}
+}
 .prod-head {
+	.swiper-container{
+		@include media-breakpoint-up(xl){
+
+			overflow: inherit;
+		}
+	}
+	&__col-left{
+		z-index: 10;
+	}
 	$m1: (1920px - 344px);
-	color: #000000;
+	// color: #000000;
 	@media (min-width:$m1) {
 		.container{
 			max-width: $m1;
