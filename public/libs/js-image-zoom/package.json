@@ -1,0 +1,71 @@
+{
+  "_from": "js-image-zoom",
+  "_id": "js-image-zoom@0.6.0",
+  "_inBundle": false,
+  "_integrity": "sha512-sjYVKnJdAKmrbwCHqAQ60UxGjA+tC24E9aogjmc30EAEGNuNyr5QHB62k+e96cuXi+qPpJjFez6IjCW8cJyZ/g==",
+  "_location": "/js-image-zoom",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "js-image-zoom",
+    "name": "js-image-zoom",
+    "escapedName": "js-image-zoom",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/js-image-zoom/-/js-image-zoom-0.6.0.tgz",
+  "_shasum": "7ed1907beba79488a046237b7a987cc54e04e8b8",
+  "_spec": "js-image-zoom",
+  "_where": "D:\\work\\github\\Kostya\\0001live-in-motion",
+  "author": {
+    "name": "Andrii Malaman",
+    "email": "and.malaman@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/malaman/js-image-zoom/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "homepage": "https://github.com/malaman/js-image-zoom/#readme",
+  "keywords": [
+    "image magnifier",
+    "image enlarger",
+    "image lens",
+    "photo zoom",
+    "photo magnifier",
+    "photo enlarger",
+    "photo lens",
+    "image zoom",
+    "image magnifier",
+    "image enlarger",
+    "photo zoom",
+    "photo magnifier",
+    "photo enlarger",
+    "zoom",
+    "magnify",
+    "enlarge"
+  ],
+  "license": "MIT",
+  "main": "js-image-zoom.js",
+  "name": "js-image-zoom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malaman/js-image-zoom.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.6.0"
+}

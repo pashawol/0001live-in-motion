@@ -321,6 +321,8 @@ JSCCommon = {
 				}
 			})
 		})
+
+		
 		// 	$('.zoom-link').easyZoom({
 		// 		id: 'imagezoom',
 		// 		// preload: '<p class="preloader">Loading the image</p>',

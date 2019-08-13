@@ -1,4 +1,5 @@
 .zoomable{
+	left: 100% !important;
 	@include media-breakpoint-up(xl){
 
 		z-index: 1000;
