@@ -317,7 +317,7 @@ JSCCommon = {
 
 			new ImageZoom($(this), {
 				target: {
-					right: 20
+					// right: 20
 				}
 			})
 		})
