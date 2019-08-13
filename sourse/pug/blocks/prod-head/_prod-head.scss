@@ -4,6 +4,14 @@
 		z-index: 1000;
 	}
 }
+.zoom-img-js{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
 .prod-head {
 	.swiper-container{
 		@include media-breakpoint-up(xl){

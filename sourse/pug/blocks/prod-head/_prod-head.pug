@@ -21,13 +21,14 @@ mixin prod-head()
 								.swiper-wrapper 
 									mixin img(i)
 										+e.slide.swiper-slide
-											+e.img-wrap( href=`img/@2x/card-${i}.jpg`)
+											+e.img-wrap.zoom-link( href=`img/@2x/card-lg-${i}.jpg`)
 												//- +pic('bg',)
+												img.zoom-img-js(src=`img/@2x/card-lg-${i}.jpg`, alt="")
 												picture&attributes(attributes)
 													source(srcset=`img/@2x/webp/card-${i}.webp ` media=`(min-width: 576px )`, type="image/webp")
 													source(srcset=`img/@1x/webp/card-${i}.webp `  type="image/webp")
 													source(srcset=`img/@2x/card-${i}.jpg` media=`(min-width:  576px )` type=`image/jpg` )
-													img.zoom-img-js.object-fit-js(src=`img/@2x/card-${i}.jpg`, alt="")
+													img.object-fit-js(src=`img/@2x/card-${i}.jpg`, alt="")
 											.show-zoom-img-js
 									each int in [1,2,3,4]
 										+img(int) 
