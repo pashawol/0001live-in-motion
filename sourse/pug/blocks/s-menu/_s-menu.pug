@@ -1,0 +1,32 @@
+mixin s-menu()
+	// start s-menu
+	+b.s-menu.section.block-with-lazy#s-menu&attributes(attributes)
+		.container
+			.row
+				mixin item()
+					+e.col.col-6
+						+e.item(href="#") 
+							block
+							
+					// /+e.col.col-6
+				+item()
+					+e.DIV.img-wrap
+						img.lazy.res-i(src="#" data-src=`img/svg/logo-white.svg`, alt="")
+					+e.DIV.btn О бренде
+					p live in&nbsp;motion
+						br
+						| &nbsp;&mdash; линия одежды для спорта и&nbsp;активного отдыха
+				+item()
+					+e.DIV.img-wrap
+						+pic('','cap','png')
+						//- img.lazy.res-i(src="#" data-src=`img/@2x/cap.png`, alt="")
+					+e.DIV.btn В каталог
+					p Мы&nbsp;создаём удобную, практичную и&nbsp;красивую экипировку,
+						|
+						br
+						|  которая 	вдохновляет
+						|
+						br
+						|  вас на&nbsp;новые&nbsp;достижения
+
+	// end s-menu

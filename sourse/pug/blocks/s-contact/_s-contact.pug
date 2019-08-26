@@ -2,8 +2,39 @@ mixin s-contact()
 	// start s-contact
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-contact
-				
+			+b.section-title.d-lg-none.text-center
+				h1  Контакты
+				+e.link(href="#") Скачать реквизиты компании
 			.row
+				+e.col.col-lg-auto.col-sm-5
+					+b.section-title.d-none.d-lg-block
+						h1  Контакты
+						+e.link(href="#") Скачать реквизиты компании
+					+e.group
+						+e.title
+							a(href="tel:8(999)999-99-99") 8 (999) 999 - 99 - 99
+						+e.small с 18:00 до 20:00 ежедневно
+					+e.group
+						+e.title
+							a(href="mailto:info@liveinmotion.ru") info@liveinmotion.ru
+					
+					+e.group
+						+e.title Задавайте вопросы
+						+b.soc
+							mixin item()
+								+e.A.item(href="#" target="_blank")
+									block
+							+item()
+								+icon('viber')
+							+item()
+								+icon('telega')
+							+item()
+								+icon('skype')
+					+e.group
+						+e.title Мы в соц. сетях:
+						+soc()
+					
+				.col.d-none.d-sm-block
+					+pic('bg','contact-img')
+				
 	// end s-contact
