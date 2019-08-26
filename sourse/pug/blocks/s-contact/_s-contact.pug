@@ -38,3 +38,29 @@ mixin s-contact()
 					+pic('bg','contact-img')
 				
 	// end s-contact
+
+mixin s-contact-404()
+	// start s-contact
+	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+		.container 
+			+e.line-block
+				.row.justify-content-between
+					.col-lg-4
+						+e.group
+							+e.title Задавайте вопросы
+							+b.soc
+								mixin item()
+									+e.A.item(href="#" target="_blank")
+										block
+								+item()
+									+icon('whatsapp')
+								+item()
+									+icon('telega')
+								+item()
+									+icon('skype')
+					.col-lg-4
+						+e.group
+							+e.title Мы в соц. сетях:
+							+soc()
+	// end s-contact
+

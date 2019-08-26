@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-style/_s-style.pug
+include ../blocks/s-articals/_s-articals.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-plan/_s-plan.pug
+include ../blocks/s-menu/_s-menu.pug
+include ../blocks/s-404/_s-404.pug
+
+block title
+	title 404
+
+block pagecontent
+	//- .container
+	//- 	+in-c("","adasd")
+	//- 	+form-wrap
+	//- 		+input("placeholder","email","", '') 
+	//- 		+input("placeholder","tel","") 
+	//- 		+input("placeholder","text","") 
+	//- 		+input("placeholder","text","label") 
+	//- 		+input("placeholder","textarea","") 
+	//- 		+input("placeholder","textarea","label") 
+	//- 		+input("","textarea","") 
+	//- +pugin()
+	// повесь этот класс на body .not-main-page  я в сборке не могу
+	.not-main-page
+		+header()
+			//- +top-line()
+			+top-nav()
+		+s-404()
+		+s-contact-404()
+		//- +s-form()
+		//- +s-menu
+		+footer()
+

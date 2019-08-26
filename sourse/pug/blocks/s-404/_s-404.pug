@@ -1,0 +1,36 @@
+mixin s-404()
+	// start s-404
+	+b.SECTION.s-404.section.block-with-lazy#s-404&attributes(attributes)
+		.container
+			+e.head
+				+e.row.row.align-items-center
+					.col-lg-6
+						+pic("","404")
+					.col
+						.strong Ошибка 404
+						h1 К&nbsp;сожалению,  страница  не&nbsp;найдена :-(
+			+e.row.row
+				mixin col(i)
+					+e.col.col-sm
+						+e.item
+							+e.icon-wrap
+								//- +icon(i)
+								img.res-i.lazy(src="#" data-src=`img/svg/${i}.svg`, alt="")
+							block
+				+col("icon_catal")
+					+e.text Но&nbsp;не&nbsp;растраивайтесь, ведь вы&nbsp;всегда можете 
+						| 
+						a(href="#") вернуться в&nbsp;каталог
+				+col("icon_crown")
+					+e.text либо на 
+						br
+						| 
+						a(href="#") главную 
+							br
+							| страницу сайта
+				.col-lg
+					+e.text 
+						.small Будем признательны, если вы&nbsp;сообщите нам об&nbsp;ошибке, нажав кнопку ниже
+						+e.btn(href="#") Сообщить об ошибке
+
+	// end s-404
