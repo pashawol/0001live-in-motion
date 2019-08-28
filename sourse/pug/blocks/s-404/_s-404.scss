@@ -21,6 +21,10 @@
 		@include media-breakpoint-up(md) {
 
 			margin-bottom: rem(100);
+			&--2{
+				margin-bottom: rem(50);
+
+			}
 		}
 		margin-bottom: rem(40);
 	}
@@ -41,7 +45,8 @@
 		margin-right: auto;
 
 		a{
-			@extend .tdu;
+			// @extend .tdu;
+			text-decoration: none !important;
 		}
 	}
 	.small{

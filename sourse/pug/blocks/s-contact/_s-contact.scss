@@ -14,9 +14,19 @@
 		}
 		padding-bottom: rem(40);
 		&__link{
-			@extend .text-body;
+			// @extend .text-body;
+			color: #333333;
 			font-size: rem(14);
-			@extend .tdu;
+			// @extend .tdu;
+			text-decoration: none !important;
+			border-bottom: 1px solid ;
+			@include mt;
+			@include media-breakpoint-up(lg) {
+
+				&:hover{
+					color: #828282;
+				}
+			}
 		}
 	}
 	&__group{

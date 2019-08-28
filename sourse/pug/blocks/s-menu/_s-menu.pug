@@ -1,6 +1,6 @@
 mixin s-menu()
 	// start s-menu
-	+b.s-menu.section.block-with-lazy#s-menu&attributes(attributes)
+	+b.s-menu.section.block-with-lazy#s-menu(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )&attributes(attributes)
 		.container
 			.row
 				mixin item()

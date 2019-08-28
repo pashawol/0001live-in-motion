@@ -64,6 +64,7 @@ body {
 		z-index: -1;
 		top: 0;
 	}
+	// padding-right: calc(100vw - 100% );
 	&.basket-fix,
 	&.fixed {
 		overflow: hidden;
@@ -74,7 +75,7 @@ body {
 		z-index: 999;
 		@include media-breakpoint-up(sm) {
 
-			padding-right: 17px;
+			// padding-right: 17px;
 		}
 
 		&::before {

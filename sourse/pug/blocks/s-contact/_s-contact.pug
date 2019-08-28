@@ -1,6 +1,6 @@
 mixin s-contact()
 	// start s-contact
-	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+	+b.s-contact.section.block-with-lazy#s-contact(class="wow fadeIn" data-wow-duration=`${dur * 2}s` )&attributes(attributes)
 		.container
 			+b.section-title.d-lg-none.text-center
 				h1  Контакты
@@ -41,7 +41,7 @@ mixin s-contact()
 
 mixin s-contact-404()
 	// start s-contact
-	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+	+b.s-contact.section.block-with-lazy#s-contact(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )&attributes(attributes)
 		.container 
 			+e.line-block
 				.row.justify-content-between

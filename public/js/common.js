@@ -46,7 +46,7 @@ jQuery(document).ready(function ($) {
 			var topH = $('header').height();
 			if ($(this).scrollTop() > topH) {
 				$('.btn-top').addClass('active');
-				console.log(topH)
+		 
 			} else {
 				$('.btn-top').removeClass('active');
 			}
@@ -265,22 +265,51 @@ JSCCommon = {
 	// /magnificPopupCall
 	mobileMenu: function () {
 		// закрыть/открыть мобильное меню
+		function paddRight(elem) { 
+			let div = document.createElement('div'); 
+			div.style.overflowY = 'scroll';
+			div.style.width = '50px';
+			div.style.height = '50px'; 
+			document.body.append(div);
+			let  padd = div.offsetWidth - div.clientWidth;
 
+			console.log(padd);
+			// console.log(1);
+			$(elem).css("paddingRight", padd);
+			div.remove(); 
+		}
 		btnToggle.click(function () {
 
 			btnToggle.toggleClass("on");
 			// $("body").toggleClass("fixed");
 			menu.toggleClass("active");
-			$("body, html").toggleClass("fixed");
+		 
+			if($("body").hasClass("fixed")){
+				$("body, html").removeClass("fixed")
+				$("body").css("paddingRight",0);
+			}
+			else{
+				$("body, html").addClass("fixed")
+				paddRight('body')
+				
+			} 
 			return false;
 		});
-
-		$(".toggle-basket").click(function () {
-
-			// btnToggle.toggleClass("on");
-			// $("body").toggleClass("fixed");
+		paddRight('.top-nav__head')
+		
+		$(".toggle-basket").click(function () { 
 			$(".toggle-block").toggleClass("active");
-			$("body, html").toggleClass("basket-fix");
+		 
+				if($("body").hasClass("basket-fix")){
+					$("body, html").removeClass("basket-fix")
+					$("body").css("paddingRight",0);
+				}
+				else{
+					$("body, html").addClass("basket-fix")
+					paddRight('body')
+						
+						
+					} 
 			return false;
 		});
 
