@@ -13,10 +13,10 @@ function LazyFunction() {
 					lazyImages.forEach(function (lazyImage) {
 						var imgWrapper = lazyImage.parentNode.clientHeight + 500;
 						if (((lazyImage.getBoundingClientRect().top - imgWrapper) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + imgWrapper) >= 0) && getComputedStyle(lazyImage).display !== "none") {
-							if (lazyImage.tagName == 'IMG') {
+							if (lazyImage.tagName == 'IMG'  && lazyImage.dataset.src) {
 								lazyImage.src = lazyImage.dataset.src;
 							}
-							if (lazyImage.tagName == 'SOURCE') {
+							if (lazyImage.tagName == 'SOURCE' && lazyImage.dataset.srcset) {
 
 								lazyImage.srcset = lazyImage.dataset.srcset;
 							}

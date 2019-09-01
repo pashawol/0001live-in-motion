@@ -1,0 +1,36 @@
+mixin s-about-page()
+	// start s-about-page
+	+b.SECTION.s-about-page.section.pt-0.block-with-lazy#s-about-page&attributes(attributes)
+		.container
+			.row.section(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`    )
+
+				.col 
+					h2 live in motion!
+					p Можно бесконечно спорить о&nbsp;том, кто впервые произнес сакраментальное: движение&nbsp;&mdash; это жизнь!
+
+					p Вопрос приоритета здесь не&nbsp;столь важен, сколь важно понимание и&nbsp;признание того, что любая форма жизни невозможна без движения и&nbsp;находится в&nbsp;постоянном изменении&nbsp;/ трансформации в&nbsp;каждую отдельную единицу времени.
+
+					p Но&nbsp;для нас недостаточно только признавать  и&nbsp;осознавать это как объективную реальность!
+					+e.btn(href="#") В магазин
+				+e.col.col-lg-5.order-lg-first
+					picture.lazy
+						// webp images
+						source(srcset='img/@2x/webp/about-page.webp ',    media=`(min-width: 992px )`, type='image/webp')
+						source(srcset='img/@2x/webp/about-page-mob.webp ',    type='image/webp')
+						// /webp images
+						source(srcset='img/@2x/about-page.jpg'   media=`(min-width: 992px )`,  type='image/jpg')
+						source(srcset='img/@2x/about-page-mob.jpg'    type='image/jpg')
+						img(src='img/@2x/about-page.jpg' alt='')
+			.section(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`  data-wow-offset="250" )
+				h2 Наша жизненная парадигма&nbsp;&mdash; быть не&nbsp;просто объектом происходящих изменений, а&nbsp;активно управлять ими.
+		 
+			.row(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`  data-wow-offset="250" )
+
+				.col 
+					p Мы&nbsp;постоянно укрепляем и&nbsp;совершенствовуем свое тело и&nbsp;свой дух, свои знания  и&nbsp;способности, познаем новое  и&nbsp;неизведанное, достигаем новых вершин  во&nbsp;всем. Именно этот смысл мы&nbsp;вкладываем  в&nbsp;свой лозунг&nbsp;&mdash; Живи в&nbsp;движении!
+
+					p А&nbsp;выбранный нами графический образ символизирует, как известное всем кольцо Мёбиуса, вечный процесс движения!
+				+e.col.col-lg-5
+					+e.logo-wrap
+						+icon('logo')
+	// end s-about-page
