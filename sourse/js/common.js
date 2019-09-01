@@ -74,6 +74,7 @@ jQuery(document).ready(function ($) {
 	$(window).resize(function () {
 		heightses();
 		initSwiper();
+		JSCCommon.stickyFunc();
 	});
 
 	heightses();
