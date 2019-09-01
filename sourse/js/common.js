@@ -18,6 +18,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.inputMask();
 	JSCCommon.moreLine();
 	JSCCommon.zhowZoomIng();
+	JSCCommon.stickyFunc();
 
 
 	$(".prod-head__group-title--js").click(function () {
@@ -212,7 +213,19 @@ jQuery(document).ready(function ($) {
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	// функции для запуска lazy
+	stickyFunc: function () {
+		if (window.matchMedia("(min-width: 778px)").matches) {
 
+			$(".s-confirm__total--js").stick_in_parent({
+				offset_top: $(".top-nav").height(),
+				inner_scrolling: true,
+				parent: '.s-confirm__right-col',
+				// // recalc_every: 1,
+				//  recalc_every: true,
+			});
+
+		}
+	},
 
 	// /LazyFunction
 

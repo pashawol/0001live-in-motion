@@ -1,0 +1,50 @@
+mixin s-confirm()
+	// start s-confirm
+	+b.SECTION.s-confirm.section.block-with-lazy#s-confirm&attributes(attributes)
+		.container 
+			
+			div
+				+e.alert Поздравляем, ваш заказ 
+					br
+					| № 18 подтверждён!
+				+e.title.strong Состав заказа:
+			.row
+				.col-xl-8.col-lg-7.col-md-6
+					block
+				+e.right-col.col
+					+e.total--js.strong
+						.container
+							.row.align-items-center.small.strong
+								.col Товары (3)
+								.col-auto 13701 ₽
+							
+							.row.align-items-center.small.strong
+								.col доставка курьером
+								.col-auto 350 ₽
+							.row.ttu.py-2
+								.col итого к оплате
+								.col-auto.text-pink 14350 ₽
+								
+							a.btn.btn-block.btn-primary(href="#") Оплатить
+					
+					//- +e.total.strong.d-md-none
+					//- 	.container
+					//- 		.row.align-items-center.small.strong
+					//- 			.col Товары (3)
+					//- 			.col-auto 13701 ₽
+							
+					//- 		.row.align-items-center.small.strong
+					//- 			.col доставка курьером
+					//- 			.col-auto 350 ₽
+					//- 		.row.ttu.py-2
+					//- 			.col итого к оплате
+					//- 			.col-auto.text-pink 350 ₽
+								
+					//- 		a.btn.btn-block.btn-primary(href="#") Оплатить
+
+			+e.foot.row(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`  data-wow-offset="250" )
+				+e.foot-col.col-sm-6
+					p Ваш заказ принят и&nbsp;передан менеджеру, который обязательно с&nbsp;Вами свяжется для уточнения деталей.
+				+e.foot-col.col-sm-6
+					p В&nbsp;случае, если Ваш телефон не&nbsp;доступен, оператор отправит Вам сообщение  по&nbsp;электронной почте.
+	// end s-confirm
