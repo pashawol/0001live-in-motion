@@ -1,6 +1,6 @@
 mixin s-about-page()
 	// start s-about-page
-	+b.SECTION.s-about-page.section.pt-0.block-with-lazy#s-about-page&attributes(attributes)
+	+b.SECTION.s-about-page.block-with-lazy#s-about-page&attributes(attributes)
 		.container
 			.row.section(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`    )
 
@@ -15,22 +15,21 @@ mixin s-about-page()
 				+e.col.col-lg-5.order-lg-first
 					picture.lazy
 						// webp images
-						source(srcset='img/@2x/webp/about-page.webp ',    media=`(min-width: 992px )`, type='image/webp')
-						source(srcset='img/@2x/webp/about-page-mob.webp ',    type='image/webp')
-						// /webp images
-						source(srcset='img/@2x/about-page.jpg'   media=`(min-width: 992px )`,  type='image/jpg')
-						source(srcset='img/@2x/about-page-mob.jpg'    type='image/jpg')
-						img(src='img/@2x/about-page.jpg' alt='')
+					 
+						img(src='img/@2x/about-page.png' alt='')
 			.section(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`  data-wow-offset="250" )
-				h2 Наша жизненная парадигма&nbsp;&mdash; быть не&nbsp;просто объектом происходящих изменений, а&nbsp;активно управлять ими.
+				h2.mb-0 Наша жизненная парадигма&nbsp;&mdash; быть не&nbsp;просто объектом происходящих изменений, а&nbsp;активно управлять ими.
 		 
-			.row(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`  data-wow-offset="250" )
+			.section.row(class="wow fadeInUp" data-wow-duration=`${dur * 2}s`  data-wow-offset="250" )
 
-				.col 
+				+e.col.col 
 					p Мы&nbsp;постоянно укрепляем и&nbsp;совершенствовуем свое тело и&nbsp;свой дух, свои знания  и&nbsp;способности, познаем новое  и&nbsp;неизведанное, достигаем новых вершин  во&nbsp;всем. Именно этот смысл мы&nbsp;вкладываем  в&nbsp;свой лозунг&nbsp;&mdash; Живи в&nbsp;движении!
 
 					p А&nbsp;выбранный нами графический образ символизирует, как известное всем кольцо Мёбиуса, вечный процесс движения!
 				+e.col.col-lg-5
-					+e.logo-wrap
-						+icon('logo')
+					+e.video-wrap.video-background
+						.video-fallback
+						.video-container
+							video#bgvid.fillItUp.video(poster='img/@2x/video.jpg', playsinline='playsinline', autoplay='autoplay', muted='muted', loop='loop')
+								source(src='video.mp4', type='video/mp4')
 	// end s-about-page

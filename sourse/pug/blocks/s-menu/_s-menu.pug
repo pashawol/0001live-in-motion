@@ -18,7 +18,8 @@ mixin s-menu()
 						| &nbsp;&mdash; линия одежды для спорта и&nbsp;активного отдыха
 				+item()
 					+e.DIV.img-wrap
-						+pic('','cap','png')
+						img.lazy.res-i(src="#" data-src=`img/@2x/cap.png`, alt="")
+						//- +pic('','cap','png')
 						//- img.lazy.res-i(src="#" data-src=`img/@2x/cap.png`, alt="")
 					+e.DIV.btn В каталог
 					p Мы&nbsp;создаём удобную, практичную и&nbsp;красивую экипировку,

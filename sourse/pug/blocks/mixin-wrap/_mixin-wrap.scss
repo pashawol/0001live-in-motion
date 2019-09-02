@@ -105,6 +105,7 @@
 		}
 		&__title{
 			padding-right: rem(40);
+			padding-bottom: 1rem;
 		}
 		.row{
 			align-items: flex-start;
@@ -214,6 +215,7 @@
 		}
 		// width: rem(105px);
 		width: rem(145px);
+	
 		@include media-breakpoint-up(md){
 			margin-bottom: 0;
 		}
@@ -223,6 +225,11 @@
 			left: 0;
 			top: 0;	width: 100%;
 			height: 100%;
+		}
+		&--confirm{
+			@include media-breakpoint-down(xs) {
+					width: rem(189) !important;
+			}
 		}
 	}
 	&__total{
@@ -255,7 +262,8 @@
 	// }
 }
 		&__title{
-			// padding-right: rem(40);
+			padding-bottom: .8rem;
+			// padding-right: rem(10);
 			// margin-bottom: rem(10);
 			line-height: 1;
 		}

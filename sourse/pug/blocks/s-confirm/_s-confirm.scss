@@ -16,16 +16,23 @@
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 		background-color: #ffffff;
 		margin-top: rem(25);
+		.row{
+			@include roww(5);
+		}
 		@include media-breakpoint-down(sm) {
 		width: 100%;
 		}
 		@include media-breakpoint-up(md) {
+			.container{
+				// padding-left: 10px;
+				// padding-right: 10px;
+			}
 			// position: absolute;
 			position: relative;
 			// top: 0;
 			left: auto;
 			bottom: auto;
-			padding: rem(30) rem(15);
+			padding: rem(30) rem(5);
 		}
 		padding: rem(30) rem(0);
 		// border-top: 1px solid $body-color;
@@ -39,8 +46,11 @@
 			width: 100%;
 		}
 	}
-	&__foot-col{
+	&__foot{
 		padding-top: rem(80);
+
+	}
+	&__foot-col{
 		p{
 			padding-left: rem(34);
 			position: relative;

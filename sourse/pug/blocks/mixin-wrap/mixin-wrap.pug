@@ -216,30 +216,36 @@ mixin basket(page, confirm)
 		mixin item(x,t)
 			+e.item(class=( page=='confirm' ? "basket__item--confirm" : ''))
 				.row
-					.col-md-auto
+					div( class=(page=='confirm' ? "col-auto" : 'col-md-auto'))
 						.row
 							.col-auto
-								+e.img-wrap
-									+pic('bg', 'prod-sm-'+x)
-							.col.d-md-none
-								+e.title
-									a.text-body.small(href="#")= t
-								+e.size.ttu.small
-									span.text-secondary Размер: 
-									| 
-									|  S
+								if !confirm
+									+e.img-wrap
+										+pic('bg', 'prod-sm-'+x)
+								else
+									+e.img-wrap--confirm
+										+pic('bg', 'prod-sm-'+x,'jpg', "0")
+
+								if !confirm
+									.col.d-md-none
+										+e.title
+											a.text-body.small(href="#")= t
+										+e.size.ttu.small
+											span.text-secondary Размер: 
+											| 
+											|  S
 
 					+e.col.col
 						if !confirm
 							+e.delete
 								+icon("delete")
 						.row
-							+e.col-12.col.d-none.d-md-block(class=( page=='confirm' ? "" : 'col-lg-4'))
+							+e.col-12.col(class=( page=='confirm' ? "" : 'col-lg-4 d-none d-md-block'))
 								+e.title
 									a.text-body.small(href="#")= t
-							+e.col-12.col(class=( page=='confirm' ? "col-auto" : 'col-xl-7'))
+							+e.col-12(class=( page=='confirm' ? "col-md-auto" : 'col-xl-7 col'))
 								.row
-									+e.col-12.d-none.d-md-block(class=( page=='confirm' ? "col-lg-auto" : 'col-xl-4 col-auto'))
+									+e.col-12(class=( page=='confirm' ? "col-lg-auto" : 'col-xl-4 col-auto d-none d-md-block'))
 										+e.size.ttu.small(class=( page=='confirm' ? "pt-0" : ''))
 											span.text-secondary Размер: 
 											| 

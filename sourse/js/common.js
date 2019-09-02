@@ -19,6 +19,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.moreLine();
 	JSCCommon.zhowZoomIng();
 	JSCCommon.stickyFunc();
+	JSCCommon.video();
 
 
 	$(".prod-head__group-title--js").click(function () {
@@ -354,6 +355,29 @@ JSCCommon = {
 			buttontxtless: "Скрыть",     	// Add your inner text for button
 			animationspeed: 250             	// Type your custom speed animation, by defaul is 'auto' auto = 1
 		});
+	},
+	video: function () {
+		var vid = document.getElementById("bgvid");
+ 
+
+		if (window.matchMedia('(prefers-reduced-motion)').matches) {
+				vid.removeAttribute("autoplay");
+				vid.pause();
+				pauseButton.innerHTML = "Paused";
+		}
+		
+		function vidFade() {
+			vid.classList.add("stopfade");
+		}
+		
+		vid.addEventListener('ended', function()
+		{
+		// only functional if "loop" is removed 
+		vid.pause();
+		// to capture IE10
+		vidFade();
+		}); 
+		
 	},
 	zhowZoomIng: function () {
 		$(".zoom-img-js").each(function () {

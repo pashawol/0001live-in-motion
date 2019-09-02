@@ -308,7 +308,7 @@ $h: em(2);
 	}
 
 	&.on span:before {
-		transform: rotate(45deg) translate(em(0), 0px);
+		transform: rotate(45deg) translate(em(0), em(1));
 		background-color: $body-color;
 	}
 
