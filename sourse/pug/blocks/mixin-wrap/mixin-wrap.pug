@@ -226,14 +226,14 @@ mixin basket(page, confirm)
 									+e.img-wrap--confirm
 										+pic('bg', 'prod-sm-'+x,'jpg', "0")
 
-								if !confirm
-									.col.d-md-none
-										+e.title
-											a.text-body.small(href="#")= t
-										+e.size.ttu.small
-											span.text-secondary Размер: 
-											| 
-											|  S
+							if !confirm
+								.col.d-md-none
+									+e.title
+										a.text-body.small(href="#")= t
+									+e.size.ttu.small
+										span.text-secondary Размер: 
+										| 
+										|  S
 
 					+e.col.col
 						if !confirm

@@ -356,7 +356,11 @@ JSCCommon = {
 			animationspeed: 250             	// Type your custom speed animation, by defaul is 'auto' auto = 1
 		});
 	},
+
 	video: function () {
+		if ($("div").is("#bgvid")){
+
+	
 		var vid = document.getElementById("bgvid");
  
 
@@ -377,7 +381,7 @@ JSCCommon = {
 		// to capture IE10
 		vidFade();
 		}); 
-		
+	}
 	},
 	zhowZoomIng: function () {
 		$(".zoom-img-js").each(function () {
