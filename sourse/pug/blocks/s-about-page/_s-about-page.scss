@@ -80,6 +80,20 @@
 			}
 		}
 	}
+	&__video-wrap{
+		position: relative;
+		// @include media-breakpoint-up(lg) {
+
+		// 	@include block();
+		// }
+		// @include block();
+		video{
+			// position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
