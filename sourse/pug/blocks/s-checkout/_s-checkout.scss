@@ -1,0 +1,263 @@
+.s-checkout {
+		 
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(18);
+		&__container{
+			max-width: 980px;
+		}
+
+		&__left-col{
+			flex: 0 0 70%;
+    	max-width: 70%;
+		}
+	}
+	.basket{
+		.row{
+			@include media-breakpoint-down(sm) {
+				@include roww(5);
+			}
+		}
+		&__img-wrap{ 
+			width: rem(72px) !important; 
+			margin-bottom: rem(9);
+		}
+		&__item{
+			&:not(:first-child){
+				padding-top: 0;
+				// padding-top: rem(17);
+			}
+			margin-bottom: rem(17);
+			padding-bottom: 0;
+		}
+		&__title{
+			padding-bottom: rem(5);
+		}
+	}
+
+	.form-wrap{
+
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+	.form-wrap{
+		padding-top: rem(100);
+		&__input{
+			text-transform: uppercase;
+		}
+	}
+	textarea{
+		height: rem(180);
+	}
+	.map-wrapper{
+		@include block(944,500);
+		>*{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100% !important;
+			height: 100% !important;
+			border: none;
+		}
+	}
+}
+
+.s-checkout-gruop{
+	padding-bottom: rem(40);
+	&__head{
+		text-align: center;
+		padding-bottom: rem(17);
+		
+	}
+	&__sm{
+		
+		font-size: $small;
+
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 518px;
+		margin-bottom: rem(2);
+	}
+	&__title{
+		font-size: $em-base;
+		font-weight: 700;
+		line-height: 1;
+
+	}
+	&__body{
+		&.border{
+			border: 1px solid $body-color;
+			margin-bottom: rem(20);
+		 
+			justify-content: center;
+			.row{
+				align-items: center;
+
+				.custom-input{ 
+					&__lab{
+					 
+						background-color: #ffffff;
+						&::after{
+							width: rem(22);
+							height: rem(22);
+						}
+					}
+
+					font-size: $small;
+					&__text{
+						text-transform: uppercase;
+						font-weight: bold;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	 
+	.custom-input__input[type="radio"]:checked + .custom-input__lab{
+		&::after{
+			opacity: 1;
+			background-color: $success;
+		}
+	}
+}
+.form-wrap__row-wrap{
+	@include media-breakpoint-up(lg) { 
+		max-width: 100%;
+	}
+	max-width: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	
+
+	padding-left: rem(20);
+	padding-right: rem(20);
+	padding-top: rem(60);
+	padding-bottom: rem(40);
+	.col-input{
+		@include media-breakpoint-up(lg) {
+
+			display: flex;
+			justify-content: center;
+		}
+		label{
+			width: initial;
+		}
+	}
+}
+.checkout-total-block{
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	background-color: #fafafa;
+	padding-top: rem(46);
+	padding-bottom: rem(60);
+	margin-bottom: rem(80);
+.container{
+	max-width: rem(357 + 30);
+}
+.btn{
+	width: 100%;
+	max-width: 100%;
+	margin-top: rem(10);
+	margin-bottom: rem(20);
+}
+}
+
+.total-block{
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+	background-color: #ffffff;
+	margin-top: rem(25);
+	
+	.row{
+		@include roww(5);
+	}
+	@include media-breakpoint-down(sm) {
+	width: 100%;
+	}
+	@include media-breakpoint-up(md) {
+		.container{
+			// padding-left: 10px;
+			// padding-right: 10px;
+			max-width: 220px;
+		}
+		// position: absolute;
+		position: relative;
+		// top: 0;
+		left: auto;
+		bottom: auto;
+		padding: rem(30) rem(5);
+	}
+	padding: rem(30) rem(0);
+	// border-top: 1px solid $body-color;
+	// border: 1px solid $body-color;
+	left: 0;
+	z-index: 200;
+	background-color: #ffffff;
+	bottom: 0;
+	// position: fixed;
+	.btn{
+		width: 100%;
+	}
+	&__text{
+		text-align: center;
+		font-size: $small;
+		font-weight: normal;
+		margin-top: rem(70);
+		position: relative;
+		padding-bottom: rem(20);
+		margin-bottom: rem(45);
+		&::before{
+			content: '';
+			@include a-cent(x);
+			top: 100%;
+			@include triangle(32px,  $success, down);
+		}
+	}
+}
+
+.tab-block{
+	&:not(.active){
+		display: none;
+	}
+}
+
+.check-block{
+	.row{
+		justify-content: center;
+	}
+	.custom-input{
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: $small;
+	}
+	@include media-breakpoint-down(sm) {
+		.custom-input{
+			padding-left: 0;
+			text-align: center;
+			&__lab{
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: rem(10);
+			}
+		}
+	}
+}

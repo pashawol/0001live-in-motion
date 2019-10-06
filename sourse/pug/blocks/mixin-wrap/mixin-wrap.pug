@@ -200,7 +200,7 @@ mixin count-block()
 		+e.btn +
 
 
-mixin basket(page, confirm)
+mixin basket(page, confirm, checkout)
 	// +b.basket
 	+b.basket
 		if !confirm
@@ -241,15 +241,24 @@ mixin basket(page, confirm)
 								+icon("delete")
 						.row
 							+e.col-12.col(class=( page=='confirm' ? "" : 'col-lg-4 d-none d-md-block'))
-								+e.title
-									a.text-body.small(href="#")= t
+								if !checkout
+									+e.title
+										a.text-body.small(href="#")= t
+								else
+									.row
+										.col
+											+e.title
+												a.text-body.small(href="#")= t
+										.col-auto.small.d-md-none X2
 							+e.col-12(class=( page=='confirm' ? "col-md-auto" : 'col-xl-7 col'))
 								.row
-									+e.col-12(class=( page=='confirm' ? "col-lg-auto" : 'col-xl-4 col-auto d-none d-md-block'))
-										+e.size.ttu.small(class=( page=='confirm' ? "pt-0" : ''))
-											span.text-secondary Размер: 
-											| 
-											|  S
+									if !checkout
+										+e.col-12(class=( page=='confirm' ? "col-lg-auto" : 'col-xl-4 col-auto d-none d-md-block'))
+											+e.size.ttu.small(class=( page=='confirm' ? "pt-0" : ''))
+												span.text-secondary Размер: 
+												| 
+												|  S
+												
 									.col.text-lg-left(class=( page=='confirm' ? "" : 'text-center'))
 										if !confirm
 											.row.align-items-center
@@ -257,9 +266,26 @@ mixin basket(page, confirm)
 													+count-block()
 												.col-md.col-auto.small.mb-2 ( 3000 ₽  X2 )
 												.col-lg-auto.col-md-12.col-auto.strong.mb-2 3000 ₽
+										
 										else
-											.small.mb-2 ( 3000 ₽  X2 )
-											.strong.mb-2 3000 ₽
+											if !checkout
+												.small.mb-2 ( 3000 ₽  X2 )
+												.strong.mb-2 3000 ₽
+											else
+												+e.size--checkout.ttu.small.d-none.d-md-block.mb-3(class=( page=='confirm' ? "pt-0" : ''))
+													span.text-secondary Размер: 
+													| 
+													|  S
+												.row
+													//- .col-12.mb-2
+													.col-md-auto.col.small 
+														.d-none.d-md-block ( 3000 ₽  X2 )
+														
+														+e.size--checkout.ttu.small.d-md-none(class=( page=='confirm' ? "pt-0" : ''))
+															span.text-secondary Размер: 
+															| 
+															|  S
+													.col-auto.strong.small 3000 ₽
 			// /+e.item
 		+item('1','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
 		+item('2','Футболка мужская "Даунхилл"  ')

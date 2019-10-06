@@ -1,0 +1,138 @@
+mixin s-checkout()
+	// start s-checkout
+	+b.s-checkout.section.block-with-lazy#s-checkout&attributes(attributes)
+		+e.container.container
+			.row
+				+e.left-col.col-xl-8.col-lg-8
+					block
+				+e.right-col.col.sticky-block-wrapper
+					+b.total-block.sticky-block-js
+						.container
+							.row.py-2.strong
+								.col Итого:
+								.col-auto.ttu 12567 ₽
+							+e.text Заполните форму ниже,  чтобы подвердить заказ
+			+form-wrap()
+				mixin gr(t, sm)
+					.s-checkout-gruop
+						.s-checkout-gruop__head
+							.s-checkout-gruop__title= t
+							if sm
+								.s-checkout-gruop__sm= sm
+						
+						.s-checkout-gruop__body&attributes(attributes)
+							block
+					// / .s-checkout-gruop
+				+gr("Укажите населённый пункт")
+					+input('Населённый пункт*')
+				+gr("Способ получения")(class="border")
+					+e.row-wrap: .row
+						.col-input.col-lg-6
+							+in-c("radio","","shipping-input")(checked data-tabs="#tab1")
+								+e.SPAN.text Доставка курьером
+								+e.SPAN.sub-text Заказ придёт по выбранному адресу
+						
+						.col-input.col-lg-6
+							+in-c("radio","","shipping-input")( data-tabs="#tab2")
+								+e.SPAN.text самовывоз
+								+e.SPAN.sub-text Можно забрать из 992 пунктов
+				br
+				.tab-block.active#tab1
+					+gr("Данные получателя", 'Пожалуйста, указывайте реальные данные —  у вас могут попросить паспорт, прежде чем вручить оплаченный заказ.')
+						+input('адрес доставки (улица, дом)*')
+						+input('Квартира')
+						+input('фио*')
+						.row
+							.col-lg-6
+								+input('E-mail*','email')
+								+e.text-sub.small  * — Обязательные поля для
+									br
+									| заполнения
+							
+							.col-lg-6
+								+input('Телефон*','tel')
+								+e.text-sub.small  Номер телефона необходим для оповещения о статусе
+									br
+									| вашего заказа
+							
+					+gr("Условия доставки")
+						.row
+							.col-lg-6
+								+select("с 21 по 22 марта",' с 21 по 22 марта 2',' с 21 по 22 марта 3',' с 21 по 22 марта 4') 
+							
+							.col-lg-6
+								+select("с 10:00 До 18:00, 350 ₽ ",' с 10:00 До 18:00, 350 ₽  2',' с 10:00 До 18:00, 350 ₽  3',' с 10:00 До 18:00, 350 ₽  4') 
+							
+				.tab-block#tab2
+					+gr("Пункты выдачи (Москва)", 'Пожалуйста, выберите пункт выдачи заказа.')
+						+b.check-block
+							.row
+								.col-md-auto.col-4
+									+in-c("checkbox","Постаматы")
+								
+								.col-md-auto.col-4
+									+in-c("checkbox","Круглосуточно")
+								
+								.col-md-auto.col-4
+									+in-c("checkbox","Ежедневно")
+								
+						.map-wrapper
+							<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2433.111009807263!2d30.998988315965182!3d52.42278625118135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x46d4684d2417419d%3A0x7a9fd4a48bc9a0e2!2z0YPQu9C40YbQsCDQk9Cw0LPQsNGA0LjQvdCwIDU3LCDQk9C-0LzQtdC70YwgMjQ2MDE3!3m2!1d52.422782999999995!2d31.001177!5e0!3m2!1sru!2sby!4v1570356769940!5m2!1sru!2sby"  allowfullscreen=""></iframe>
+					+gr("Данные получателя", 'Пожалуйста, указывайте реальные данные —  у вас могут попросить паспорт, прежде чем вручить оплаченный заказ.')
+						//- +input('адрес доставки (улица, дом)*')
+						//- +input('Квартира')
+						+input('фио*')
+						.row
+							.col-lg-6
+								+input('E-mail*','email')
+								+e.text-sub.small  * — Обязательные поля для
+									br
+									| заполнения
+							
+							.col-lg-6
+								+input('Телефон*','tel')
+								+e.text-sub.small  Номер телефона необходим для оповещения о статусе
+									br
+									| вашего заказа
+							
+					+gr("Условия доставки")
+						.row
+							.col-lg-6
+								+select("с 21 по 22 марта",' с 21 по 22 марта 2',' с 21 по 22 марта 3',' с 21 по 22 марта 4') 
+							
+							.col-lg-6
+								+select("с 10:00 До 18:00, 350 ₽ ",' с 10:00 До 18:00, 350 ₽  2',' с 10:00 До 18:00, 350 ₽  3',' с 10:00 До 18:00, 350 ₽  4') 
+							
+
+				+gr("Способ оплаты")(class="border")
+					+e.row-wrap: .row
+						.col-input.col-lg-6
+							+in-c("radio","","pay-input")
+								+e.SPAN.text онлайн оплата
+								+e.SPAN.sub-text Банковской картой
+						
+						.col-input.col-lg-6
+							+in-c("radio","","pay-input")
+								+e.SPAN.text Наличными
+								+e.SPAN.sub-text При получении
+				+gr("Комментарий к заказу",'Расскажите, как быстрее добраться к вам,  укажите код домофона, номер подъезда или  другую информацию, которая может пригодиться курьеру.')
+					+input("Ваш комментарий",  "textarea")
+				+b.checkout-total-block
+					.container
+						.row.align-items-center.small.strong
+							.col.ttu Товары (3)
+							.col-auto 13701 ₽
+						
+						.row.align-items-center.small.strong
+							.col.ttu Доставка 
+							.col-auto 350 ₽
+						.row.ttu.py-2.strong
+							.col итого к оплате
+							.col-auto.text-pink 14350 ₽
+							
+						a.btn.btn-block.btn-primary(href="#") Подтвердить заказ
+						.small Нажимая на кнопку , я даю согласие на обработку своих персональных данных и соглашаюсь 
+							| 
+							a(href="#") с Политикой конфиденциальности
+		.small.text-center.text-secondary  © 2019 «live in motion!»
+	// end s-checkout

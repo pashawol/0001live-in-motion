@@ -20,13 +20,14 @@ jQuery(document).ready(function ($) {
 	JSCCommon.zhowZoomIng();
 	JSCCommon.stickyFunc();
 	JSCCommon.video();
+	JSCCommon.radioTAbs();
 
 
 	$(".prod-head__group-title--js").click(function () {
 		$(this).next().slideToggle();
 	})
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1920.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/checkout_delivery_1920.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -212,16 +213,16 @@ jQuery(document).ready(function ($) {
 	});
 	wow.init();
 });
-JSCCommon = {
+const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	// функции для запуска lazy
-	stickyFunc: function () {
+	stickyFunc() {
 		if (window.matchMedia("(min-width: 778px)").matches) {
 
-			$(".s-confirm__total--js").stick_in_parent({
+			$(".s-confirm__total--js, .sticky-block-js").stick_in_parent({
 				offset_top: $(".top-nav").height(),
 				inner_scrolling: true,
-				parent: '.s-confirm__right-col',
+				parent: ' .sticky-block-wrapper',
 				// // recalc_every: 1,
 				//  recalc_every: true,
 			});
@@ -231,7 +232,7 @@ JSCCommon = {
 
 	// /LazyFunction
 
-	magnificPopupCall: function () {
+	magnificPopupCall() {
 		$('.popup-with-move-anim').magnificPopup({
 			type: 'inline',
 
@@ -278,7 +279,7 @@ JSCCommon = {
 		// /modal галерея
 	},
 	// /magnificPopupCall
-	mobileMenu: function () {
+	mobileMenu() {
 		// закрыть/открыть мобильное меню
 		function paddRight(elem) { 
 			let div = document.createElement('div'); 
@@ -288,7 +289,7 @@ JSCCommon = {
 			document.body.append(div);
 			let  padd = div.offsetWidth - div.clientWidth;
 
-			console.log(padd);
+		 
 			// console.log(1);
 			$(elem).css("paddingRight", padd);
 			div.remove(); 
@@ -332,7 +333,7 @@ JSCCommon = {
 	// /mobileMenu
 
 	// табы  . 
-	tabscostume: function (tab) {
+	tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
@@ -343,12 +344,12 @@ JSCCommon = {
 	},
 	// /табы  .  
 	// /CustomYoutubeBlock
-	inputMask: function () {
+	inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+]7 [(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7 (999) 999-99-99");
 	},
 	// /inputMask
-	moreLine: function () {
+	moreLine() {
 		$('.text-more').moreLines({
 			linecount: 7,
 			buttontxtmore: "Подробнее",     	// Add your inner text for button
@@ -357,7 +358,7 @@ JSCCommon = {
 		});
 	},
 
-	video: function () {
+	video() {
 		if ($("div").is("#bgvid")){
 
 	
@@ -383,7 +384,7 @@ JSCCommon = {
 		}); 
 	}
 	},
-	zhowZoomIng: function () {
+	zhowZoomIng() {
 		$(".zoom-img-js").each(function () {
 
 			new ImageZoom($(this), {
@@ -399,6 +400,29 @@ JSCCommon = {
 		// 		// preload: '<p class="preloader">Loading the image</p>',
 		// 		parent: '.prod-head__slide'
 		// });
+	},
+	radioTAbs() {
+		// $('[data-tabs]').checked(function(){
+		// 	$($(this).data("tabs")).fadeIn(function(){$(this).addClass('active')}).siblings().hide(function(){$(this).removeClass('active')})
+		// })
+
+	// табы на радиокнопках
+	$('[data-tabs]').change(function () {
+		var th = $(this),
+			tabRadio = th.data('tabs');
+		$( tabRadio).fadeIn(100).addClass("active")
+			.siblings('.tab-block').removeClass('active').hide();
+			// console.log(th.data('tabs'))
+	})
+		$('[data-tabs]').each(function () {
+			var th = $(this),
+				tabRadio = th.data('tabs');
+			if (th.is(":checked")) {
+	
+				$(tabRadio).fadeIn(100).addClass("active")
+					.siblings('.tab-block').removeClass('active').hide();
+			}
+		})
 	}
 };
 
