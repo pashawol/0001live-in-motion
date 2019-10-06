@@ -47,13 +47,14 @@ jQuery(document).ready(function ($) {
 		// var topH = 	$('.top-nav  ').innerHeight();
 		function navFixed() {
 			var topH = $('header').height();
-			if ($(this).scrollTop() > topH) {
+			if ($(window).scrollTop() > topH) {
 				$('.btn-top').addClass('active');
 		 
 			} else {
 				$('.btn-top').removeClass('active');
 			}
-			if ($(this).scrollTop() > 0) {
+			if ($(window).scrollTop() > 0) {
+	 
 				$('.top-nav  ').addClass('fixed');
 			} else {
 				$('.top-nav  ').removeClass('fixed');
@@ -63,6 +64,7 @@ jQuery(document).ready(function ($) {
 		$(window).scroll(function () {
 			navFixed()
 		});
+		navFixed()
 		// конец добавил
 		if (window.matchMedia("(min-width: 1200px)").matches) {
 

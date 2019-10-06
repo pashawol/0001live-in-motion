@@ -38,13 +38,13 @@ jQuery(document).ready(function ($) {
 		function navFixed() {
 			var topH = $('header').height();
 
-			if ($(this).scrollTop() > topH) {
+			if ($(window).scrollTop() > topH) {
 				$('.btn-top').addClass('active');
 			} else {
 				$('.btn-top').removeClass('active');
 			}
 
-			if ($(this).scrollTop() > 0) {
+			if ($(window).scrollTop() > 0) {
 				$('.top-nav  ').addClass('fixed');
 			} else {
 				$('.top-nav  ').removeClass('fixed');
@@ -54,7 +54,8 @@ jQuery(document).ready(function ($) {
 		navFixed();
 		$(window).scroll(function () {
 			navFixed();
-		}); // конец добавил
+		});
+		navFixed(); // конец добавил
 
 		if (window.matchMedia("(min-width: 1200px)").matches) {
 			btnToggle.removeClass("on"); // $("body").removeClass("fixed");
