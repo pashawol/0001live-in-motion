@@ -19,6 +19,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.stickyFunc();
 	JSCCommon.video();
 	JSCCommon.radioTAbs();
+	JSCCommon.customSelect();
 	$(".prod-head__group-title--js").click(function () {
 		$(this).next().slideToggle();
 	}); // добавляет подложку для pixel perfect
@@ -365,6 +366,12 @@ var JSCCommon = {
 			if (th.is(":checked")) {
 				$(tabRadio).fadeIn(100).addClass("active").siblings('.tab-block').removeClass('active').hide();
 			}
+		});
+	},
+	customSelect: function customSelect() {
+		$('select').select2({
+			// theme: 'bootstrap4',
+			minimumResultsForSearch: Infinity
 		});
 	}
 }; // JSCCommon.LazyFunction();

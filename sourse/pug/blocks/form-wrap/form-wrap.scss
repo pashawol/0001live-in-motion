@@ -24,6 +24,18 @@
 	 textarea{
 		 height: rem(202);
 	 }
+
+	 &__text-sub{
+		 padding-top: rem(10);
+		//  margin-bottom: rem(20);
+		
+		 @include media-breakpoint-down(sm) {
+			br{
+
+				 display: none;
+				}
+		 }
+	 }
 }
 
 
@@ -133,6 +145,7 @@
 
 	&__input[type="radio"] + &__lab{ 
 		border-radius: 50%;
+		top: 0;
 		&::after{ 
 			border-radius: 50%;
 		}
@@ -149,88 +162,35 @@
  
 }
 
-
-
-
-
-// .jq-selectbox{
-// 	max-width: 100%;
-// 	margin: auto;
-// 	display: block !important;
-//  // height: auto;
-// 	&__select{
-// 		// background-color: transparent;
-		 
-// 		box-shadow: none !important; 
-// 		background-image: none !important;
-// 		text-shadow: none;
-// 		font-family: $default-font;
-// 		font-size: rem(14); 
-// 		text-align: left;
-// 		border: 1px solid #dadada;
-// 		background-color: #fff;
-// 		padding-top: rem(12);
-// 		padding-bottom: rem(12);
-// 		height: auto;
-// 		border-radius: rem(6);
-// 		@include mt;
-// 		&:hover{
-		 
-// 		}
-// 		&-text{
-// 			// width: 100% !important;
-// 			line-height: 1;
-// 		}
-// 	}	
-// 	&__select:hover &__trigger{
-		 
-// 	}
-// 	&__trigger{
-// 		border: none;
-// 		background-color: #dadada; 
-// 		height: 100%;
-// 		width: 40px;
-// 		border-radius: rem(6);
-// 		text-align: center;
-// 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAA40lEQVRIS9XVXRXCMAwF4HsVgARQABLAATgAZeAAHIAEJIADUFBOdtqdwdKk7OeBPa7pl61JW8J5QghLAKcYtiV58+bQCojgBcA0xj0BrD04iypgyu/CKmqARXALLQBd+AP9ATThGg0h7AAcvMoq4601rtAeYDPHnuRRXnAgMOEVLKg086LDb2tTHiRnZvN3TfRH6MBreic5H6f6o/RpqnCPfn0B2JC8Jkvb+zI4KWwnAVff52vulCqBVbDaptoXxdPKgrNgFo3Fk7tJg03QRDOwC7poAz7HZZIq97tNCzugFfYGUK5wGWWE5JYAAAAASUVORK5CYII=);
-// 		background-position: center;
-// 		background-repeat: no-repeat;
-// 		@include mt;
-// 		&:hover{
-			
-
-// 		}
-// 	}
-// 	&__trigger-arrow { 
-// 		border: none;
-    
-// }
-// li{
-// 	font-size: rem(16);
-// 	padding: em(10px) 10px em(10px);
-// 	&:hover {
-     
-//     color: #fff;
-// }
-// }
-// }
-
-
-
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	background-image: url(../img/svg/chevron-down.svg);
+				// border-color: $success transparent transparent transparent;
+				border: none;
+				width: rem(17);
+				height: rem(9px);
+				background-size: 100%;
+				right: rem(20);
+				@include a-cent(y);
+}
 .select2-container--default{
 	display: block;
 	outline: 0 !important; 
 	.select2-selection--single{
-		border-radius: 0;
-		border: none;
-		border-bottom: solid 1px ;
-		height: auto;
-		font-size: rem(24px);
-		outline: 0 !important; 
+		@extend .form-control;
+	 
+		padding-right: rem(37);
+		text-transform: uppercase;
 		.select2-selection__arrow b{
-				border-color: $success transparent transparent transparent;
-			  border-style: solid;
-			  border-width: 7px 7px 0 7px;
+			// background-image: url(../img/svg/chevron-down.svg);
+			// 	// border-color: $success transparent transparent transparent;
+			// 	border: none;
+			// 	width: rem(17);
+			// 	height: rem(9px);
+			// 	background-size: 100%;
+			// 	right: rem(20);
+			display: none;
+				// border-width: 7px 7px 0 7px;
+			
 		}
 		.select2-selection__rendered{
 			white-space: normal;
@@ -240,10 +200,27 @@
 		}
 	}
 } 
-.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
-	border-color: transparent transparent $success transparent;
-  border-width: 0 7px 7px 7px;
+.select2-container--default.select2-container--open .select2-selection--single {
+	border: 1px solid #BDBDBD;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow  {
+	background-image: url(../img/svg/chevron-up.svg);
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+	background-color:  #F2F2F2;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
-	background-color: $success;
+	background-color: #DCEEBB;
+	color: $body-color;
+}
+
+.select2-results__option{
+	padding: rem(20) rem(20);
+	font-size: rem(14);
+	border-top: 1px solid #BDBDBD;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+	max-height: rem(60 * 4);
+	overflow-y: auto;
 }

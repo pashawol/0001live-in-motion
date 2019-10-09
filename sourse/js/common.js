@@ -21,6 +21,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.stickyFunc();
 	JSCCommon.video();
 	JSCCommon.radioTAbs();
+	JSCCommon.customSelect();
 
 
 	$(".prod-head__group-title--js").click(function () {
@@ -425,6 +426,12 @@ const JSCCommon = {
 					.siblings('.tab-block').removeClass('active').hide();
 			}
 		})
+	},
+	customSelect() {
+		$('select').select2({
+			// theme: 'bootstrap4',
+			minimumResultsForSearch: Infinity
+	});
 	}
 };
 

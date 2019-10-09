@@ -272,23 +272,26 @@ mixin basket(page, confirm, checkout)
 												.small.mb-2 ( 3000 ₽  X2 )
 												.strong.mb-2 3000 ₽
 											else
-												+e.size--checkout.ttu.small.d-none.d-md-block.mb-3(class=( page=='confirm' ? "pt-0" : ''))
+												+e.size--checkout.ttu.small.d-none.d-md-block.mb-3
 													span.text-secondary Размер: 
 													| 
 													|  S
 												.row
 													//- .col-12.mb-2
 													.col-md-auto.col.small 
-														.d-none.d-md-block ( 3000 ₽  X2 )
+														.d-none.d-md-block.mb-2 ( 3000 ₽  X2 )
 														
 														+e.size--checkout.ttu.small.d-md-none(class=( page=='confirm' ? "pt-0" : ''))
 															span.text-secondary Размер: 
 															| 
 															|  S
-													.col-auto.strong.small 3000 ₽
+													.col-auto.strong.small.mb-2 3000 ₽
 			// /+e.item
 		+item('1','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
 		+item('2','Футболка мужская "Даунхилл"  ')
+		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
+		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
+		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
 		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
 		if !confirm
 			+e.total

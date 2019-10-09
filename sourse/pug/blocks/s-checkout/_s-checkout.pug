@@ -6,7 +6,7 @@ mixin s-checkout()
 				+e.left-col.col-xl-8.col-lg-8
 					block
 				+e.right-col.col.sticky-block-wrapper
-					+b.total-block.sticky-block-js
+					+b.total-block
 						.container
 							.row.py-2.strong
 								.col Итого:
@@ -45,15 +45,15 @@ mixin s-checkout()
 						.row
 							.col-lg-6
 								+input('E-mail*','email')
-								+e.text-sub.small  * — Обязательные поля для
-									br
-									| заполнения
+									+e.text-sub.small  * &mdash; Обязательные поля для 
+										br 
+										| заполнения
 							
 							.col-lg-6
 								+input('Телефон*','tel')
-								+e.text-sub.small  Номер телефона необходим для оповещения о статусе
-									br
-									| вашего заказа
+									+e.text-sub.small  Номер телефона необходим для оповещения о&nbsp;статусе
+										br
+										| вашего заказа
 							
 					+gr("Условия доставки")
 						.row

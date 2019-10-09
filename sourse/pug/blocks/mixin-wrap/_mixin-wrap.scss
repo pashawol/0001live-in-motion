@@ -269,11 +269,15 @@
 		}
 
 		&__size{
-			padding-bottom: rem(15);
+			padding-bottom: rem(5);
 			@include media-breakpoint-up(lg) {
 				
 			}
 			padding-top: rem(12);
+			&--checkout{
+				padding-top: rem(5);
+				
+			}
 		}
 		.btn-sm{
 			width: rem(175);
