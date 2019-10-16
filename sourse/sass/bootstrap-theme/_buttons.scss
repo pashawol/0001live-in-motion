@@ -18,6 +18,10 @@
   overflow: hidden;
   z-index: 2;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  // @include media-breakpoint-down(xs) {
+  //   @include button-size(($btn-padding-y * $m), ($btn-padding-x * $m), ($btn-font-size * $m), $btn-line-height, $btn-border-radius);
+
+  // } 
   @include mt;
 
   @include hover {

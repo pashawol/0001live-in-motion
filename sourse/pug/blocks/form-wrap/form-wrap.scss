@@ -124,11 +124,13 @@
 		@include mt;
 		position: absolute; 
 		margin-right: 10px;
+		@include mt;
 		&::after{  
 			content: '';
 			position: absolute;
 			@include a-cent; 
 			opacity: 0;
+			@include mt;
 		}
 
 	}
@@ -137,9 +139,14 @@
 		&::after{ 
 			content:   url(../img/svg/checkbox-lg.svg);
 			position: absolute;
-			@include a-cent; 
+			left: 50%;
+			top: 50%;
+			bottom: auto;
+			right: auto;
+			@include transform(translateX(-50%) translateY(-50%) scale(0)) ;
 			opacity: 0;
 			margin-top: rem(5);
+			
 		}
 	}
 
@@ -148,10 +155,27 @@
 		top: 0;
 		&::after{ 
 			border-radius: 50%;
+			top: 100%;
+			// opacity: 1;
 		}
 	}
 
+	&__input[type="checkbox"]:checked + &__lab{
+		&::after{
+	
+			@include transform(translateX(-50%) translateY(-50%) scale(1)) ;
+			// opacity: 1;
+		}
+	}
+	&__input[type="radio"]:checked + &__lab{
+		&::after{
+	
+			opacity: 1;
+			top: 50%;
+		}
+	}
 	&__input:checked + &__lab{
+
 		// background-color: $success;
 		 
 		&::after{
@@ -215,6 +239,11 @@
 }
 
 .select2-results__option{
+	// @include media-breakpoint-down(xs){
+
+	// 	padding: rem(20 * $m) rem(20 * $m);
+	// 	font-size: rem(14 * $m);
+	// }
 	padding: rem(20) rem(20);
 	font-size: rem(14);
 	border-top: 1px solid #BDBDBD;
@@ -231,3 +260,9 @@
 .select2 {
 	width:100%!important;
 	}
+
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		padding-bottom: 0;
+		// line-height: inherit;
+		line-height: 2;
+	} 

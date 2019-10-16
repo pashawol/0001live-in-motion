@@ -82,6 +82,10 @@
 	}
 	&__video-wrap{
 		position: relative;
+		height: 100%;
+		.video-container{
+			height: 100%;
+		}
 		// @include media-breakpoint-up(lg) {
 
 		// 	@include block();
@@ -92,6 +96,11 @@
 			left: 0;
 			top: 0;
 			width: 100%;
+			@include media-breakpoint-up(md) {
+
+				min-height: calc(100% - #{rem(40px)});
+			}
+			object-fit: cover;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
