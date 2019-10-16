@@ -148,6 +148,10 @@
 	&__logo{
 		.icon{
 			font-size: rem(90);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(50);
+
+			}
 			color: $success;
 
 		}

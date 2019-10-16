@@ -12,7 +12,7 @@ mixin mob-mnu()
 				a.strong.text-body.small(href="tel:8(800)7750077") 8 (800) 77 500 77
 				.small с 18:00 до 20:00 ежедневно
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(mane) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		+e.head
@@ -21,7 +21,7 @@ mixin top-nav()
 					.col-auto.d-xl-none
 						+b.toggle-menu-mobile--js
 							span
-					.col.d-xl-none.text-center
+					.col.text-center(class=(mane ? "d-xl-none": 'col-xl-auto' ))
 						+e.logo(href="#")
 							+icon('logo')
 					.col.d-none.d-xl-block
