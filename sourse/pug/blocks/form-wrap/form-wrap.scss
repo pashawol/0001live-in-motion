@@ -1,6 +1,7 @@
 .form-wrap{
 	&__input-wrap{
 		@extend .form-group;
+		position: relative;
 		
 		margin-bottom: rem(19);
 		}
@@ -16,7 +17,22 @@
 		 @extend .btn-primary;
 		 width: 100%;
 		 display: block;
- 	}
+	 }
+	 &__title{
+		 font-size: rem(10);
+		 position: absolute;
+		 left: rem(15);
+		 top: em(-20);
+		 z-index: 5;
+		 span{
+			 padding-left: rem(8);
+			 padding-right: rem(8);
+			 background-color: #fff;
+			 
+		 }
+		//  transform: translateY(-);
+	 }
+
  	label{
  		width: 100%;
  		display: block;
@@ -37,8 +53,35 @@
 		 }
 	 }
 }
+.empty .form-wrap__title{
+	opacity: 0;
+}
+.form-wrap__valid-text{
+	margin-left: rem(5);
+}
 
+.is-invalid{
+	color: $danger;
+	&::placeholder {
+    color: $danger;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
 
+	+ .form-wrap__title{
+		opacity: 1;
+		color: $danger;
+	}
+}
+.is-valid {
+
+	color: $success;
+	+ .form-wrap__title{
+		opacity: 1;
+		color: $success;
+	}
+	
+}
 .parsley-error{
 	border-image: none;
 	border: 2px solid  red !important;

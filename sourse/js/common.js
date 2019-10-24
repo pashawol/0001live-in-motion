@@ -22,10 +22,11 @@ jQuery(document).ready(function ($) {
 	JSCCommon.video();
 	JSCCommon.radioTAbs();
 	JSCCommon.customSelect();
+	JSCCommon.inputLabel();
 
 
 	$(".prod-head__group-title--js").click(function () {
-		$(this).next().slideToggle();
+		$(this).toggleClass("active").next().slideToggle();
 	})
 	// добавляет подложку для pixel perfect
 	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/checkout_delivery_1920.png);"></div>')
@@ -431,6 +432,18 @@ const JSCCommon = {
 		$('select').select2({
 			// theme: 'bootstrap4',
 			minimumResultsForSearch: Infinity
+	});
+	},
+	inputLabel() {
+			// для плаваюещего label
+	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('label').addClass('empty');
+
+	$('input, textarea').keyup(function () {
+		if ($(this).val().trim() !== '') {
+			$(this).closest('label').removeClass('empty');
+		} else {
+			$(this).closest('label').addClass('empty');
+		}
 	});
 	}
 };

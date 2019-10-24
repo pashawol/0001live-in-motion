@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+//- include ../blocks/s-style/_s-style.pug
+//- include ../blocks/s-articals/_s-articals.pug
+include ../blocks/s-prod/_s-prod.pug
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/s-plan/_s-plan.pug
+//- include ../blocks/prod-head/_prod-head.pug
+//- include ../blocks/prod-body/_prod-body.pug
+include ../blocks/s-confirm/_s-confirm.pug
+include ../blocks/s-checkout/_s-checkout.pug
+
+block title
+	title Оформление заказа
+
+block pagecontent
+
+	// повесь этот класс на body .not-main-page  я в сборке не могу
+	.not-main-page
+
+		+header()
+			//- +top-line()
+			+top-nav()
+			//- +header-block()
+		//- .page-title
+		.container 
+			.w-50
+				+form-wrap()
+					+input('Населённый пункт*')(required class="is-valid" value="is-valid")
+						
+					+input('Населённый пункт*')(required class="is-invalid" value="is-invalid")
+						
+					+input('Населённый пункт*')(required class="is-invalid")
+						
+					+input('Населённый пункт*')(required)
+					+select("с 10:00 До 18:00, 350 ₽ ",' с 10:00 До 18:00, 350 ₽  2',' с 10:00 До 18:00, 350 ₽  3',' с 10:00 До 18:00, 350 ₽  4') 
+					button(type="submit") Submit

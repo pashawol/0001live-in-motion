@@ -121,15 +121,21 @@
 				@include mt;
 				top: rem(2);
 			}
+			&.active{
+				&::before{
+					transform: rotateX(0);
+
+				}
+			}
 		}
 	}
 	&__group-block--hidden{
 		display: none;
 	}
 	.text-more{
-		padding-bottom: rem(10);
+		// padding-bottom: rem(10);
 		line-height: 1.5;
-		margin-bottom: rem(15);
+		margin-bottom: rem(25);
 	}
 
 	&__slider-sm{

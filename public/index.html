@@ -36,7 +36,7 @@
 								</div>
 								<div class="col d-none d-xl-block">
 									<ul class="top-nav__nav">
-										<li class="top-nav__item"><a class="top-nav__link" href="#">Магазин</a>
+										<li class="top-nav__item"><a class="top-nav__link" href="#">Каталог</a>
 										</li>
 										<li class="top-nav__item"><a class="top-nav__link" href="#">О бренде</a>
 										</li>
@@ -66,7 +66,7 @@
 					<div class="menu-mobile menu-mobile--js d-xl-none">
 						<div class="menu-mobile__inner">
 							<ul class="menu-mobile__nav">
-								<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Магазин</a>
+								<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Каталог</a>
 								</li>
 								<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">О бренде</a>
 								</li>
@@ -341,7 +341,7 @@
 									<div class="header-block__title">live in motion!
 									</div>
 									<p>Одежда для тренировок и&nbsp;активного отдыха, которая будет вас радовать и&nbsp;вдохновлять на&nbsp;новые победы</p>
-									<div class="header-block__btn-wrap"><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call">Купить</a><a class="header-block__btn btn-outline" href="#">Lookbook</a>
+									<div class="header-block__btn-wrap"><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call">Купить</a><a class="header-block__btn btn-outline" href="#">О бренде</a>
 									</div>
 								</div>
 							</div>
@@ -383,7 +383,7 @@
 											<div class="header-block__title">live in motion!
 											</div>
 											<p>Одежда для тренировок и&nbsp;активного отдыха, которая будет вас радовать и&nbsp;вдохновлять на&nbsp;новые победы</p>
-											<div class="header-block__btn-wrap"><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call">Купить</a><a class="header-block__btn btn-outline" href="#">Lookbook</a>
+											<div class="header-block__btn-wrap"><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call">Купить</a><a class="header-block__btn btn-outline" href="#">О бренде</a>
 											</div>
 										</div>
 									</div>
@@ -409,7 +409,7 @@
 											<div class="header-block__title">live in motion!
 											</div>
 											<p>Одежда для тренировок и&nbsp;активного отдыха, которая будет вас радовать и&nbsp;вдохновлять на&nbsp;новые победы</p>
-											<div class="header-block__btn-wrap"><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call">Купить</a><a class="header-block__btn btn-outline" href="#">Lookbook</a>
+											<div class="header-block__btn-wrap"><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call">Купить</a><a class="header-block__btn btn-outline" href="#">О бренде</a>
 											</div>
 										</div>
 									</div>
@@ -435,7 +435,7 @@
 											<div class="header-block__title">live in motion!
 											</div>
 											<p>Одежда для тренировок и&nbsp;активного отдыха, которая будет вас радовать и&nbsp;вдохновлять на&nbsp;новые победы</p>
-											<div class="header-block__btn-wrap"><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call">Купить</a><a class="header-block__btn btn-outline" href="#">Lookbook</a>
+											<div class="header-block__btn-wrap"><a class="header-block__btn btn-primary popup-with-move-anim" href="#modal-call">Купить</a><a class="header-block__btn btn-outline" href="#">О бренде</a>
 											</div>
 										</div>
 									</div>
@@ -788,16 +788,24 @@
 							</div>
 							<div class="form-wrap">
 								<form>
-									<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="Ваше имя*" name="text"/>
+									<div class="form-wrap__input-wrap">
+										<label><input class="form-wrap__input" type="text" placeholder="Ваше имя*" name="text"/><span class="form-wrap__title"><span>Ваше имя*</span><span class="form-wrap__valid-text">valid text</span></span>
+										</label>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+									<div class="form-wrap__input-wrap">
+										<label><input class="form-wrap__input" type="tel" placeholder="Ваш телефон" name="tel" required="required"/><span class="form-wrap__title"><span>Ваш телефон</span><span class="form-wrap__valid-text">valid text</span></span>
+										</label>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="email" placeholder="Ваш e-mail*" name="email"/> 
+									<div class="form-wrap__input-wrap">
+										<label><input class="form-wrap__input" type="email" placeholder="Ваш e-mail*" name="email"/><span class="form-wrap__title"><span>Ваш e-mail*</span><span class="form-wrap__valid-text">valid text</span></span> 
+										</label>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap"><textarea class="form-wrap__input form-control" placeholder="Ваша идея" name="textarea"></textarea>
+									<div class="form-wrap__input-wrap">
+										<label><textarea class="form-wrap__input form-control" placeholder="Ваша идея" name="textarea"></textarea><span class="form-wrap__title"><span>Ваша идея</span><span class="form-wrap__valid-text">valid text</span></span>
+										</label>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="form-wrap__btn" type="submit">Отправить
@@ -848,7 +856,9 @@
 								<div class="col-lg">
 									<div class="form-wrap">
 										<form> 
-											<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="email" placeholder="Ваш e-mail*" name="email"/> 
+											<div class="form-wrap__input-wrap">
+												<label><input class="form-wrap__input" type="email" placeholder="Ваш e-mail*" name="email"/><span class="form-wrap__title"><span>Ваш e-mail*</span><span class="form-wrap__valid-text">valid text</span></span> 
+												</label>
 											</div>
 											<!-- +e.input-wrap-->
 											<button class="form-wrap__btn" type="submit">Подписаться
@@ -897,13 +907,19 @@
 					<h2>Форма связи</h2>
 					<p>Оставьте ваши контактные данные и&nbsp;мы&nbsp;перезвоним  в&nbsp;ближайшее время</p>
 				</div>
-				<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="Ваше имя*" name="text"/>
+				<div class="form-wrap__input-wrap">
+					<label><input class="form-wrap__input" type="text" placeholder="Ваше имя*" name="text"/><span class="form-wrap__title"><span>Ваше имя*</span><span class="form-wrap__valid-text">valid text</span></span>
+					</label>
 				</div>
 				<!-- +e.input-wrap-->
-				<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="Ваш телефон" name="tel"/>
+				<div class="form-wrap__input-wrap">
+					<label><input class="form-wrap__input" type="tel" placeholder="Ваш телефон" name="tel"/><span class="form-wrap__title"><span>Ваш телефон</span><span class="form-wrap__valid-text">valid text</span></span>
+					</label>
 				</div>
 				<!-- +e.input-wrap-->
-				<div class="form-wrap__input-wrap"><input class="form-wrap__input" type="email" placeholder="Ваш e-mail*" name="email"/> 
+				<div class="form-wrap__input-wrap">
+					<label><input class="form-wrap__input" type="email" placeholder="Ваш e-mail*" name="email"/><span class="form-wrap__title"><span>Ваш e-mail*</span><span class="form-wrap__valid-text">valid text</span></span> 
+					</label>
 				</div>
 				<!-- +e.input-wrap-->
 				<button class="form-wrap__btn" type="submit">Отправить
