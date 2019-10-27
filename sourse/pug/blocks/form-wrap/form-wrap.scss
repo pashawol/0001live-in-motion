@@ -11,27 +11,17 @@
 		//  outline: 0 !important;
 		 resize: none;
 		//  text-transform: uppercase;
- 	}
+	 }
+	 &__input:focus ~ .form-wrap__title{
+		// opacity: 1 !important;
+	}
  	&__btn{
 		 cursor: pointer;
 		 @extend .btn-primary;
 		 width: 100%;
 		 display: block;
 	 }
-	 &__title{
-		 font-size: rem(10);
-		 position: absolute;
-		 left: rem(15);
-		 top: em(-20);
-		 z-index: 5;
-		 span{
-			 padding-left: rem(8);
-			 padding-right: rem(8);
-			 background-color: #fff;
-			 
-		 }
-		//  transform: translateY(-);
-	 }
+
 
  	label{
  		width: 100%;
@@ -54,20 +44,50 @@
 	 }
 }
 .empty .form-wrap__title{
-	opacity: 0;
+	// opacity: 0;
+	font-size: .63636rem;
+	top: rem(20);
+	span + span{
+		display: none;
+	}
 }
+
+.form-wrap__title{
+	font-size: rem(10);
+	
+	position: absolute;
+	left: rem(15);
+	z-index: 5;
+	top: em(-20);
+	pointer-events: none;
+	@include mt;
+	span{
+		padding-left: rem(8);
+		padding-right: rem(8);
+		background-color: #fff;
+		
+	}
+	//  transform: translateY(-);
+}		
+.is-invalid,
+.is-valid,
+			.form-wrap__input:focus{
+
+			&	~ .form-wrap__title {
+					top: em(-20) !important;
+				font-size: rem(10) !important;
+				span + span {
+					display: inline-block;
+				}
+			}
+		} 
 .form-wrap__valid-text{
 	margin-left: rem(5);
 }
 
 .is-invalid{
-	color: $danger;
-	&::placeholder {
-    color: $danger;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
-  }
-
+	// color: $danger;
+	 
 	+ .form-wrap__title{
 		opacity: 1;
 		color: $danger;
@@ -75,7 +95,7 @@
 }
 .is-valid {
 
-	color: $success;
+	// color: $success;
 	+ .form-wrap__title{
 		opacity: 1;
 		color: $success;
@@ -197,13 +217,13 @@
 		border-radius: 50%;
 		top: 0;
 		&::after{ 
-			border-radius: 50%;
-			top: 100%;
+			border-radius: 50%; 
+			@include transform(translateX(-50%) translateY(-50%) scale(0)) ;
 			// opacity: 1;
 		}
 	}
 
-	&__input[type="checkbox"]:checked + &__lab{
+	&__input:checked + &__lab{
 		&::after{
 	
 			@include transform(translateX(-50%) translateY(-50%) scale(1)) ;
@@ -211,10 +231,8 @@
 		}
 	}
 	&__input[type="radio"]:checked + &__lab{
-		&::after{
-	
-			opacity: 1;
-			top: 50%;
+		&::after{ 
+			// top: 50%;
 		}
 	}
 	&__input:checked + &__lab{

@@ -18,6 +18,7 @@
   background-color: $input-bg;
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
+  box-shadow: none !important;
  
 //   @include media-breakpoint-down(xs) {
 
@@ -30,7 +31,7 @@
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @include border-radius($input-border-radius, 0);
 
-  @include box-shadow($input-box-shadow);
+  // @include box-shadow($input-box-shadow);
   @include transition($input-transition);
 
   // Unstyle the caret on `<select>`s in IE10+.
