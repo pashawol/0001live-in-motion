@@ -1,8 +1,18 @@
 .form-wrap{
+	.bx-sls .dropdown-icon,
+	.bx-sls .bx-ui-sls-clear{
+		top: 50%;
+    transform: translateY(-50%);
+	}
+	.bx-sls .bx-ui-sls-pane{
+		top: rem(54);
+	}
 	.bx-sls .dropdown-block { 
 		box-shadow: none;
  
 		@extend .form-control;
+		padding-left: rem(40);
+		padding-top: rem(10);
 		input{
 			background-color: transparent;
 		}
