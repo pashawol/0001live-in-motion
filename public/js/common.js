@@ -1,8 +1,10 @@
 "use strict";
 
-var $ = jQuery;
 jQuery(document).ready(function ($) {
+	// добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/delivery_1920.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// полифил для object-fit
+
 	objectFitImages(); // Picture element HTML5 shiv
 
 	document.createElement("picture"); // для свг
@@ -19,6 +21,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.radioTAbs();
 	JSCCommon.customSelect();
 	JSCCommon.inputLabel();
+	JSCCommon.accordion();
 	$(".prod-head__group-title--js").click(function () {
 		$(this).toggleClass("active").next().slideToggle();
 	}); // добавляет подложку для pixel perfect
@@ -89,6 +92,10 @@ jQuery(document).ready(function ($) {
 			992: {
 				slidesPerView: 3
 			}
+		},
+		navigation: {
+			nextEl: $('.s-prod').find('.swiper-button-next'),
+			prevEl: $('.s-prod').find('.swiper-button-prev')
 		}
 	});
 	var slider = {
@@ -187,6 +194,22 @@ jQuery(document).ready(function ($) {
 		mobile: false
 	});
 	wow.init();
+	var breadSl = new Swiper('.breadcrumb-slider-js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 30,
+		freeMode: true,
+		freeModeMomentum: true,
+		// spaceBetween: 30, 
+		watchOverflow: true
+	});
+	var breadSl = new Swiper('.mnu-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		freeMode: true,
+		freeModeMomentum: true,
+		// spaceBetween: 30, 
+		watchOverflow: true
+	});
 });
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
@@ -380,6 +403,15 @@ var JSCCommon = {
 			} else {
 				$(this).closest('label').addClass('empty');
 			}
+		});
+	},
+	accordion: function accordion() {
+		$('.accord__head').click(function () {
+			var th = $(this);
+			th.next().slideToggle(function () {
+				th.toggleClass('active');
+			});
+			return false;
 		});
 	}
 }; // JSCCommon.LazyFunction();

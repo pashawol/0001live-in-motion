@@ -1,6 +1,6 @@
 mixin title()
 	+e.title-block&attributes(attributes)
-		+breadcrumb("Каталог",'Для мужчин')
+		//- +breadcrumb("Каталог",'Для мужчин')
 		.row
 			.col
 				+e.title Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in&nbsp;motion design
@@ -14,7 +14,7 @@ mixin prod-head()
 			+title()(class="d-xl-none")
 			
 			+e.row.row
-				+e.col-left.col-xl-8
+				+e.col-left.col-xxxl-8.col-xl-7
 					.row
 						+e.slider-wrap.co-xl-12
 							+e.slider.gallery-top.swiper-container.gal
@@ -41,14 +41,35 @@ mixin prod-head()
 												+pic('bg','card-'+i)
 									each int in [1,2,3,4]
 										+img(int) 
-				.col-xl-4
+				.col
 					+title()(class="d-xl-block d-none")
+					.row.row--sm.small.mb-2
+						.col-auto Цвет:
+						.col.strong Красный
+					
+					.row.row--sm.small.mb-2
+						.col-auto Материал:
+						.col
+							strong Хлопок / Полиэстр 
+							| 
+							span.text-secondary (
+								a.tdu.text-secondary(href="#") подробнее
+									|
+									span.d-none.d-md-inline про материал
+								| )
+					.row.row--sm.small.mb-2.pb-4.align-items-center
+						.col-auto Для чего: 
+						.col-auto.strong Бег
+							//- | 
+						.col-auto 
+							img.res-i(src="img/svg/icon-foot.svg", alt="")
+					
 					+e.size-wrap
 						.row.small.pb-2
-							.col Выберите размер
+							.col.strong.ttu Выберите размер
 							.col-auto
 								a(href="#").text-secondary Подбор размера
-						+size()
+						+size()(class="is-invalid")
 						+e.count-block
 							.row
 								.col.small Количество:

@@ -1,0 +1,28 @@
+mixin s-pay()
+	// start s-pay
+	+b.SECTION.s-pay.section.block-with-lazy#s-pay&attributes(attributes)
+		.container
+			.row
+				.col-lg-8
+					+b.section-title
+						h2 Оплачивайте  сразу либо потом
+					+e.P.head-text Мы&nbsp;выбрали самые популярные  и&nbsp;удобные способы оплаты.
+					+e.row.row
+						mixin item(i,t)
+							+e.col.col-sm-6
+								+e.icon-wrap
+									img.res-i(src=`img/svg/pay-${i}.svg`, alt="")
+								+e.title= t
+								block
+						+item("1",'Картой')
+							p Онлайн на&nbsp;сайте, при самовывозе либо курьеру при получении
+						+item("2",'Наличными')
+							p При самовывозе либо  курьеру при получении
+				.col
+					+e.line-right
+						+e.img-wrap
+							img.res-i.lazy(src="#" data-src="img/@2x/pay-img.png", alt="")
+							+e.line-text  Платежи на&nbsp;сайте осуществляются на&nbsp;базе  международного стандарта безопасности 
+								|
+								strong PCI&nbsp;DSS
+	// end s-pay

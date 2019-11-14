@@ -53,10 +53,7 @@
 											</li>
 										</ul>
 									</div>
-									<div class="col-auto d-none d-xl-block"><a class="top-nav__link top-nav__link--tel" href="tel:88007750077">8 800 77 500 77
-										<svg class="icon icon-tel ">
-											<use xlink:href="img/svg/sprite.svg#tel"></use>
-										</svg></a>
+									<div class="col-auto d-none d-xl-block"><a class="top-nav__link top-nav__link--tel" href="tel:88007750077">8 800 77 500 77</a>
 									</div>
 									<div class="col-auto"><a class="top-nav__basket toggle-basket" href="#">
 										<svg class="icon icon-basket ">
@@ -337,13 +334,25 @@
 					<!-- end top-nav-->
 				</header>
 				<!-- end HEADER.header-->
+				<div class="container">
+					<nav class="breadcrumb-slider-js swiper-container" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог  </span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name"> Мужчинам </span>
+									<meta itemprop="position" content="2"/></a></li>
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name"> Худи и свитшоты </span>
+									<meta itemprop="position" content="3"/></a></li>
+							<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name"> Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design</span>
+									<meta itemprop="position" content="4"/></a></li>
+						</ol>
+					</nav>
+				</div>
 				<!-- start prod-head-->
 				<div class="prod-head">
 					<div class="container">
 						<div class="d-none"></div>
 						<div class="prod-head__title-block d-xl-none">
-							<nav class="breadcrumb"><a class="breadcrumb-item" href="#">Каталог</a><span class="breadcrumb-item active">Для мужчин</span>
-							</nav>
 							<div class="row">
 								<div class="col">
 									<div class="prod-head__title">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in&nbsp;motion design
@@ -355,7 +364,7 @@
 							</div>
 						</div>
 						<div class="prod-head__row row">
-							<div class="prod-head__col-left col-xl-8">
+							<div class="prod-head__col-left col-xxxl-8 col-xl-7">
 								<div class="row">
 									<div class="prod-head__slider-wrap co-xl-12">
 										<div class="prod-head__slider gallery-top swiper-container gal">
@@ -467,10 +476,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-4">
+							<div class="col">
 								<div class="prod-head__title-block d-xl-block d-none">
-									<nav class="breadcrumb"><a class="breadcrumb-item" href="#">Каталог</a><span class="breadcrumb-item active">Для мужчин</span>
-									</nav>
 									<div class="row">
 										<div class="col">
 											<div class="prod-head__title">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in&nbsp;motion design
@@ -481,23 +488,37 @@
 										</div>
 									</div>
 								</div>
+								<div class="row row--sm small mb-2">
+									<div class="col-auto">Цвет:</div>
+									<div class="col strong">Красный</div>
+								</div>
+								<div class="row row--sm small mb-2">
+									<div class="col-auto">Материал:</div>
+									<div class="col"><strong>Хлопок / Полиэстр </strong> <span class="text-secondary">(<a class="tdu text-secondary" href="#">
+												подробнее<span class="d-none d-md-inline">про материал</span></a>)</span></div>
+								</div>
+								<div class="row row--sm small mb-2 pb-4 align-items-center">
+									<div class="col-auto">Для чего: </div>
+									<div class="col-auto strong">Бег</div>
+									<div class="col-auto"> <img class="res-i" src="img/svg/icon-foot.svg" alt=""/></div>
+								</div>
 								<div class="prod-head__size-wrap">
 									<div class="row small pb-2">
-										<div class="col">Выберите размер</div>
+										<div class="col strong ttu">Выберите размер</div>
 										<div class="col-auto"><a class="text-secondary" href="#">Подбор размера</a></div>
 									</div>
 									<form class="sizes-block">
 										<label class="sizes-block__size-item"> 
 											<input type="radio" name="size" checked="checked"/><span class="sizes-block__lab">S</span>
 										</label>
-										<label class="sizes-block__size-item"> 
-											<input type="radio" name="size"/><span class="sizes-block__lab">M</span>
+										<label class="sizes-block__size-item">
+											<input class="is-invalid" type="radio" name="size"/><span class="sizes-block__lab">M</span>
 										</label>
 										<label class="sizes-block__size-item"> 
-											<input type="radio" name="size"/><span class="sizes-block__lab">L</span>
+											<input class="is-invalid" type="radio" name="size"/><span class="sizes-block__lab">L</span>
 										</label>
 										<label class="sizes-block__size-item"> 
-											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
+											<input class="is-invalid" type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
 									<div class="prod-head__count-block">

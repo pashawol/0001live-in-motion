@@ -5,6 +5,11 @@
 	}
 	.bx-sls .bx-ui-sls-variants .bx-ui-sls-variant{
 		border-radius: 0;
+		margin: 0;
+		padding-top: rem(12);
+		padding-bottom: rem(10);
+		padding: .8625rem .9rem;
+		// padding: rem(15) ;
 		&:not(:last-child){
 
 			border-bottom: 1px solid #BDBDBD;
@@ -21,13 +26,15 @@
     transform: translateY(-50%);
 	}
 	.bx-sls .bx-ui-sls-pane{
-		top: rem(54);
+		top: rem(56);
+		width: calc(100% + 2px);
+    left: -1px;
 	}
 	.bx-sls .dropdown-block { 
 		box-shadow: none;
  
 		@extend .form-control;
-		padding-left: rem(40);
+		// padding-left: rem(40);
 		padding-top: rem(10);
 		input{
 			background-color: transparent;

@@ -31,20 +31,15 @@ block pagecontent
 			//- +top-line()
 			+top-nav()
 			//- +header-block()
+		.container
+			+breadcrumb("Каталог","Все")
 		+b.page-title
 			.container
 				.row
 					.col-xl-auto.text-xl-left.text-center
 						h1 Каталог 
-						.row.row--sm.justify-content-center
-							.col-sm-auto.col-4
-								+e.btn-head.active(href="#") всё
-							.col-sm-auto.col-4
-								+e.btn-head(href="#") для мужчин
-							.col-sm-auto.col-4
-								+e.btn-head(href="#") для женщин
 					.col
-						.row.justify-content-xl-between.justify-content-center
+						.row.justify-content-xl-end.justify-content-center
 							+e.item.col-md-auto.col-4
 								+e.color(style="background-color: #ffcf2b;")
 								.small Материалы из&nbsp;Европы
@@ -56,8 +51,31 @@ block pagecontent
 							+e.item.col-md-auto.col-4
 								+e.color(style="background-color: #32cc91;")
 								.small Контроль качества
-								
 
+				.row.row--sm.justify-content-xl-start.justify-content-center
+					.col-sm-auto.col-4
+						+e.btn-head.active(href="#") всё
+					.col-sm-auto.col-4
+						+e.btn-head(href="#") для мужчин
+					.col-sm-auto.col-4
+						+e.btn-head(href="#") для женщин
+
+				+e.sub-category.mnu-slider-js.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							+e.btn-head--sm(href="#") терморегулирующее белье
+						.swiper-slide
+							+e.btn-head--sm(href="#") футболки и майки
+						.swiper-slide
+							+e.btn-head--sm(href="#") поло
+						.swiper-slide
+							+e.btn-head--sm.active(href="#") худи и свитшоты
+						.swiper-slide
+							+e.btn-head--sm(href="#") брюки
+						.swiper-slide
+							+e.btn-head--sm(href="#") куртки и жилеты
+						.swiper-slide
+							+e.btn-head--sm(href="#") велоформа
 
 		//- +s-style
 		+s-prod-2()

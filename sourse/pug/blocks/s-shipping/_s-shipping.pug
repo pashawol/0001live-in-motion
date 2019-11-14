@@ -1,0 +1,38 @@
+mixin s-shipping()
+	// start s-shipping
+	+b.SECTION.s-shipping.section.block-with-lazy#s-shipping&attributes(attributes)
+		.container
+			.row
+				.col.order-lg-last
+					+e.line-right
+						+e.img-wrap
+							img.res-i(src="img/@2x/box.png", alt="")
+				.col-lg-8
+					+b.section-title
+						h2 Удобная доставка
+					p Мы&nbsp;работаем с&nbsp;логистической компанией Boxberry, которая имеет филиалы более чем в&nbsp;470 городах России!
+					+e.row.row
+						mixin item(i,t)
+							+e.col.col-sm-6
+								+e.icon-wrap
+									img.res-i(src=`img/svg/shipping-i-${i}.svg`, alt="")
+								+e.title= t
+								block
+						+item("1",'До двери')
+							p При оформлении заказа  выберите дату и&nbsp;время доставки.  Курьер обязательно позвонит вам  и&nbsp;привезет заказ туда, куда нужно
+						+item("2",'Заберите сами')
+							p В&nbsp;одном из&nbsp;пунктов  самовывоза или постаматов  &mdash;&nbsp;в&nbsp;России их&nbsp;более 100&nbsp;000,  выберите ближайший к&nbsp;вам
+			+e.warning
+				.row
+					.col-lg-6
+						.row
+							.col-sm-auto
+								img.res-i(src="img/svg/icon_warning.svg", alt="")
+
+							.col.strong При получении товара, распакуйте  его и&nbsp;проверьте целостность!
+					+e.warning-col.col-lg-6 Все товары проверяются перед отправлением!
+						br
+						| Наши менеджеры будут рады ответить  на&nbsp;ваши&nbsp;вопросы по&nbsp;телефону:
+						| 
+						a.text-body.strong.d-inline-block(href="tel:88007750077") 8 800 77 500 77
+	// end s-shipping

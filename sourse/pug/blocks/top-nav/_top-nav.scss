@@ -112,7 +112,19 @@
 			}
 			&--tel{
 				&::after{
-				display: none;
+				// display: none;
+				content: '?';
+				display: inline-block;
+				border: 2px solid;
+				border-radius: 50%;
+				width: rem(25);
+				height: rem(25);
+				background: none;
+				text-align: center;
+				position: static;
+				opacity: 1;
+				transform: none;
+				margin-left: rem(29);
 				}
 				&:hover{
 					opacity: 0.75;

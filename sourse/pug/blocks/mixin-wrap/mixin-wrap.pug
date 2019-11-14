@@ -11,10 +11,13 @@ mixin icon(name,mod)
 
 //- breadcrumb
 mixin breadcrumb(...items)
-	nav.breadcrumb
-		-for (var i = 0; i < items.length - 1; i++)
-			a.breadcrumb-item(href='#')= items[i]
-		span.breadcrumb-item.active=  items[items.length - 1]
+	nav(aria-label="breadcrumb" ).breadcrumb-slider-js.swiper-container
+		ol.breadcrumb.swiper-wrapper(itemscope itemtype="http://schema.org/BreadcrumbList")
+			-for (var i = 0; i < items.length; i++)
+				li.breadcrumb-item.swiper-slide( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href='#' itemprop="item" )
+						span( itemprop="name")= items[i]
+						meta(itemprop="position" content= (i + 1) )
 //- /breadcrumb
 
 		
@@ -184,14 +187,14 @@ mixin size()
 		+e.LABEL.size-item 
 			input(type="radio" name='size' checked)
 			+e.SPAN.lab S
-		+e.LABEL.size-item 
-			input(type="radio" name='size')
+		+e.LABEL.size-item
+			input(type="radio" name='size')&attributes(attributes)
 			+e.SPAN.lab M
 		+e.LABEL.size-item 
-			input(type="radio" name='size')
+			input(type="radio" name='size')&attributes(attributes)
 			+e.SPAN.lab L
 		+e.LABEL.size-item 
-			input(type="radio" name='size')
+			input(type="radio" name='size')&attributes(attributes)
 			+e.SPAN.lab XL
 mixin count-block()
 	+b.count-block

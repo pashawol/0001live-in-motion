@@ -1,0 +1,22 @@
+
+mixin accord(t) 
+	+b.accord.ttu
+		+e.head
+			+e.inner= t
+				+e.before
+		+e.body
+			p Чтобы получить заказ может потребоваться паспорт. 
+				br
+				| Пожалуйста, возьмите его на всякий случай.
+mixin s-faq()
+	// start s-faq
+	+b.SECTION.s-faq.section.block-with-lazy#s-faq&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Ответы на частые вопросы 
+			+accord('Когда привезут мой заказ?')
+			+accord('Как происходит оплата?')
+			+accord('Поднимут ли заказ на этаж?')
+			+accord('Где взять чек и информацию об оплате?')
+			+accord('Что нужно для получения заказа?')
+	// end s-faq
