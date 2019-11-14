@@ -24,7 +24,26 @@ mixin s-checkout()
 							block
 					// / .s-checkout-gruop
 				+gr("Укажите населённый пункт")
-					+input('Населённый пункт*')
+					.form-wrap__input-wrap
+						label
+							#sls-13126.bx-sls
+								.dropdown-block.bx-ui-sls-input-block
+									span.dropdown-icon
+									input.dropdown-field(type='text', autocomplete='off', name='ORDER_PROP_27', value='', placeholder='Введите название ...', style='display: none;')
+									.bx-ui-sls-container(style='margin: 0px; padding: 0px; border: none; position: relative;')
+										input.bx-ui-sls-route(type='text', disabled='disabled', autocomplete='off', style='padding: 0px; margin: 0px;')
+										input.bx-ui-sls-fake(type='text', autocomplete='off', value='', placeholder='Введите название ...')
+									.dropdown-fade2white
+									.bx-ui-sls-loader
+									.bx-ui-sls-clear(title='Отменить выбор', style='display: none;')
+								
+							script.
+								if (!window.BX && top.BX)
+								window.BX = top.BX;
+								new BX.Sale.component.location.selector.search({'scope':'sls-13126','source':'/bitrix/components/bitrix/sale.location.selector.search/get.php','query':{'FILTER':{'EXCLUDE_ID':0,'SITE_ID':''},'BEHAVIOUR':{'SEARCH_BY_PRIMARY':'0','LANGUAGE_ID':'ru'}},'selectedItem':false,'knownItems':[],'provideLinkBy':'code','messages':{'nothingFound':'К сожалению, ничего не найдено','error':'К сожалению, произошла внутренняя ошибка'},'callback':'locationUpdated','useSpawn':false,'initializeByGlobalEvent':'','globalEventScope':'','pathNames':[],'types':{'1':{'CODE':'COUNTRY'},'2':{'CODE':'COUNTRY_DISTRICT'},'3':{'CODE':'REGION'},'4':{'CODE':'SUBREGION'},'5':{'CODE':'CITY'},'6':{'CODE':'VILLAGE'},'7':{'CODE':'STREET'}}});
+							span.form-wrap__title
+								span Населённый пункт*
+								span.form-wrap__valid-text.d-none
 				+gr("Способ получения")(class="border")
 					+e.row-wrap: .row
 						.col-input.col-lg-6

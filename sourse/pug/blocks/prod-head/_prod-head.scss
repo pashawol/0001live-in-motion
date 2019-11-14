@@ -98,18 +98,22 @@
 		margin-bottom: rem(60);
 	}
 	&__group{
-		margin-bottom: rem(50);
+		padding-bottom: rem(50);
+		// ol
+		ul {
+			padding-left: rem(20);
+		}
 	}
 	&__group-item{
 		display: flex;
-		margin-bottom: rem(25);
+		padding-bottom: rem(25);
 
 	}
 	&__icon-wrap{
 		margin-right: rem(18);
 	}
 	&__group-title{
-		margin-bottom: rem(24);
+		padding-bottom: rem(24);
 		position: relative;		
 		&--toggle{
 			cursor: pointer;
@@ -135,9 +139,11 @@
 	.text-more{
 		// padding-bottom: rem(10);
 		line-height: 1.5;
-		margin-bottom: rem(25);
+		padding-bottom: rem(25);
 	}
-
+	.b-morelines_section_button{
+		margin-top: rem(25);
+	}
 	&__slider-sm{
 		max-height: 100%;
 		@include media-breakpoint-up(lg) {

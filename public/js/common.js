@@ -1,8 +1,6 @@
 "use strict";
 
 var $ = jQuery;
-var btnToggle = $(".toggle-menu-mobile--js"),
-		menu = $(".menu-mobile--js");
 jQuery(document).ready(function ($) {
 	// полифил для object-fit
 	objectFitImages(); // Picture element HTML5 shiv
@@ -24,8 +22,6 @@ jQuery(document).ready(function ($) {
 	$(".prod-head__group-title--js").click(function () {
 		$(this).toggleClass("active").next().slideToggle();
 	}); // добавляет подложку для pixel perfect
-
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/checkout_delivery_1920.png);"></div>'); // /добавляет подложку для pixel perfect
 
 	function heightses() {
 		var w = $(window).width();
@@ -60,9 +56,9 @@ jQuery(document).ready(function ($) {
 		navFixed(); // конец добавил
 
 		if (window.matchMedia("(min-width: 1200px)").matches) {
-			btnToggle.removeClass("on"); // $("body").removeClass("fixed");
+			$(".toggle-menu-mobile--js").removeClass("on"); // $("body").removeClass("fixed");
 
-			menu.removeClass("active");
+			$(".menu-mobile--js").removeClass("active");
 			$("body").removeClass("fixed");
 		}
 	}
@@ -86,7 +82,7 @@ jQuery(document).ready(function ($) {
 	var swiper3 = new Swiper($('.s-prod__slider--js'), {
 		slidesPerView: 2,
 		spaceBetween: 30,
-		loop: true,
+		loop: false,
 		watchOverflow: true,
 		breakpointsInverse: true,
 		breakpoints: {
@@ -172,7 +168,7 @@ jQuery(document).ready(function ($) {
 
 	initSwiper();
 	var prodBodySl = new Swiper('.prod-body__slider--js', {
-		loop: true,
+		loop: false,
 		freeModeMomentum: true,
 		slidesPerView: 'auto',
 		// spaceBetween: 30,
@@ -261,10 +257,10 @@ var JSCCommon = {
 			div.remove();
 		}
 
-		btnToggle.click(function () {
-			btnToggle.toggleClass("on"); // $("body").toggleClass("fixed");
+		$(".toggle-menu-mobile--js").click(function () {
+			$(".toggle-menu-mobile--js").toggleClass("on"); // $("body").toggleClass("fixed");
 
-			menu.toggleClass("active");
+			$(".menu-mobile--js").toggleClass("active");
 
 			if ($("body").hasClass("fixed")) {
 				$("body, html").removeClass("fixed");
@@ -277,7 +273,7 @@ var JSCCommon = {
 			return false;
 		});
 		paddRight('.top-nav__head');
-		$(".toggle-basket").click(function () {
+		$(document).on('click', '.toggle-basket', function () {
 			$(".toggle-block").toggleClass("active");
 
 			if ($("body").hasClass("basket-fix")) {
@@ -344,7 +340,7 @@ var JSCCommon = {
 				target: {// right: 20
 				}
 			});
-		}); // 	$('.zoom-link').easyZoom({
+		}); //// 	$('.zoom-link').easyZoom({
 		// 		id: 'imagezoom',
 		// 		// preload: '<p class="preloader">Loading the image</p>',
 		// 		parent: '.prod-head__slide'

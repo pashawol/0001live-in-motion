@@ -89,8 +89,10 @@
 .sizes-block{
 	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
+	// width: 100%;
 	padding-bottom: rem(12);
+	margin-left: rem(-2);
+	margin-right: rem(-2);
 	&__size-item{
 		@include media-breakpoint-up(sm) {
 
@@ -107,8 +109,12 @@
 	height: rem(40px);
 	border: 1px solid $body-color;
 	@extend .small;
-	margin-right: rem(5);
+	margin-right: rem(2);
+	margin-left: rem(2);
 	margin-bottom: rem(5);
+	&:hover{
+		opacity: 0.6;
+	}
 
 }
 input{
@@ -116,5 +122,6 @@ input{
 }
 input:checked + &__lab{
 	background-color: $success;
+	opacity: 1 !important;
 }
 }

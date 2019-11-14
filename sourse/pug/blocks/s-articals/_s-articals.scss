@@ -13,6 +13,9 @@
 	}
 	&__img-wrap{
 		margin-bottom: rem(10);
+		img{
+			// object-fit:  !important;
+		}
 	}
 	&__col{
 		margin-bottom: rem(20);

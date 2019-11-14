@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="libs/swiper-4.2.0/swiper.min.css">
 		<link rel="stylesheet" href="libs/ImageZoom-master/image_zoom.min.css">
 		<link rel="stylesheet" href="libs/select22/select2.min.css">
+		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/main.min.css">
 	</head>
 	<body>
@@ -523,10 +524,26 @@
 									</div>
 									<div class="s-checkout-gruop__body">
 										<div class="form-wrap__input-wrap">
-											<label><input class="form-wrap__input" type="text" name="text"/><span class="form-wrap__title"><span>Населённый пункт*</span><span class="form-wrap__valid-text">valid text</span></span>
+											<label>
+												<div class="bx-sls" id="sls-13126">
+													<div class="dropdown-block bx-ui-sls-input-block"><span class="dropdown-icon"></span>
+														<input class="dropdown-field" type="text" autocomplete="off" name="ORDER_PROP_27" value="" placeholder="Введите название ..." style="display: none;"/>
+														<div class="bx-ui-sls-container" style="margin: 0px; padding: 0px; border: none; position: relative;">
+															<input class="bx-ui-sls-route" type="text" disabled="disabled" autocomplete="off" style="padding: 0px; margin: 0px;"/>
+															<input class="bx-ui-sls-fake" type="text" autocomplete="off" value="" placeholder="Введите название ..."/>
+														</div>
+														<div class="dropdown-fade2white"></div>
+														<div class="bx-ui-sls-loader"></div>
+														<div class="bx-ui-sls-clear" title="Отменить выбор" style="display: none;"></div>
+													</div>
+												</div>
+												<script>
+													if (!window.BX && top.BX)
+													window.BX = top.BX;
+													new BX.Sale.component.location.selector.search({'scope':'sls-13126','source':'/bitrix/components/bitrix/sale.location.selector.search/get.php','query':{'FILTER':{'EXCLUDE_ID':0,'SITE_ID':''},'BEHAVIOUR':{'SEARCH_BY_PRIMARY':'0','LANGUAGE_ID':'ru'}},'selectedItem':false,'knownItems':[],'provideLinkBy':'code','messages':{'nothingFound':'К сожалению, ничего не найдено','error':'К сожалению, произошла внутренняя ошибка'},'callback':'locationUpdated','useSpawn':false,'initializeByGlobalEvent':'','globalEventScope':'','pathNames':[],'types':{'1':{'CODE':'COUNTRY'},'2':{'CODE':'COUNTRY_DISTRICT'},'3':{'CODE':'REGION'},'4':{'CODE':'SUBREGION'},'5':{'CODE':'CITY'},'6':{'CODE':'VILLAGE'},'7':{'CODE':'STREET'}}});
+												</script><span class="form-wrap__title"><span>Населённый пункт*</span><span class="form-wrap__valid-text d-none"></span></span>
 											</label>
 										</div>
-										<!-- +e.input-wrap-->
 									</div>
 								</div>
 								<!-- / .s-checkout-gruop-->

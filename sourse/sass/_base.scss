@@ -636,7 +636,7 @@ picture{
 		 min-width: rem(110);
 		 margin-bottom: rem(20);
 		 &.active{
-			 opacity: 1;
+			 opacity: 1 !important;
 			 background-color: $success;
 		 }
 
