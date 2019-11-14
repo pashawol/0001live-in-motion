@@ -1,5 +1,21 @@
 .form-wrap{
-	.bx-sls .dropdown-icon,
+	.bx-sls .bx-ui-sls-pane{
+		border-radius: 0;
+		padding: 0;
+	}
+	.bx-sls .bx-ui-sls-variants .bx-ui-sls-variant{
+		border-radius: 0;
+		&:not(:last-child){
+
+			border-bottom: 1px solid #BDBDBD;
+		}
+	}
+	.bx-sls .bx-ui-sls-variants .bx-ui-sls-variant:hover, .bx-sls .bx-ui-sls-variant-active {
+		background: #DCEEBB;
+}
+	.bx-sls .dropdown-icon{
+		display: none;
+	}
 	.bx-sls .bx-ui-sls-clear{
 		top: 50%;
     transform: translateY(-50%);
