@@ -13,10 +13,10 @@ include ../blocks/s-prod/_s-prod.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-checkout/_s-checkout.pug
 include ../blocks/s-pay/_s-pay.pug
-include ../blocks/s-faq/_s-faq.pug
+include ../blocks/s-size-block/_s-size-block.pug
 
 block title
-	title Доставка и оплата
+	title Таблица размеров
 
 block pagecontent
 
@@ -29,11 +29,9 @@ block pagecontent
 			//- +header-block()
 		//- .page-title
 		.container 
-			+breadcrumb("Доставка и оплата")
-			h1 Доставка и оплата
-		+s-shipping
-		+s-pay
-		+s-faq
+			+breadcrumb("Каталог","Таблица размеров")
+			h1 Таблица размеров 
+		+s-size-block
 		//- +s-prod-7()
 		//- +s-prod-7()
 		//- +s-contact-404()

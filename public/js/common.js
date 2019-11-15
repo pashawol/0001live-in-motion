@@ -2,9 +2,9 @@
 
 jQuery(document).ready(function ($) {
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/delivery_1920.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/delivery_1920.jpg);"></div>')
+	// /добавляет подложку для pixel perfect
 	// полифил для object-fit
-
 	objectFitImages(); // Picture element HTML5 shiv
 
 	document.createElement("picture"); // для свг
@@ -210,6 +210,12 @@ jQuery(document).ready(function ($) {
 		// spaceBetween: 30, 
 		watchOverflow: true
 	});
+	var td = $(".s-size-block table td, .s-size-block table th");
+	td.hover(function () {
+		var th = $(this);
+		th.parents("table").find('th:nth-child(' + (th.index() + 1) + ')').toggleClass("hover");
+		th.parents("table").find('td:nth-child(' + (th.index() + 1) + ')').toggleClass("hover");
+	});
 });
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
@@ -396,14 +402,20 @@ var JSCCommon = {
 	},
 	inputLabel: function inputLabel() {
 		// для плаваюещего label
-		$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('label').addClass('empty');
+		$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('.form-wrap__input-wrap').addClass('empty');
 		$('input, textarea').keyup(function () {
 			if ($(this).val().trim() !== '') {
-				$(this).closest('label').removeClass('empty');
+				$(this).closest('.form-wrap__input-wrap').removeClass('empty');
 			} else {
-				$(this).closest('label').addClass('empty');
+				$(this).closest('.form-wrap__input-wrap').addClass('empty');
 			}
-		});
+		}); // $('.form-wrap__input-wrap ').on('focus',  '.bx-ui-sls-fake', function () {
+		// 	if ($(this).val().trim() !== '') {
+		// 		$(this).closest('.form-wrap__input-wrap').removeClass('empty');
+		// 	} else {
+		// 		$(this).closest('.form-wrap__input-wrap').addClass('empty');
+		// 	}
+		// });
 	},
 	accordion: function accordion() {
 		$('.accord__head').click(function () {

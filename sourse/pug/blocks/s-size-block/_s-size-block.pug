@@ -1,0 +1,71 @@
+mixin s-size-block()
+	// start s-size-block
+	+b.SECTION.s-size-block.section.block-with-lazy#s-size-block&attributes(attributes)
+		.container
+			+b.s-size-block-head
+				+e.row.row
+					+e.item.col-lg-auto.col-6
+						+e.title Для мужчин или&nbsp;женщин?
+						.row.text-center
+							.col-lg-auto
+								+e.btn-head.active(href="#") Для мужчин
+								
+							.col-lg-auto
+								+e.btn-head(href="#") Для женщин
+					
+					+e.item.col-lg-auto.col-6
+						+e.title Верх или&nbsp;низ?
+						.row.text-center
+							.col-lg-auto
+								+e.btn-head.active(href="#") Верх
+								
+							.col-lg-auto
+								+e.btn-head(href="#") Низ
+					
+
+
+			+b.section-title
+				.row
+					.col-auto
+						h2 Снимите мерки
+					.col-auto
+					a.tdu(href="#") Остались вопросы?
+			.row
+				.col-7
+					+pic("","img-size-1")
+					//- img.res-i.lazy(src="#" src-lazy="", alt="")
+				.col-5
+					.ttu.strong.mb-2 Обхват талии
+					p  Обхват талии измеряется строго горизонтально по самой узкой части тела, проходя через самую выступающую точку живота.
+			
+			.row
+				.col-7
+					+pic("","img-size-2")
+					//- img.res-i.lazy(src="#" src-lazy="", alt="")
+				.col-5
+					.ttu.strong.mb-2 Обхват груди
+					p  При измерении обхвата груди лента должна плотно прилегать к телу, спереди проходить по наиболее выступающим точкам, сбоку через подмышечные впадины, сзади обхватывая лопатки.
+			+e.foot
+				h2 Определите ваш размер
+				p Используйте таблицу ниже, чтобы определить размер на основе полученных мерок. Если ваши параметры соответствуют двум размерам, закажите модель меньшего размера для более плотной посадки и модель большего размера для более свободной. Если обхват груди и обхват талии соответствуют разным размерам, выберите размер, которому соответствуют параметры груди.
+			+e.table-wrap
+				table
+					tr
+						th Размер
+						th Обхват груди (см)
+						th Обхват талии (см)
+						th Российские размеры
+					mixin tr(t1,t2,t3,t4)
+						tr
+							td= t1
+							td= t2
+							td= t3
+							td= t4
+					+tr("XS/S",'86-90','74-78','44')
+					+tr("S",'90-94','78-82','46')
+					+tr("M",'94-198','82-86','48')
+					+tr("L",'98-102','86-90','50')
+					+tr("L/XL",'102-106','92-94','52')
+					+tr("XL",'106-110','96-100','54')
+					+tr("XXL",'110-114','106-110','56')
+	// end s-size-block
