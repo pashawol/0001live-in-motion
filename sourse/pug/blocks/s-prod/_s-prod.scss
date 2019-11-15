@@ -116,6 +116,7 @@
 		max-width: rem(172px);
 		flex-grow: 1;
 		cursor: pointer;
+		@include mt;
 	}
 	&__lab{
 		display: flex;

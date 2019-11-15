@@ -1,6 +1,6 @@
 
 mixin accord(t) 
-	+b.accord.ttu
+	+b.accord
 		+e.head
 			+e.inner= t
 				+e.before
@@ -19,4 +19,11 @@ mixin s-faq()
 			+accord('Поднимут ли заказ на этаж?')
 			+accord('Где взять чек и информацию об оплате?')
 			+accord('Что нужно для получения заказа?')
+			+e.foot-wrap
+				+e.foot
+					.row
+						.col-lg-auto.col
+							+e.foot-text Не нашли интересующий вас вопрос? Задайте свой
+						.col-sm-auto
+							+e.btn(href="#") Задать вопрос
 	// end s-faq

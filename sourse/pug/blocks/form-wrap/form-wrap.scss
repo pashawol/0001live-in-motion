@@ -1,4 +1,10 @@
 .form-wrap{
+	.bx-sls .bx-ui-sls-container{
+		overflow: inherit;
+		.form-wrap__title { 
+			left: -.38182rem;
+		}
+	}
 	.bx-sls .bx-ui-sls-pane{
 		border-radius: 0;
 		padding: 0;
@@ -112,9 +118,12 @@
 	}
 	//  transform: translateY(-);
 }		
+.form-wrap__input-wrap.focus textarea,
+.form-wrap__input-wrap.focus input,
 .is-invalid,
 .is-valid,
-			.form-wrap__input:focus{
+			textarea:focus,
+			input:focus{
 
 			&	~ .form-wrap__title {
 					top: em(-20) !important;

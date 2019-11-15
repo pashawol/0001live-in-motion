@@ -376,7 +376,7 @@ textarea {
 	display: table-cell
 }
 
-
+.tabs-sub,
 .tabs {
 	&__btn {
 		&:hover {
@@ -393,6 +393,13 @@ textarea {
 		display: none;
 	}
 }
+.tabs__content-data{
+	&.active {
+		display: block;
+	}
+
+	display: none;
+} 
 
 
 select.form-control {

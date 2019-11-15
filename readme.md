@@ -9,3 +9,5 @@
 1. <https://pashawol.github.io/0001live-in-motion/public/08-checkout.html> - подтверждение
 1. <https://pashawol.github.io/0001live-in-motion/public/09-delivery.html> - Доставка и оплата
 1. <https://pashawol.github.io/0001live-in-motion/public/10-size.html> - Таблица размеров
+1. <https://pashawol.github.io/0001live-in-motion/public/11-done.html> - Успех
+1. <https://pashawol.github.io/0001live-in-motion/public/12-error.html> - ошибка

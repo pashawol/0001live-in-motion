@@ -1,0 +1,35 @@
+mixin s-payment()
+	// start s-payment
+	+b.SECTION.s-payment.text-center.section.block-with-lazy#s-payment&attributes(attributes)
+		.container
+			+e.inner
+				img.res-i(src="img/svg/icon_ok.svg", alt="")
+				+e.title  Поздравляем, 
+					br
+					| ваш заказ 
+					|
+					span.text-succes № 18 
+					|
+					|  оплачен!
+				p Чек об&nbsp;оплате будет выслан на&nbsp;e-mail,  указанный при оформлении заказа
+				+e.btn-wrap
+					+e.btn.btn-primary(href="#") Продолжить покупки
+					+e.btn.btn-outline-dark(href="#") Вернуться на главную
+	// end s-payment
+	
+mixin s-payment2()
+	// start s-payment
+	+b.SECTION.s-payment.text-center.section.block-with-lazy#s-payment&attributes(attributes)
+		.container
+			+e.inner
+				img.res-i(src="img/svg/icon-error.svg", alt="")
+				+e.title  К сожалению, при оплате вашего заказа 
+					span.text-danger № 18 
+					|
+					| произошла ошибка
+				p.warning Пожалуйста, обратитесь за&nbsp;помощью к&nbsp;менеджеру,  по&nbsp;телефону 
+					a(href="tel:8007750077") 8&nbsp;800 77&nbsp;500 77
+					|
+					|  либо заполнив форму обратной связи
+				+e.small Будем рады помочь вам с решением возникшей проблемы!
+	// end s-payment

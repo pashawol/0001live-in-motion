@@ -2,8 +2,9 @@
 
 
 jQuery(document).ready(function ($) {
+ 
 		// добавляет подложку для pixel perfect
-		// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/delivery_1920.jpg);"></div>')
+		$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/delivery_1920.jpg);"></div>')
 		// /добавляет подложку для pixel perfect
 
 	// полифил для object-fit
@@ -14,6 +15,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	JSCCommon.magnificPopupCall();
 	JSCCommon.tabscostume('tabs');
+	// JSCCommon.tabscostume('tabs-sub');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.moreLine();
@@ -222,6 +224,7 @@ jQuery(document).ready(function ($) {
 		let th = $(this);
 		th.parents("table").find('th:nth-child(' + (th.index() + 1) + ')').toggleClass("hover"); 
 		th.parents("table").find('td:nth-child(' + (th.index() + 1) + ')').toggleClass("hover"); 
+		// th.toggleClass("hover-this");
 	})
 });
 var JSCCommon = {
@@ -328,8 +331,19 @@ var JSCCommon = {
 	// табы  . 
 	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active');
+			$('.' + tab + '__content:nth-child('+($(this).index() + 1)+')').each(function(){
+				$(this).fadeIn().addClass('active') 
+			})
 		});
+		$(".tab-sub-js").click(function(){
+			let tabCont = $(this).data("tabs");
+			console.log(tabCont);
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.tabs__content-data'+tabCont).fadeIn().addClass('active').siblings().hide().removeClass('active');
+		})
+
+
 	},
 	// /табы  .  
 	// /CustomYoutubeBlock
@@ -420,6 +434,31 @@ var JSCCommon = {
 			}
 		});
 		
+		let selectedTd;
+		let body = document.querySelector('body')
+			body.onclick = function(event) {
+				if ($("div").is(".form-wrap__input-wrap--city")) {
+
+					let formWrap = event.target.closest('.form-wrap__input-wrap--city'); // (1)
+					let formWrapEl = document.querySelector('.form-wrap__input-wrap--city'); // (1)
+					let target = event.target; // где был клик? 
+					// if (!formWrap)  formWrapEl.classList.remove('focus'); // не на TD? тогда не интересует
+					
+				if (!body.contains(formWrap)) formWrapEl.classList.remove('focus'); // (3)
+				else{
+					
+					highlight(formWrap); // (4)
+				}
+			}
+			};
+
+			function highlight(td) {
+			 
+					selectedTd = td;
+					selectedTd.classList.add('focus'); // подсветить новый td
+			 
+				// console.log(selectedTd)
+			}
 		// $('.form-wrap__input-wrap ').on('focus',  '.bx-ui-sls-fake', function () {
 		// 	if ($(this).val().trim() !== '') {
 		// 		$(this).closest('.form-wrap__input-wrap').removeClass('empty');

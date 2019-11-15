@@ -12,11 +12,11 @@ include ../blocks/s-prod/_s-prod.pug
 //- include ../blocks/prod-body/_prod-body.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-checkout/_s-checkout.pug
-include ../blocks/s-pay/_s-pay.pug
-include ../blocks/s-faq/_s-faq.pug
+include ../blocks/s-pay/_s-pay.pug 
+include ../blocks/s-payment/_s-payment.pug
 
 block title
-	title Доставка и оплата
+	title Успешная оплата заказа
 
 block pagecontent
 
@@ -29,13 +29,10 @@ block pagecontent
 			//- +header-block()
 		//- .page-title
 		.container 
-			+breadcrumb("Доставка и оплата")
-			h1 Доставка и оплата
-		+s-shipping
-		+s-pay
-		.container
-			.hr
-		+s-faq
+			+breadcrumb("Каталог","Подтверждение заказа","Успешная оплата заказа")
+			.text-center
+				h1 Успешная оплата заказа 
+		+s-payment
 		//- +s-prod-7()
 		//- +s-prod-7()
 		//- +s-contact-404()
