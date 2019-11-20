@@ -88,9 +88,10 @@
 			
 			margin-left: auto;
 			width: rem(292px);
-			height: 100%;
+			height: rem(501);
 			text-align: left;
-		 
+			padding-top: rem(70);
+			align-items: flex-start;
 		} 
 		text-align: center;
 		// height: rem(240);
