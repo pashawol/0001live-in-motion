@@ -1,3 +1,6 @@
+.page-title + .s-prod {
+	padding-top: rem(10);
+}
 .s-prod {
 
 
@@ -99,6 +102,38 @@
 	 
 		&__size-item{
 			max-width: rem(68px);
+		}
+	}
+	&__wrap{
+		// display: inline-block;
+		// display: flex;
+		// flex-direction: column;
+	}
+	&__foot{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: rem(270)
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-sm;
+		@extend .btn-outline-secondary;
+		@include media-breakpoint-up(lg) {
+
+			width: rem(136);
+		}
+		@include media-breakpoint-up(lg) {
+
+			width: rem(110);
+		}
+		width: rem(80);
+		.icon{
+
+			color: transparent;
+			stroke:$body-color ;
+			stroke-width: 1px;
+			font-size: rem(17);
 		}
 	}
 }

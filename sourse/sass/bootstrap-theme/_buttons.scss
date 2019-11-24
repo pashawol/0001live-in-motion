@@ -130,6 +130,19 @@ fieldset:disabled a.btn {
   // }
 }
 
+.btn-outline-secondary{
+  background-color: transparent;
+  border-color: #E0E0E0 !important;
+  color: #E0E0E0 !important;
+  @include media-breakpoint-up(xl) {
+
+    
+    &:hover{
+    
+      opacity: 0.6;
+    }
+  }
+}
 
 //
 // Link buttons

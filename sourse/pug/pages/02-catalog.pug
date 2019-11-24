@@ -9,6 +9,8 @@ include ../blocks/s-prod/_s-prod.pug
 include ../blocks/s-about/_s-about.pug
 include ../blocks/s-plan/_s-plan.pug
 
+block variables
+	- let  mainPage= 'catalog-page'
 block title
 	title title
 
@@ -51,31 +53,35 @@ block pagecontent
 							+e.item.col-md-auto.col-4
 								+e.color(style="background-color: #32cc91;")
 								.small Контроль качества
-
-				.row.row--sm.justify-content-xl-start.justify-content-center
-					.col-sm-auto.col-4
-						+e.btn-head.active(href="#") всё
-					.col-sm-auto.col-4
-						+e.btn-head(href="#") для мужчин
-					.col-sm-auto.col-4
-						+e.btn-head(href="#") для женщин
-
-				+e.sub-category.mnu-slider-js.swiper-container
-					.swiper-wrapper
-						.swiper-slide
-							+e.btn-head--sm(href="#") терморегулирующее белье
-						.swiper-slide
-							+e.btn-head--sm(href="#") футболки и майки
-						.swiper-slide
-							+e.btn-head--sm(href="#") поло
-						.swiper-slide
-							+e.btn-head--sm.active(href="#") худи и свитшоты
-						.swiper-slide
-							+e.btn-head--sm(href="#") брюки
-						.swiper-slide
-							+e.btn-head--sm(href="#") куртки и жилеты
-						.swiper-slide
-							+e.btn-head--sm(href="#") велоформа
+				.row.justify-content-between
+					.col-xl-12.col-md-auto
+						.row.row--sm.justify-content-xl-start.justify-content-center
+							.col-sm-auto.col-4
+								+e.btn-head.active(href="#") всё
+							.col-sm-auto.col-4
+								+e.btn-head(href="#") для мужчин
+							.col-sm-auto.col-4
+								+e.btn-head(href="#") для женщин
+					.col-xl-12.col-md-auto
+						+e.sub-category
+							.d-none.d-xl-block
+								.row
+									.col-auto
+										+e.btn-head--sm(href="#") терморегулирующее белье
+									.col-auto
+										+e.btn-head--sm(href="#") футболки и майки
+									.col-auto
+										+e.btn-head--sm(href="#") поло
+									.col-auto
+										+e.btn-head--sm.active(href="#") худи и свитшоты
+									.col-auto
+										+e.btn-head--sm(href="#") брюки
+									.col-auto
+										+e.btn-head--sm(href="#") куртки и жилеты
+									.col-auto
+										+e.btn-head--sm(href="#") велоформа
+							.d-xl-none
+								+select("тип продукта",'терморегулирующее белье','футболки и майки','поло','худи и свитшоты','брюки','куртки и жилеты','велоформа') 
 
 		//- +s-style
 		+s-prod-2()

@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/main.min.css">
 	</head>
-	<body>
+	<body class="catalog-page">
 		<div class="main-wrapper">
 			<!-- повесь этот класс на body .not-main-page  я в сборке не могу-->
 			<div class="not-main-page">
@@ -370,29 +370,51 @@
 								</div>
 							</div>
 						</div>
-						<div class="row row--sm justify-content-xl-start justify-content-center">
-							<div class="col-sm-auto col-4"><a class="page-title__btn-head active" href="#">всё</a>
+						<div class="row justify-content-between">
+							<div class="col-xl-12 col-md-auto">
+								<div class="row row--sm justify-content-xl-start justify-content-center">
+									<div class="col-sm-auto col-4"><a class="page-title__btn-head active" href="#">всё</a>
+									</div>
+									<div class="col-sm-auto col-4"><a class="page-title__btn-head" href="#">для мужчин</a>
+									</div>
+									<div class="col-sm-auto col-4"><a class="page-title__btn-head" href="#">для женщин</a>
+									</div>
+								</div>
 							</div>
-							<div class="col-sm-auto col-4"><a class="page-title__btn-head" href="#">для мужчин</a>
-							</div>
-							<div class="col-sm-auto col-4"><a class="page-title__btn-head" href="#">для женщин</a>
-							</div>
-						</div>
-						<div class="page-title__sub-category mnu-slider-js swiper-container">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide"><a class="page-title__btn-head page-title__btn-head--sm" href="#">терморегулирующее белье</a>
-								</div>
-								<div class="swiper-slide"><a class="page-title__btn-head page-title__btn-head--sm" href="#">футболки и майки</a>
-								</div>
-								<div class="swiper-slide"><a class="page-title__btn-head page-title__btn-head--sm" href="#">поло</a>
-								</div>
-								<div class="swiper-slide"><a class="page-title__btn-head page-title__btn-head--sm active" href="#">худи и свитшоты</a>
-								</div>
-								<div class="swiper-slide"><a class="page-title__btn-head page-title__btn-head--sm" href="#">брюки</a>
-								</div>
-								<div class="swiper-slide"><a class="page-title__btn-head page-title__btn-head--sm" href="#">куртки и жилеты</a>
-								</div>
-								<div class="swiper-slide"><a class="page-title__btn-head page-title__btn-head--sm" href="#">велоформа</a>
+							<div class="col-xl-12 col-md-auto">
+								<div class="page-title__sub-category">
+									<div class="d-none d-xl-block">
+										<div class="row">
+											<div class="col-auto"><a class="page-title__btn-head page-title__btn-head--sm" href="#">терморегулирующее белье</a>
+											</div>
+											<div class="col-auto"><a class="page-title__btn-head page-title__btn-head--sm" href="#">футболки и майки</a>
+											</div>
+											<div class="col-auto"><a class="page-title__btn-head page-title__btn-head--sm" href="#">поло</a>
+											</div>
+											<div class="col-auto"><a class="page-title__btn-head page-title__btn-head--sm active" href="#">худи и свитшоты</a>
+											</div>
+											<div class="col-auto"><a class="page-title__btn-head page-title__btn-head--sm" href="#">брюки</a>
+											</div>
+											<div class="col-auto"><a class="page-title__btn-head page-title__btn-head--sm" href="#">куртки и жилеты</a>
+											</div>
+											<div class="col-auto"><a class="page-title__btn-head page-title__btn-head--sm" href="#">велоформа</a>
+											</div>
+										</div>
+									</div>
+									<div class="d-xl-none">
+										<div class="page-title__input-wrap"> 
+											<select class="page-title__input">
+												<option>тип продукта</option>
+												<option>терморегулирующее белье</option>
+												<option>футболки и майки</option>
+												<option>поло</option>
+												<option>худи и свитшоты</option>
+												<option>брюки</option>
+												<option>куртки и жилеты</option>
+												<option>велоформа</option>
+											</select>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -430,7 +452,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="s-prod__col col-md-4 col-6 wow fadeInUp" data-wow-duration="1s">
@@ -461,7 +490,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="s-prod__col col-md-4 col-6 wow fadeInUp" data-wow-duration="1s">
@@ -492,7 +528,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="s-prod__col col-md-4 col-6 wow fadeInUp" data-wow-duration="1s">
@@ -523,7 +566,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="s-prod__col col-md-4 col-6 wow fadeInUp" data-wow-duration="1s">
@@ -554,7 +604,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="s-prod__col col-md-4 col-6 wow fadeInUp" data-wow-duration="1s">
@@ -585,7 +642,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="s-prod__col col-md-4 col-6 wow fadeInUp" data-wow-duration="1s">
@@ -616,7 +680,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="s-prod__col col-md-4 col-6 wow fadeInUp" data-wow-duration="1s">
@@ -647,7 +718,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="s-prod__col col-md-4 col-6 wow fadeInUp" data-wow-duration="1s">
@@ -678,7 +756,14 @@
 											<input type="radio" name="size"/><span class="sizes-block__lab">XL</span>
 										</label>
 									</form>
-									<div class="strong">4567 ₽ </div>
+									<div class="item-prod__foot">
+										<div class="strong">4567 ₽ </div>
+										<button class="item-prod__btn" type="button"> 
+											<svg class="icon icon-add-basket ">
+												<use xlink:href="img/svg/sprite.svg#add-basket"></use>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>

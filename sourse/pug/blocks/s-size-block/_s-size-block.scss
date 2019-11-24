@@ -20,11 +20,14 @@
 		max-width: rem(760);
 		padding-top: rem(20);
 		h2{
-			margin-bottom: rem(35);
+			@include media-breakpoint-up(xl) {
+
+				margin-bottom: rem(35);
+			}
 		}
 	}
 	table{
-		margin-top: rem(20);
+		margin-top: rem(60);
 		margin-bottom: rem(20);
 		width: 100%;
 		text-align: center;
@@ -46,6 +49,10 @@
 		}
 
 	}
+	th{
+
+		vertical-align: top;
+	}
 	td,
 	th{
 		@include media-breakpoint-down(xs) {
@@ -59,7 +66,6 @@
 		} 
 		height:67px;
 		padding: rem(25) rem(4);
-		vertical-align: top;
 		&.hover{
 			background: rgba(50, 204, 145, 0.3);
 
@@ -143,12 +149,17 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {
+		table{
+			margin-top: 60px;
+		}
 		// font-size:14;
 		h2{
 			font-size: 23px;
+			margin-bottom: 10px;
 		}
 		p{
-			line-height: (40/22);
+			line-height: (20/14);
+			font-size: 14px;
 		}
 		.btn-wrap{
 			justify-content: center;

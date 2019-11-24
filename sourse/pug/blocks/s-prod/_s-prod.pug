@@ -8,8 +8,11 @@ mixin prod(i,t,s="sl")
 				+piclazy('bg', 'prod-'+i) 
 		+e.title.small= t 
 		+size()
-		.strong 4567 ₽ 
- 
+		
+		+e.foot
+			.strong 4567 ₽ 
+			+e.btn(type="button") 
+				+icon("add-basket")
 
 mixin s-prod()
 	// start s-prod
