@@ -180,11 +180,19 @@
 		justify-content: space-between;
 	}
 	&__title{
-		margin-bottom: rem(10);
+		margin-bottom: rem(15);
 		@include media-breakpoint-up(md) {
 			max-width: none;
+			margin-bottom: rem(10);
+			font-size: 1rem;
 		}
-		max-width: rem(115);
+		@include media-breakpoint-up(sm) {
+
+			// font-size: .9rem;
+			// max-width: rem(125);
+		}
+		font-size: .9rem;
+		max-width: rem(135);
 		margin-left: auto;
 		margin-right: auto;
 	}
