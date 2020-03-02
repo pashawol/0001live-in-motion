@@ -211,7 +211,7 @@ jQuery(document).ready(function ($) {
 		watchOverflow: true,  
 	});
 
-	var breadSl = new Swiper('.mnu-slider-js', {
+	var breadSl2 = new Swiper('.mnu-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 10,
 		freeMode: true, 

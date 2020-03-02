@@ -36,10 +36,13 @@
 	tr{
 		&:nth-child(odd){
 			background-color: #f3f3f5;
-		}
-		@include mt;
+		} 
 		&:hover{
-			background: rgba(50, 204, 145, 0.3);
+			th,
+			td{
+
+				background: rgba(50, 204, 145, 0.3);
+			}
 		}
 	}
 	th{
@@ -66,16 +69,39 @@
 		} 
 		height:67px;
 		padding: rem(25) rem(4);
-		&.hover{
+		position: relative;
+		z-index: 2;
+		&::before{
+			content: '';
+			@include a-cent;
+			z-index: -1;		
 			background: rgba(50, 204, 145, 0.3);
-
+			opacity: 0; 
+			width: 100%;
+			height: 100%;
+		}
+		&.hover{
+			&::before{
+				opacity: 1;
+			}
 		}
 		
+		
 		&:hover{
-			background: #32CC91 !important;
+			&::before{
+				opacity: 1;
+				background: #32CC91 !important;
+			}
 
 		}
 
+	}
+	td:first-child:hover,
+	th:hover{
+		&::before{
+			opacity: 0;
+			// background-color: rgba(50, 204, 145, 0.3) !important;
+		}
 	}
 
 	&__foot{
