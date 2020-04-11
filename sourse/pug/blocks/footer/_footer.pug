@@ -5,6 +5,7 @@ mixin footer()
 				.col-xl-auto.col-lg-4.col-md-5
 					+piclazy('bg','good-news-img','jpg',0)
 					.d-lg-none.d-md-block.d-none
+						+e.btn-outline(href="#") Задать вопрос
 						+soc()
 						+e.copy © 2019 «live in motion!» 
 				+e.col.col
@@ -25,7 +26,11 @@ mixin footer()
 								|.
 					.row.d-md-none.d-lg-flex
 						.col-md
-							+soc()
+							+e.row.row
+								.col-md-12.col-sm-6.col-auto
+									+e.btn-outline(href="#") Задать вопрос
+								.col-md-12.col-sm-6.col
+									+soc()
 						.col-md.align-self-end.order-md-first
 							+e.copy © 2019 «live in motion!»
 	

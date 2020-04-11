@@ -2,7 +2,7 @@
 
 jQuery(document).ready(function ($) {
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/delivery_1920.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/fabric_1920.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// полифил для object-fit
 
 	objectFitImages(); // Picture element HTML5 shiv
@@ -239,7 +239,7 @@ var JSCCommon = {
 			fixedContentPos: true,
 			fixedBgPos: true,
 			overflowY: 'auto',
-			closeBtnInside: false,
+			closeBtnInside: true,
 			preloader: false,
 			midClick: true,
 			removalDelay: 300,
@@ -248,6 +248,9 @@ var JSCCommon = {
 		}); // / modal window
 		// modal галерея
 
+		$(".modal-close-js").click(function () {
+			$.magnificPopup.close();
+		});
 		$(".gal").each(function () {
 			$(this).find("a").magnificPopup({
 				type: 'image',
@@ -271,6 +274,15 @@ var JSCCommon = {
 				}
 			});
 		}); // /modal галерея
+
+		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+			disableOn: 700,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false
+		});
 	},
 	// /magnificPopupCall
 	mobileMenu: function mobileMenu() {

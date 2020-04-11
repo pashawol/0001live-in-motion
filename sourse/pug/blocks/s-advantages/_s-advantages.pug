@@ -1,0 +1,25 @@
+mixin s-advantages()
+	// start s-advantages
+	+b.SECTION.s-advantages.section.section--lg#s-advantages&attributes(attributes)
+		.container
+			+b.section-title(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) 
+				h2 Преимущества Polartec® Power Air™ 
+			.row(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) 
+				mixin item(n,img,color)
+					+e.col.col-sm-4.col-6
+						+e.number(style=`border-bottom-color:${color};background-image: url(img/@2x/s-advantages-${img}.jpg); `)= `0${n}`
+						block
+				+item("1",'1','#FFCF2B')
+					+e.text Прочность
+				+item("2",'2','#32CC91')
+					+e.text Долговечность материала
+				+item("3",'3','#E13EAF')
+					+e.text Поверхность материала  не&nbsp;подвержена пилингу
+				+item("4",'1','#FFCF2B')
+					+e.text Долговечность и&nbsp;дружественность к&nbsp;окружающей среде
+				+item("5",'2','#32CC91')
+					+e.text Поверхность материала не&nbsp;подвержена пилингу
+				+item("6",'3','#E13EAF')
+					+e.text Поверхность материала  не&nbsp;подвержена пилингу
+			a.btn.btn-primary(href="#" class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )  Задать вопрос
+	// end s-advantages

@@ -1,0 +1,57 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-style/_s-style.pug
+include ../blocks/s-articals/_s-articals.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-plan/_s-plan.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-more/_s-more.pug
+include ../blocks/sOther/_sOther.pug
+
+block variables
+	- let  mainPage= 'fabric'
+block title
+	title fabric
+
+block pagecontent
+ 
+	// повесь этот класс на body .not-main-page  я в сборке не могу
+	.not-main-page
+
+		+header()
+			//- +top-line()
+			+top-nav()
+			//- +header-block()
+		.container
+			+breadcrumb("Ткань Power-air")
+		
+		+s-content
+		.container
+			hr.m-0
+		+s-advantages
+		.container
+			hr.m-0
+		+s-more
+		.container
+			hr.m-0
+		+s-prod-2(2) 
+			+b.section-title
+				h2  Товары Polartec® Power Air™
+				p Компания live in&nbsp;motion! тесно сотрудничает с&nbsp;брендом Polartec<sup class="reg">&reg;</sup> и&nbsp;рада представить вашему вниманию товары, выполненные из&nbsp;ткани Power Air&trade;
+		.container
+			hr.m-0
+		+sOther
+		//- .block-wrapper.container.p-0
+		//- 	+s-about
+		//- 	+s-plan
+		+s-form("not")
+			div(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) 
+				h2 Обратная связь
+				p У&nbsp;вас остались вопросы, пожелания или предложения? Будем рады вам помочь
+		//- +s-contact()
+		+footer()
+

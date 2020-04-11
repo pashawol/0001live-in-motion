@@ -41,4 +41,14 @@ mixin modal()
 		+input('Ваш e-mail*','email')  
 		+e.btn(type="submit") Отправить
 	// #modal-call
+	
+	+form-wrap()(id="modal-thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+		+b.section-title.text-center
+			h2 Заявка <br> отправлена!
+			p В&nbsp;ближайшее время с&nbsp;вами свяжется наш менеджер и&nbsp;ответит на&nbsp;интересующие вопросы.
+		+e.btn.modal-close-js(type="button") Ок
+	// #modal-thanks
+
+	a.popup-with-move-anim(href="#modal-thanks") modal-thanks
+
 	// modal

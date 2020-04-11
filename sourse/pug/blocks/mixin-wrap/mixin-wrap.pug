@@ -203,9 +203,19 @@ mixin count-block()
 		+e.btn +
 
 
-mixin basket(page, confirm, checkout)
+mixin basket(page, confirm, checkout, empty)
 	// +b.basket
 	+b.basket
+		if !page
+			.row.align-items-center
+				.col
+				.col-auto
+					+e.close-btn.toggle-basket
+						+icon('close')
+			+e.empty.text-center.mb-4
+				img.mb-1(src="img/svg/basket-empty.svg", alt="")
+				.small.mb-4  Ваша корзина пуста
+				.h6: a.tdu(href="#") Смотреть наши товары
 		if !confirm
 			.row.align-items-center
 				.col
@@ -293,9 +303,9 @@ mixin basket(page, confirm, checkout)
 		+item('1','Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design')
 		+item('2','Футболка мужская "Даунхилл"  ')
 		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
-		//- +item('3','Худи женское "organic design and the wooden architecture of russia"  ')
-		//- +item('3','Худи женское "organic design and the wooden architecture of russia"  ')
-		//- +item('3','Худи женское "organic design and the wooden architecture of russia"  ')
+		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
+		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
+		+item('3','Худи женское "organic design and the wooden architecture of russia"  ')
 		if !confirm
 			+e.total
 				.row.align-items-center
@@ -320,3 +330,5 @@ mixin basket(page, confirm, checkout)
 						.col-md-auto
 							+e.btn.btn-primary(href="#") Оформить заказ
 	// /+b.basket
+
+	

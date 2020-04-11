@@ -1,4 +1,4 @@
-mixin s-form()
+mixin s-form(notmain)
 	// start s-form
 	+b.s-form.section.block-with-lazy#s-form(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )&attributes(attributes)
 		.container
@@ -7,12 +7,16 @@ mixin s-form()
 					+piclazy('bg','form-img1')
 				.col-lg-4.col-md-5
 					+b.section-title
-						h2 Поделиться идеей
-						p Если у&nbsp;вас есть пожелания по&nbsp;ассортименту и&nbsp;принтам&nbsp;&mdash; поделитесь, и&nbsp;мы&nbsp;возьмем  ваши идеи на&nbsp;вооружение.
+						if block
+							block
+						else
+							h2 Поделиться идеей
+							p Если у&nbsp;вас есть пожелания по&nbsp;ассортименту и&nbsp;принтам&nbsp;&mdash; поделитесь, и&nbsp;мы&nbsp;возьмем  ваши идеи на&nbsp;вооружение.
 					+form-wrap()
 						+input('Ваше имя*')
 						+input('Ваш телефон','tel')(required)
-						+input('Ваш e-mail*','email') 
-						+input('Ваша идея','textarea')
+						+input('Ваш e-mail*','email')
+						if !notmain
+							+input('Ваша идея','textarea')
 						+e.btn(type="submit") Отправить
 	// end s-form

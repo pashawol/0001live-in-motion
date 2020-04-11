@@ -1,11 +1,11 @@
-"use strict"; 
+"use strict";
 
 
 jQuery(document).ready(function ($) {
- 
-		// добавляет подложку для pixel perfect
-		$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/delivery_1920.jpg);"></div>')
-		// /добавляет подложку для pixel perfect
+
+	// добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/fabric_1920.jpg);"></div>')
+	// /добавляет подложку для pixel perfect
 
 	// полифил для object-fit
 	objectFitImages(); // Picture element HTML5 shiv
@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
 		$(this).toggleClass("active").next().slideToggle();
 	}); // добавляет подложку для pixel perfect
 
-	
+
 	function heightses() {
 		var w = $(window).width();
 		$(".prod-head__slider-sm").css("max-height", $(".prod-head__slider").height() - 20);
@@ -201,29 +201,29 @@ jQuery(document).ready(function ($) {
 	wow.init();
 
 
-	
+
 	var breadSl = new Swiper('.breadcrumb-slider-js', {
 		slidesPerView: 'auto',
 		// spaceBetween: 30,
-		freeMode: true, 
+		freeMode: true,
 		freeModeMomentum: true,
 		// spaceBetween: 30, 
-		watchOverflow: true,  
+		watchOverflow: true,
 	});
 
 	var breadSl2 = new Swiper('.mnu-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 10,
-		freeMode: true, 
+		freeMode: true,
 		freeModeMomentum: true,
 		// spaceBetween: 30, 
-		watchOverflow: true,  
+		watchOverflow: true,
 	});
 	var td = $(".s-size-block table td, .s-size-block table th");
-	td.hover(function(){
+	td.hover(function () {
 		let th = $(this);
-		th.parents("table").find('th:nth-child(' + (th.index() + 1) + ')').toggleClass("hover"); 
-		th.parents("table").find('td:nth-child(' + (th.index() + 1) + ')').toggleClass("hover"); 
+		th.parents("table").find('th:nth-child(' + (th.index() + 1) + ')').toggleClass("hover");
+		th.parents("table").find('td:nth-child(' + (th.index() + 1) + ')').toggleClass("hover");
 		// th.toggleClass("hover-this");
 	})
 });
@@ -248,7 +248,7 @@ var JSCCommon = {
 			fixedContentPos: true,
 			fixedBgPos: true,
 			overflowY: 'auto',
-			closeBtnInside: false,
+			closeBtnInside: true,
 			preloader: false,
 			midClick: true,
 			removalDelay: 300,
@@ -256,7 +256,9 @@ var JSCCommon = {
 			tClose: 'Закрыть (Esc)'
 		}); // / modal window
 		// modal галерея
-
+		$(".modal-close-js").click(function () {
+			$.magnificPopup.close();
+		})
 		$(".gal").each(function () {
 			$(this).find("a").magnificPopup({
 				type: 'image',
@@ -280,6 +282,16 @@ var JSCCommon = {
 				}
 			});
 		}); // /modal галерея
+
+		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+			disableOn: 700,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+
+			fixedContentPos: false
+		});
 	},
 	// /magnificPopupCall
 	mobileMenu: function mobileMenu() {
@@ -312,10 +324,10 @@ var JSCCommon = {
 			return false;
 		});
 		paddRight('.top-nav__head');
-		
+
 		$(document).on('click', '.toggle-basket', function () {
 			$(".toggle-block").toggleClass("active");
-			
+
 			if ($("body").hasClass("basket-fix")) {
 				$("body, html").removeClass("basket-fix");
 				$("body").css("paddingRight", 0);
@@ -332,15 +344,15 @@ var JSCCommon = {
 	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active');
-			$('.' + tab + '__content:nth-child('+($(this).index() + 1)+')').each(function(){
-				$(this).fadeIn().addClass('active') 
+			$('.' + tab + '__content:nth-child(' + ($(this).index() + 1) + ')').each(function () {
+				$(this).fadeIn().addClass('active')
 			})
 		});
-		$(".tab-sub-js").click(function(){
+		$(".tab-sub-js").click(function () {
 			let tabCont = $(this).data("tabs");
 			console.log(tabCont);
 			$(this).addClass('active').siblings().removeClass('active');
-			$('.tabs__content-data'+tabCont).fadeIn().addClass('active').siblings().hide().removeClass('active');
+			$('.tabs__content-data' + tabCont).fadeIn().addClass('active').siblings().hide().removeClass('active');
 		})
 
 
@@ -391,7 +403,7 @@ var JSCCommon = {
 				target: {// right: 20
 				}
 			});
-		}); 
+		});
 		//// 	$('.zoom-link').easyZoom({
 		// 		id: 'imagezoom',
 		// 		// preload: '<p class="preloader">Loading the image</p>',
@@ -405,12 +417,12 @@ var JSCCommon = {
 		// табы на радиокнопках
 		$('[data-tabs]').change(function () {
 			var th = $(this),
-					tabRadio = th.data('tabs');
+				tabRadio = th.data('tabs');
 			$(tabRadio).fadeIn(100).addClass("active").siblings('.tab-block').removeClass('active').hide(); // console.log(th.data('tabs'))
 		});
 		$('[data-tabs]').each(function () {
 			var th = $(this),
-					tabRadio = th.data('tabs');
+				tabRadio = th.data('tabs');
 
 			if (th.is(":checked")) {
 				$(tabRadio).fadeIn(100).addClass("active").siblings('.tab-block').removeClass('active').hide();
@@ -433,32 +445,32 @@ var JSCCommon = {
 				$(this).closest('.form-wrap__input-wrap').addClass('empty');
 			}
 		});
-		
+
 		let selectedTd;
 		let body = document.querySelector('body')
-			body.onclick = function(event) {
-				if ($("div").is(".form-wrap__input-wrap--city")) {
+		body.onclick = function (event) {
+			if ($("div").is(".form-wrap__input-wrap--city")) {
 
-					let formWrap = event.target.closest('.form-wrap__input-wrap--city'); // (1)
-					let formWrapEl = document.querySelector('.form-wrap__input-wrap--city'); // (1)
-					let target = event.target; // где был клик? 
-					// if (!formWrap)  formWrapEl.classList.remove('focus'); // не на TD? тогда не интересует
-					
+				let formWrap = event.target.closest('.form-wrap__input-wrap--city'); // (1)
+				let formWrapEl = document.querySelector('.form-wrap__input-wrap--city'); // (1)
+				let target = event.target; // где был клик? 
+				// if (!formWrap)  formWrapEl.classList.remove('focus'); // не на TD? тогда не интересует
+
 				if (!body.contains(formWrap)) formWrapEl.classList.remove('focus'); // (3)
-				else{
-					
+				else {
+
 					highlight(formWrap); // (4)
 				}
 			}
-			};
+		};
 
-			function highlight(td) {
-			 
-					selectedTd = td;
-					selectedTd.classList.add('focus'); // подсветить новый td
-			 
-				// console.log(selectedTd)
-			}
+		function highlight(td) {
+
+			selectedTd = td;
+			selectedTd.classList.add('focus'); // подсветить новый td
+
+			// console.log(selectedTd)
+		}
 		// $('.form-wrap__input-wrap ').on('focus',  '.bx-ui-sls-fake', function () {
 		// 	if ($(this).val().trim() !== '') {
 		// 		$(this).closest('.form-wrap__input-wrap').removeClass('empty');
@@ -467,15 +479,15 @@ var JSCCommon = {
 		// 	}
 		// });
 	},
-	accordion: function () { 
+	accordion: function () {
 		$('.accord__head').click(function () {
 			var th = $(this);
-			th.next().slideToggle(()=>{
+			th.next().slideToggle(() => {
 				th.toggleClass('active')
-			}) 
-				 return false;
-				});
- 
+			})
+			return false;
+		});
+
 	},
 }; // JSCCommon.LazyFunction();
 

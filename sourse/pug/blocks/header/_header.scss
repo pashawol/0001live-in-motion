@@ -1,10 +1,11 @@
-.header{
-	
+.header {
+
   // 
   @include media-breakpoint-up(xl) {
 
-    min-height: rem(100);
+    min-height: rem(80);
   }
+
   min-height: rem(150);
 
   @include media-breakpoint-up(lg) {}
@@ -39,4 +40,4 @@
   @include media-breakpoint-down(sm) {}
 
   @include media-breakpoint-down(xs) {}
- }
+}
