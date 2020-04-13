@@ -105,7 +105,7 @@
  	// position: fixed;
  	position: absolute;
  	right: 0;
- 	width: rem(652px);
+ 	width: rem(682px);
  	max-width: 100%;
  	top: 0;
  	z-index: 2;
@@ -141,11 +141,13 @@
 
  	.basket {
 
- 		margin-right: 12px;
+
  		line-height: (20 / 14);
+ 		display: flex;
+ 		flex-direction: column;
 
  		&__size {
- 			margin-bottom: rem(30);
+ 			margin-bottom: rem(20);
  		}
 
  		&__delete {
@@ -172,17 +174,29 @@
  		&__item {
  			padding-right: 0;
  			font-size: 14px;
+ 			padding-bottom: 0;
+ 			padding-top: 40px;
+ 			padding-bottom: 8px;
+ 			margin-bottom: 0;
+
+ 			&:first-child {
+ 				padding-top: 0;
+ 			}
+
+ 			&:last-child {
+ 				margin-bottom: 0;
+ 			}
  		}
 
  		&__item,
  		&__total {
 
- 			max-width: 498px;
+ 			// max-width: 498px;
  		}
 
  		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
  		padding-top: rem(20);
- 		padding-left: rem(25);
+ 		padding-left: rem(55);
  		padding-right: rem(25);
  		padding-bottom: rem(40);
  		overflow-y: auto;
@@ -191,12 +205,24 @@
  		background-color: #ffffff;
  		flex-grow: 1;
 
+ 		&__items {
+ 			flex-grow: 1;
+ 			overflow-x: hidden;
+ 			overflow-y: auto;
+ 			position: relative;
+ 			padding-right: 12px;
+ 			margin-top: rem(12);
+ 			margin-bottom: rem(40);
+ 		}
+
+
  		@include media-breakpoint-up(sm) {
 
 
  			// scrollbar-width: thin;
  			scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.2);
 
+ 			&__items::-webkit-scrollbar,
  			&::-webkit-scrollbar {
  				width: 12px;
  				height: 12px;
@@ -208,6 +234,7 @@
  			}
 
  			/* Add a thumb */
+ 			&__items::-webkit-scrollbar-thumb,
  			&::-webkit-scrollbar-thumb {
  				border-radius: 6px;
  				background-color: rgba(0, 0, 0, 0.5);
@@ -223,6 +250,7 @@
 
  			}
 
+ 			&__items::-webkit-scrollbar-button,
  			&::-webkit-scrollbar-button {
  				display: none
  			}

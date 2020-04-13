@@ -152,6 +152,14 @@
 			width: rem(136);
 		}
 
+		@include media-breakpoint-down(xs) {
+			padding-top: rem(1);
+			padding-bottom: rem(1);
+			padding-left: rem(5);
+			padding-right: rem(5);
+			width: 44px;
+		}
+
 		@include media-breakpoint-up(lg) {
 
 			width: rem(110);

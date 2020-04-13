@@ -1,6 +1,8 @@
 .footer {
+  padding-bottom: rem(100);
+
   @include media-breakpoint-up(xl) {
-    padding-top: rem(80);
+    padding-top: rem(42 - 7);
   }
 
   .row {
@@ -37,7 +39,7 @@
       // margin-bottom: rem(55);
     }
 
-    margin-bottom: rem(6);
+    margin-bottom: rem(15);
   }
 
   .soc {
@@ -85,7 +87,7 @@
   }
 
   &__btn-outline {
-    @extend .btn;
+    // @extend .btn;
     @extend .btn-outline-primary;
 
     @include media-breakpoint-up(xl) {

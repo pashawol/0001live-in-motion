@@ -1,5 +1,10 @@
 .s-advantages {
-	padding-bottom: calc(var(--pb) + #{rem(50)});
+	@include media-breakpoint-up(sm) {
+
+		padding-bottom: rem(100 /1);
+	}
+
+	padding-bottom: rem(70);
 
 	.section-title {
 		padding-bottom: rem(50);
@@ -16,12 +21,21 @@
 		border-bottom: 2px solid;
 		width: rem(90px);
 		height: rem(90px);
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		// @include rfs(rem(50px));
 		font-size: rem(50px);
 		line-height: (60px / 50);
+		background-size: cover;
+
+		@include media-breakpoint-only(md) {
+			width: 130px;
+			font-size: 64px;
+			height: 130px;
+		}
+
 		display: flex;
 		align-items: center;
 		text-align: center;
@@ -31,6 +45,18 @@
 	}
 
 	&__text {
+		@include media-breakpoint-up(lg) {
+			font-size: 1rem;
+		}
+
+		@include media-breakpoint-up(md) {
+			font-size: 18px;
+		}
+
+		font-size: 14px;
+
+		@include media-breakpoint-up(sm) {}
+
 		@include media-breakpoint-up(lg) {
 			max-width: 100%;
 		}

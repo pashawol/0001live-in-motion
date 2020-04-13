@@ -1,3 +1,7 @@
+.mb-19 {
+	margin-bottom: 19px;
+}
+
 .s-content {
 	&--fabric {
 		@include media-breakpoint-up(xl) {
@@ -18,6 +22,7 @@
 
 	&__img-wrap {
 		position: relative;
+		text-align: center;
 
 		@include media-breakpoint-down(lg) {
 			margin-top: rem(60);
@@ -110,6 +115,7 @@
 
 	@include media-breakpoint-down(xs) {
 		padding-top: 0;
+		padding-bottom: rem(60);
 
 		h1 {
 			padding-bottom: rem(50);

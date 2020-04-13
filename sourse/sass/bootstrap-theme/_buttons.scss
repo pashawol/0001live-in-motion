@@ -161,9 +161,7 @@ fieldset:disabled a.btn {
 
 
     &:hover {
-      border-color: #ffb72b !important;
-      // border-color: $primary !important;
-      // color: $body-color !important;
+      color: rgba($color: $body-color, $alpha: .6) !important;
     }
   }
 }

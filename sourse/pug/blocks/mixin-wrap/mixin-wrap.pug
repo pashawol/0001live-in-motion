@@ -22,31 +22,7 @@ mixin breadcrumb(...items)
 
 		
 //- pugination
-mixin pugin()
-	//- nav(aria-label='...')
-	//- 	ul.pagination.justify-content-center
-	//- 		li.page-item.disabled
-	//- 			a.page-link(href='#', tabindex='-1') 
-	//- 				i(class="fas fa-chevron-left")
-	//- 		li.page-item.disabled
-	//- 			a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
-
-	//- 		li.page-item
-	//- 			a.page-link(href='#') 1
-	//- 		li.page-item.active
-	//- 			a.page-link(href='#')
-	//- 				| 2 
-	//- 				span.sr-only (current)
-	//- 		li.page-item
-	//- 			a.page-link.page-link-more(href='#') ...
-	//- 		li.page-item
-	//- 			a.page-link(href='#') 3
-
-	//- 		li.page-item
-	//- 			a.page-link.d-none.d-md-block(href='#') Дальше
-	//- 		li.page-item
-	//- 			a.page-link(href='#') 
-	//- 				i(class="fas fa-chevron-right")
+mixin pugin() 
 	.pagination-wrapper
 		ul.page-numbers
 			li
@@ -94,20 +70,7 @@ mixin soc()
 		+item()
 			+icon('vk')
 		
-//- /scial buttons
-//- WP menu
-//- mixin mnu()
-//- 	- var nav= { "Наши работы":"#","Цены":"#","Калькулятор":"#","Акции":"#" ,"Заказать":"#"}
-//- 	ul.menu
-//- 		li.menu-item.menu-item-has-children
-//- 			a(href="#") О нас
-//- 			ul.sub-menu
-//- 				li.menu-item: a(href="#") Строительство загородных домов
-//- 				li.menu-item: a(href="#") Отделка загородных домов
-//- 				li.menu-item: a(href="#") Покраска деревянных домов
-//- 				li.menu-item: a(href="#") Штукатурные фасады загородных домов
-//- 		each linkPatch, linkName in nav
-//- 			li.menu-item: a(href="#")= linkName
+ 
 
 //- menu
 mixin mnu()
@@ -165,22 +128,7 @@ mixin pic(bg, i, exp="jpg", media='576px' )
 		else 
 			img(src=`img/@2x/${i}.${exp}`, alt="") 
 	// /picture
-		 
-//- /picture with lazy
-	example
-	+piclazy('consult','png','bg')
-	or
-	+piclazy('consult','png')
-
-
  
-		 
-//- /picture
-	example
-	+piclazy('consult','png','bg')
-	or
-	+piclazy('consult','png')
-
 
 mixin size()
 	+b.FORM.sizes-block

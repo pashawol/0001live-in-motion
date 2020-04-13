@@ -102,11 +102,18 @@ body {
 	// --pt: #{rem(40)};
 	// --pb: #{rem(30)};
 
-	--pt: #{rem(52)};
-	--pb: #{rem(40)};
+	--pt: #{rem(22)};
+	--pb: #{rem(20)};
+
+	@include media-breakpoint-up(sm) {
+		--pt: #{rem(52)};
+		--pb: #{rem(50)};
+
+	}
 
 	@include media-breakpoint-up(md) {
-		--pb: #{rem(50)};
+		// --pt: #{rem(52)};
+		// --pb: #{rem(50)};
 
 	}
 
@@ -617,7 +624,7 @@ picture {
 
 .btn-outline-primary {
 	@extend .btn;
-	@extend .btn-primary;
+	// @extend .btn-primary;
 	@extend .btn-outline-primary;
 }
 
@@ -783,4 +790,8 @@ button {
 		padding-top: rem(18);
 		padding-bottom: rem(18);
 	}
+}
+
+.section .basket {
+	padding-bottom: rem(40);
 }

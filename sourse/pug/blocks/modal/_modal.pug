@@ -33,7 +33,7 @@ mixin modal()
 	//- 			br 
 
 	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
-		+b.section-title.text-center
+		+b.section-title.text-center.pb-2
 			h2 Форма связи
 			p Оставьте ваши контактные данные и&nbsp;мы&nbsp;перезвоним  в&nbsp;ближайшее время
 		+input('Ваше имя*')
@@ -45,7 +45,7 @@ mixin modal()
 	+form-wrap()(id="modal-thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
 		+b.section-title.text-center
 			h2 Заявка <br> отправлена!
-			p В&nbsp;ближайшее время с&nbsp;вами свяжется наш менеджер и&nbsp;ответит на&nbsp;интересующие вопросы.
+			p.thanks-text В&nbsp;ближайшее время с&nbsp;вами свяжется наш менеджер и&nbsp;ответит на&nbsp;интересующие вопросы
 		+e.btn.modal-close-js(type="button") Ок
 	// #modal-thanks
 

@@ -11,6 +11,19 @@
 	max-width: rem(560px);
 	padding: rem(60) rem(80);
 	background-color: #ffffff;
+	min-height: rem(620);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	h2 {
+		line-height: 1;
+		margin-bottom: rem(20);
+	}
+
+	.thanks-text {
+		margin-bottom: rem(30);
+	}
 
 	// &::before{
 	// 	content: '';

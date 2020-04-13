@@ -4,7 +4,7 @@
 jQuery(document).ready(function ($) {
 
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/fabric_1920.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/fabric_1920.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 	// полифил для object-fit
