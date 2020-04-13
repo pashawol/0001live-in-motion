@@ -99,11 +99,13 @@ body {
 }
 
 :root {
-	--pt: #{rem(52 / 2)};
-	--pb: #{rem(50 / 2)};
+	// --pt: #{rem(40)};
+	// --pb: #{rem(30)};
+
+	--pt: #{rem(52)};
+	--pb: #{rem(40)};
 
 	@include media-breakpoint-up(md) {
-		--pt: #{rem(52)};
 		--pb: #{rem(50)};
 
 	}
@@ -773,4 +775,12 @@ button {
 
 .text-0 {
 	color: #000000 !important;
+}
+
+@include media-breakpoint-down(xs) {
+	.btn {
+		font-size: 14px;
+		padding-top: rem(18);
+		padding-bottom: rem(18);
+	}
 }

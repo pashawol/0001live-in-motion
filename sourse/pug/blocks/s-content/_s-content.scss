@@ -1,6 +1,10 @@
 .s-content {
 	&--fabric {
-		padding-bottom: rem(100);
+		@include media-breakpoint-up(xl) {
+
+			padding-bottom: rem(100);
+		}
+
 		padding-top: rem(17);
 	}
 
@@ -12,7 +16,13 @@
 		max-width: rem(660);
 	}
 
-	&__gal {
+	&__img-wrap {
+		position: relative;
+
+		@include media-breakpoint-down(lg) {
+			margin-top: rem(60);
+		}
+
 		@include media-breakpoint-up(xl) {
 
 			margin-left: 0;
@@ -26,34 +36,36 @@
 		margin-right: -15px;
 	}
 
-	[data-fancybox="video"] {
+	&__gal {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		padding-bottom: (540 * 100% / 962);
+		background-image: url(../img/svg/play.svg);
+		display: block;
+		background-position: center center;
+		background-repeat: no-repeat;
 
-		&::before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 0;
-			padding-bottom: (540 * 100% / 962);
-			background-image: url(../img/svg/play.svg);
-			display: block;
-			background-position: center center;
-			background-repeat: no-repeat;
-
-			@include media-breakpoint-up(xl) {
-				background-size: rem(70);
-
-			}
-
-			@include media-breakpoint-up(md) {
-
-				background-size: rem(170);
-			}
-
-			background-size: rem(100);
+		@include media-breakpoint-up(xl) {
+			background-size: rem(70);
 
 		}
+
+		@include media-breakpoint-up(md) {
+
+			background-size: rem(170);
+		}
+
+		background-size: rem(100);
+
+	}
+
+	[data-fancybox="video"] {
+
+		&::before {}
 	}
 
 	//
@@ -88,7 +100,7 @@
 	@include media-breakpoint-down(lg) {
 		.btn {
 
-			margin-bottom: rem(100);
+			margin-bottom: rem(40);
 		}
 	}
 

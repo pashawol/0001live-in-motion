@@ -6,17 +6,14 @@ mixin s-form(notmain)
 				+e.col.col.order-md-last
 					+piclazy('bg','form-img1')
 				.col-lg-4.col-md-5
-					+b.section-title
-						if block
-							block
-						else
-							h2 Поделиться идеей
-							p Если у&nbsp;вас есть пожелания по&nbsp;ассортименту и&nbsp;принтам&nbsp;&mdash; поделитесь, и&nbsp;мы&nbsp;возьмем  ваши идеи на&nbsp;вооружение.
+					+b.section-title 
+						h2 Обратная связь
+						p У&nbsp;вас остались вопросы, пожелания или предложения? Будем рады вам помочь
 					+form-wrap()
 						+input('Ваше имя*')
 						+input('Ваш телефон','tel')(required)
 						+input('Ваш e-mail*','email')
-						if !notmain
-							+input('Ваша идея','textarea')
+						//- if !notmain
+						//- 	+input('Ваша идея','textarea')
 						+e.btn(type="submit") Отправить
 	// end s-form

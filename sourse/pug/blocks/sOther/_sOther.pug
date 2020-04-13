@@ -10,7 +10,7 @@ mixin sOther()
 				
 			.row(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) 
 				mixin col(i,t)
-					+e.col.col-sm.col-4
+					+e.col.col-sm.col-4(href="#")
 						picture
 							source( srcset=`img/@2x/webp/material-${i}.webp`)
 							img.res-i(src=`img/@2x/material-${i}.jpg`, alt="")

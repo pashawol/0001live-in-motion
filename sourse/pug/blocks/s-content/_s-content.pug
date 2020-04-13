@@ -11,7 +11,8 @@ mixin s-content()
 						p Power Air&trade;&nbsp;&mdash; трикотажное полотно со&nbsp;множеством небольших воздушных карманов. Этот материал по&nbsp;конструкции напоминает воздушно-пузырьковую полиэтиленовую пленку для упаковки хрупких изделий. Но&nbsp;в&nbsp;отличие от&nbsp;пленки, карманы Power Air&trade; не&nbsp;пустые, а&nbsp;заполнены теми самыми полиэфирными волокнами, из&nbsp;которых состоит привычный нам флис
 					a.btn-primary.btn(href="#") Смотреть товары
 				.col
-					+e.gal(href="https://www.youtube.com/watch?v=Pq9yPrLWMyU" data-fancybox="video")
+					+e.img-wrap
+						+e.gal(href="https://www.youtube.com/watch?v=Pq9yPrLWMyU" data-fancybox="video")
 						picture
 							source(media="(min-width: 1200px)", srcset="img/@2x/webp/visual.webp" type="image/webp")
 							source(media="(min-width: 1200px)", srcset="img/@2x/visual.jpg" type="image/jpg")
@@ -20,3 +21,29 @@ mixin s-content()
 							source(media="(min-width: 360px)", srcset="img/@1x/webp/visual-tablet.webp" type="image/webp")
 							img(src="img/@2x/img/@1x/visual-tablet.jpg", alt="")
 	// end s-content
+	.container.d-none.d-xl-block
+			hr.m-0
+
+	p варианат без ВИДЕО. Звезда в шоке!
+	// start s-content
+	+b.s-content--fabric.section.block-with-lazy#s-content&attributes(attributes)
+		.container
+			.row(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) 
+				.col-xl-8
+					+e.wrap
+						h1 Ткань Power-air
+						p.mb-1
+							strong.ttu Polartec® Power Air™
+						p Power Air&trade;&nbsp;&mdash; трикотажное полотно со&nbsp;множеством небольших воздушных карманов. Этот материал по&nbsp;конструкции напоминает воздушно-пузырьковую полиэтиленовую пленку для упаковки хрупких изделий. Но&nbsp;в&nbsp;отличие от&nbsp;пленки, карманы Power Air&trade; не&nbsp;пустые, а&nbsp;заполнены теми самыми полиэфирными волокнами, из&nbsp;которых состоит привычный нам флис
+					a.btn-primary.btn(href="#") Смотреть товары
+				.col.d-none.d-xl-block
+					+e.img-wrap
+						+e.gal(href="https://www.youtube.com/watch?v=Pq9yPrLWMyU" data-fancybox="video")
+						picture
+							source(media="(min-width: 1200px)", srcset="img/@2x/webp/visual.webp" type="image/webp")
+							source(media="(min-width: 1200px)", srcset="img/@2x/visual.jpg" type="image/jpg") 
+							img(src="img/@2x/img/@2x/visual.jpg", alt="")
+	// end s-content
+	.container
+			hr.m-0
+

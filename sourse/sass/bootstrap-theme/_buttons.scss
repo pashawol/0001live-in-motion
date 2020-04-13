@@ -152,6 +152,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
+
   background-color: transparent;
   border-color: $primary !important;
   color: $body-color !important;
@@ -160,8 +161,7 @@ fieldset:disabled a.btn {
 
 
     &:hover {
-
-      background-color: $primary;
+      border-color: #ffb72b !important;
       // border-color: $primary !important;
       // color: $body-color !important;
     }
