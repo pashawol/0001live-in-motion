@@ -25,14 +25,14 @@ html {
 body,
 html {
 
-	@include media-breakpoint-up(xxl) {
+	// @include media-breakpoint-up(xxl) {
 
-		font-size: 22px;
-	}
+	// 	font-size: 22px;
+	// }
 
 	@include media-breakpoint-up(xl) {
 
-		font-size: 20px;
+		font-size: 22px;
 	}
 
 	@include media-breakpoint-up(lg) {

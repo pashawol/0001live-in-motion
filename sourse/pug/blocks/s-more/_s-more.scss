@@ -10,13 +10,19 @@
 		position: relative;
 		padding-left: rem(46);
 		margin-bottom: rem(48);
-		line-height: (40 / 22);
+
+		@include media-breakpoint-up(sm) {
+
+			line-height: (40 / 22);
+		}
+
+		line-height: (20 / 14);
 
 		span {
 			position: absolute;
 			left: 0;
 			top: rem(10);
-			width: rem(10);
+			width: 10px;
 			height: calc(100% - #{rem(20)});
 		}
 
