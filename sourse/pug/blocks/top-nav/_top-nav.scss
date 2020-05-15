@@ -10,6 +10,15 @@
 			padding-bottom: 0;
 			// font-size: $small;
 		}
+			&__logo {
+				.icon {
+				 
+					color: $success;
+
+			 
+
+				} 
+			}
 	}
 	
 }
@@ -162,9 +171,13 @@
 			font-size: rem(90);
 			@include media-breakpoint-up(xl) {
 				font-size: rem(50);
-
+				
+				color: $success;
 			}
-			color: $success;
+					@include media-breakpoint-up(lg) {
+
+					}
+					color: #ffffff;
 
 		}
 		display: inline-block;

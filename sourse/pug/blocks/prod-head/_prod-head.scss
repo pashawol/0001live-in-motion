@@ -14,6 +14,10 @@
 	opacity: 0;
 }
 .prod-head {
+	font-size: 14px;
+	.sizes-block {
+		padding-top: 14px; 
+	}
 	.row--sm{
 		@include roww(5);
 	}
@@ -60,14 +64,22 @@
 	}
 	&__slide{
 		@include media-breakpoint-up(xl) {
-
+			
 			margin-bottom: 30px;
 		}
 	}
 	&__img-wrap{
 		height: 100%;
-	
+		
 	}
+	.row.row--sm.small.mb-2{
+		margin-bottom: 20px !important;
+			@include media-breakpoint-up(md) {
+				}
+				a.text-secondary{
+					@extend .tdu;
+				}
+			}
 	&__title{
 		font-size: 1rem;
 		font-weight: bold;
@@ -77,24 +89,26 @@
 		padding-bottom: rem(25);
 	}
 	.size-block{
-		margin-bottom: rm(20);
-		max-width: rem(484);
+		margin-bottom: rem(20);
+		max-width: 484px;
 	}
 	&__size-wrap{
 		// max-width: rem(500);
 		@include media-breakpoint-up(sm) {
-			max-width: rem(484);
+			max-width: 484px;
 
 		}
 	}
 	&__count-block{
 		border: 1px solid #e0e0e0;
-		// max-width: rem(484);
+		// max-width: 484px;
 		min-height: 40px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-
+		input{
+			min-height: 40px;
+		}
 		.row{
 			align-items: center;
 			padding-left: rem(26);
@@ -106,6 +120,9 @@
 	&__btn{
 		padding-left: 0;
 		padding-right: 0;
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
 		@include media-breakpoint-up(xl) {
 
 			margin-bottom: rem(80);
@@ -154,7 +171,7 @@
 	.text-more{
 		// padding-bottom: rem(10);
 		line-height: 1.5;
-		padding-bottom: rem(25);
+		padding-bottom: rem(40);
 	}
 	.b-morelines_section_button{
 		margin-top: rem(25);
@@ -172,7 +189,7 @@
 		@include media-breakpoint-up(sm) { 
 		height: 440px;
 	}
-	height: 100%;
+	height: 340px;
 	
 
 	picture{

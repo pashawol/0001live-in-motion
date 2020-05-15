@@ -30,7 +30,7 @@ $pink: #e13eaf !default;
 $red: #FF3D3D !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$green: #77B206 !default;
+$green: #96CD2E !default;
 $teal: #32cc91 !default;
 $cyan: #17a2b8 !default;
 
@@ -102,7 +102,9 @@ $grid-breakpoints: (xs: 0,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px) !default;
+  xxl: 1440px,
+  xxxl: 1900px,
+  ) !default;
 
 // Grid containers
 //

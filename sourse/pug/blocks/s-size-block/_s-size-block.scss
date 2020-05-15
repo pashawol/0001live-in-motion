@@ -1,5 +1,21 @@
 .s-size-block {
+	&__wrap{
+		margin-left: auto;
+		margin-right: auto;
+		.col-lg-5{
+			max-width: 435px;
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: none;
 
+		}
+		
+		@include media-breakpoint-up(sm) {
+			max-width: 652px;
+		}
+
+	}
 	.section-title {
 		a {
 			display: inline-block;
@@ -218,6 +234,13 @@
 		}
 
 		// font-size:14;
+		
+		.btn-wrap {
+			justify-content: center;
+		}
+	}
+
+	@include media-breakpoint-down(xs) {
 		h2 {
 			font-size: 23px;
 			margin-bottom: 10px;
@@ -228,12 +251,7 @@
 			font-size: 14px;
 		}
 
-		.btn-wrap {
-			justify-content: center;
-		}
 	}
-
-	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
 
@@ -291,7 +309,15 @@
 	&__btn-head {
 		@extend .btn-outline;
 		@extend .btn-sm;
-		width: rem(165);
+		@include media-breakpoint-up(sm) {
+			
+			width: 165px;
+		}
+					@include media-breakpoint-down(xs) {
+						font-size: 12px;
+					padding: rem(5);
+					}
+		width: 100px;
 		margin-bottom: rem(20);
 		margin-left: 15px;
 		margin-right: 15px;

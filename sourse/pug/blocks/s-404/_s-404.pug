@@ -8,12 +8,12 @@ mixin s-404()
 						+pic("","404")
 					.col
 						.strong Ошибка 404
-						h1 К&nbsp;сожалению,  страница  не&nbsp;найдена :-(
+						h1 К&nbsp;сожалению,  страница  #[span.d-inline-block не&nbsp;найдена&nbsp;:-(]
 			+e.row--2.row
 				mixin col(i)
 					+e.col.col-sm
 						+e.item
-							+e.icon-wrap
+							+e.icon-wrap.tdn(href="#").d-block
 								//- +icon(i)
 								img.res-i.lazy(src="#" data-src=`img/svg/${i}.svg`, alt="")
 							block

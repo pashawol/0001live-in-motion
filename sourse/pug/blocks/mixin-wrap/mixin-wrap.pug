@@ -224,10 +224,10 @@ mixin basket(page, confirm, checkout, empty)
 										.col.text-lg-left(class=( page=='confirm' ? "" : 'text-center'))
 											if !confirm
 												.row.align-items-center
-													.col-lg-auto.col-md-12.col-auto.mb-2
+													.col-auto.mb-2
 														+count-block()
 													.col-md.col-auto.small.mb-2 ( 3000 ₽  X2 )
-													.col-lg-auto.col-md-12.col-auto.strong.mb-2 3000 ₽
+													.col-auto.strong.mb-2 3000 ₽
 											
 											else
 												if !checkout
@@ -268,7 +268,7 @@ mixin basket(page, confirm, checkout, empty)
 										.col.strong 
 											+e.SPAN.total-title Итого: 
 											| 
-											| 12567 ₽
+											span.d-inline-block 12567 ₽
 										.col-auto
 											+e.btn.btn-primary(href="#") Оформить заказ
 					else 
@@ -276,7 +276,7 @@ mixin basket(page, confirm, checkout, empty)
 							+e.SPAN.total-title Итого: 
 							| 
 							| 12567 ₽
-						.col-md-auto
+						.col-auto
 							+e.btn.btn-primary(href="#") Оформить заказ
 	// /+b.basket
 

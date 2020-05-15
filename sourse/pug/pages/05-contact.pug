@@ -11,7 +11,7 @@ include ../blocks/s-plan/_s-plan.pug
 include ../blocks/s-menu/_s-menu.pug
 
 block title
-	title title
+	title Контакты
 
 block pagecontent
 	//- .container
@@ -30,6 +30,8 @@ block pagecontent
 		+header()
 			//- +top-line()
 			+top-nav()
+		.container
+			+breadcrumb("Контакты")
 		+s-contact()
 		//- +s-form()
 		+s-menu

@@ -82,7 +82,7 @@
 
 
  .toggle-block {
-
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
  	// top: 100px !important;
  	&::before {
  		content: '';
@@ -98,7 +98,7 @@
 
  	@include media-breakpoint-down(xs) {
  		.row {
- 			@include roww(5);
+ 			// @include roww(5);
  		}
  	}
 
@@ -194,12 +194,13 @@
  			// max-width: 498px;
  		}
 
- 		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
- 		padding-top: rem(20);
+ 	
+ 		padding-top: 33px;
  		padding-left: rem(55);
  		padding-right: rem(12);
  		padding-bottom: rem(40);
- 		overflow-y: auto;
+		 overflow-y: auto;
+		 overflow-x: hidden;
  		max-height: 100%;
  		z-index: 2;
  		background-color: #ffffff;
@@ -302,7 +303,9 @@
  		position: absolute;
  		z-index: 20;
 
- 		@include media-breakpoint-up(md) {}
+ 		@include media-breakpoint-up(lg) {
+			 	top: rem(3);
+		 }
 
  		// right: 0;
  		right: -5px;
@@ -310,10 +313,10 @@
  		@include media-breakpoint-up(sm) {
 
  			right: -15px;
- 			top: rem(3);
+ 		
  		}
 
- 		top: rem(3);
+ 		top: rem(28);
 
  		.icon {
  			color: transparent;

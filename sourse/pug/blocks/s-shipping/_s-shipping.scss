@@ -1,7 +1,7 @@
 .s-shipping {
 		padding-top: rem(65);
 		p{
-			font-size: rem(16);
+			font-size: 16px;
 			@include media-breakpoint-up(lg) {
 
 				max-width: rem(500);
@@ -14,7 +14,8 @@
 		&__warning{
 			@include media-breakpoint-up(sm) {
 
-				margin-top: rem(102);
+				margin-top: 102px;
+				padding-bottom: 102px;
 			}
 			margin-top: rem(32);
 			border-top: 1px solid rgba($color: #333333, $alpha: .2);
@@ -36,14 +37,31 @@
 				}
 				text-align: center;
 		h2{
-			padding-top: rem(30);
+			padding-top: rem(80);
+		}
+		// 	@include media-breakpoint-up(sm) {
+
+		// 		font-size: 16px;
+		// 	}
+
+		// 	font-size: 14px;
+		p{
+		// 			@include media-breakpoint-up(sm) {
+
+		// 				font-size: 16px;
+		// 			}
+		// 			font-size: 14px;
+			max-width: 690px;
 		}
 		&__row{
+			@include media-breakpoint-up(sm) {
+				padding-top: 45px;
+			}
 			padding-top: rem(45);
 			// margin-bottom: rem(30);
 			// @include roww(20);
 			p{
-				max-width: rem(300) !important;
+				max-width: 300px !important;
 				line-height: 1.5;
 				// padding-bottom: 0;
 				@include media-breakpoint-up(sm) {
@@ -135,7 +153,16 @@
 			}
 
 		}
-	
+	&__d22{
+		@include media-breakpoint-up(lg) {
+
+			font-size: 22px;
+		}
+		@include media-breakpoint-up(sm) {
+
+			font-size: 18px;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

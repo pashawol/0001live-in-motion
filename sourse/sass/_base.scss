@@ -2,6 +2,10 @@ html {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 }
+img{
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimizeSpeed;
+}
 
 .screen {
 	top: 0;
@@ -96,6 +100,20 @@ body {
 
 	padding-top: rem(36);
 	padding-bottom: rem(30);
+
+	h2 {
+		@include media-breakpoint-up(lg) {
+
+			font-size: 50px;
+		}
+
+		@include media-breakpoint-up(md) {
+
+			font-size: 32px;
+		}
+
+		font-size: 24px;
+	}
 }
 
 :root {
@@ -646,6 +664,7 @@ picture {
 }
 
 
+
 .page-title {
 	padding-bottom: rem(18);
 
@@ -707,7 +726,17 @@ picture {
 		width: auto;
 
 		&:not(.page-title__btn-head--sm) {
-			min-width: rem(110);
+				@include media-breakpoint-up(sm) {
+
+					min-width: 110px;
+					font-size: 14px;
+					padding: 8px 5px;
+				}
+				min-width: rem(100);
+				font-size: 12px;
+				padding-left: 0;
+				padding-right: 0;
+				padding: 5px 1px;
 
 		}
 
@@ -753,11 +782,14 @@ picture {
 			@include media-breakpoint-up(md) {
 
 				width: rem(330);
+				height: 39px;
+				padding: .2625rem .9rem;
 			}
-
+			padding: .6625rem .9rem;
+			// height: 54px;
+			min-height: 1px;
 			margin-bottom: rem(10);
-			padding: .4625rem .9rem;
-			height: rem(43);
+			// height: rem(43);
 		}
 
 	}

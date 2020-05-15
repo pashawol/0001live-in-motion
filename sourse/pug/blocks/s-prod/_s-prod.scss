@@ -4,7 +4,7 @@
 
 .s-prod {
 	.section-title {
-		max-width: rem(1000);
+		// max-width: rem(1000);
 		padding-top: 1rem;
 	}
 
@@ -30,8 +30,17 @@
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
-		max-width: 1630px;
+			@include media-breakpoint-up(xxxl) {
 
+				max-width: 1630px;
+			}
+			max-width: 1360px;
+	@include media-breakpoint-down(xl) {
+		.swiper-button-hand{
+
+			display: none;
+		}
+	}
 		.swiper-button-hand {
 			&-prev {
 				left: rem(15);
@@ -123,7 +132,7 @@
 	}
 
 	.sizes-block {
-
+	 
 		&__size-item {
 			max-width: rem(68px);
 		}
@@ -159,13 +168,14 @@
 			padding-right: rem(5);
 			width: 44px;
 		}
+		width: 86px;
 
 		@include media-breakpoint-up(lg) {
 
-			width: rem(110);
+			// width: rem(110);
 		}
 
-		width: rem(80);
+		// width: rem(80);
 
 		.icon {
 
@@ -198,7 +208,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
+			@include media-breakpoint-up(sm) {
+				height: 40px;
+				font-size: 14px;
+			}
 		height: rem(40px);
 		border: 1px solid $body-color;
 		@extend .small;

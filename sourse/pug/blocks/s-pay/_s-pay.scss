@@ -3,15 +3,18 @@
 	h2{
 		@include media-breakpoint-up(sm) {
 
-			max-width: rem(490);
+			max-width: 420px;
 		}
 	}
 	padding-top: rem(65);
 	p{
-		font-size: rem(16);
+		@include media-breakpoint-up(lg) {
+			font-size: 16px;
+		}
+		font-size: 14px;
 	}
 	&__head-text{
-				@include media-breakpoint-up(lg) {
+				@include media-breakpoint-up(md) {
 		
 					max-width: rem(300);
 				}
@@ -53,7 +56,7 @@
 		// margin-bottom: rem(30);
 		@include roww(25);
 		p{
-			max-width: rem(300);
+			max-width: 300px;
 			line-height: 1.5;
 			// padding-bottom: 0;
 			@include media-breakpoint-up(sm) {
@@ -61,7 +64,7 @@
 				margin-left: 0;
 			 
 			}
-			padding-bottom: rem(30);
+			padding-bottom: 60px;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -73,19 +76,19 @@
 		height: rem(130);
 		line-height: rem(130);
 		vertical-align: middle;
-		margin-bottom: rem(5);
+		margin-bottom: 10px;
 	}
 	&__title{
 		// text-decoration: underline;
 		text-transform: uppercase;
 		font-weight: bold;
 		@include rfs(rem(25));
-		margin-bottom: rem(4);
+		margin-bottom: 4px;
 	}
 
 	&__line-right{
+		// margin-top: 40px;
 		@include media-breakpoint-up(lg) {
-			
 			margin-left: auto;
 			width: rem(292px);
 			height: rem(501);

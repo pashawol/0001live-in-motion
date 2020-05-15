@@ -158,9 +158,16 @@
     &__row-main {
       @include roww(50)
     }
+    .soc{
+      padding-top: rem(10);
+    }
   }
 
-  @include media-breakpoint-only(lg) {}
+  @include media-breakpoint-only(lg) {
+    &__copy{
+      margin-top: rem(-125);
+    }
+  }
 
   @include media-breakpoint-only(xl) {}
 
