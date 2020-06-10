@@ -1,5 +1,10 @@
 .s-form {
-	padding-bottom: rem(80);
+	@include media-breakpoint-up(lg) {
+
+		padding-bottom: 58px;
+	}
+
+	padding-bottom: rem(60);
 
 	.section-title {
 		padding-bottom: rem(40);

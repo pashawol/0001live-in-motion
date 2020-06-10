@@ -1,5 +1,41 @@
+.s-contact+.s-menu {
+	@include media-breakpoint-down(xs) {
+		// padding-top: 0;
+		margin-top: rem(-10);
+	}
+
+}
+
 .s-menu {
-	padding-bottom: rem(56);
+
+	// padding-bottom: rem(56);
+	@include media-breakpoint-up(lg) {
+
+		padding-bottom: calc(var(--spb) + #{rem(18)});
+	}
+
+
+	@include media-breakpoint-up(sm) {
+		padding-bottom: calc(var(--spb) + #{rem(12)});
+		// padding-bottom: calc(var(--spb) - #{rem(8)});
+	}
+
+	@include media-breakpoint-down(xs) {
+		padding-top: 0;
+	}
+
+	.container {
+		@include media-breakpoint-up(lg) {
+
+			padding-top: rem(35);
+		}
+
+		@include media-breakpoint-up(sm) {
+
+			padding-top: rem(30);
+		}
+
+	}
 
 	&__col {
 		// margin-bottom: rem(60);

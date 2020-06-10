@@ -102,6 +102,20 @@
 							<!-- +b.basket-->
 							<div class="basket">
 								<div class="row align-items-center">
+									<div class="col"></div>
+									<div class="col-auto">
+										<div class="basket__close-btn toggle-basket">
+											<svg class="icon icon-close ">
+												<use xlink:href="img/svg/sprite.svg#close"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="basket__empty text-center mb-4"><img class="mb-1" src="img/svg/basket-empty.svg" alt=""/>
+									<div class="small mb-4"> Ваша корзина пуста</div>
+									<div class="h6"><a class="tdn" href="#">Смотреть наши товары</a></div>
+								</div>
+								<div class="row align-items-center">
 									<div class="col"><a class="basket__clear-btn small text-secondary" href="#"> Очистить корзину</a>
 									</div>
 									<div class="col-auto">
@@ -112,66 +126,68 @@
 										</div>
 									</div>
 								</div>
-								<div class="basket__item">
-									<div class="row">
-										<div class="col-md-auto">
-											<div class="row">
-												<div class="col-auto">
-													<div class="basket__img-wrap">
-														<!-- picture-->
-														<picture>
-															<!-- webp images-->
-															<source srcset="img/@2x/webp/prod-sm-1.webp " media="(min-width: 576px )" type="image/webp"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/webp/prod-sm-1.webp " type="image/webp"/>
-															<!-- /webp images -->
-															<source srcset="img/@2x/prod-sm-1.jpg" media="(min-width:  576px)" type="image/jpg"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/prod-sm-1.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-1.jpg" alt=""/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col d-md-none">
-													<div class="basket__title"><a class="text-body small" href="#">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design</a>
-													</div>
-													<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-														 S
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="basket__col col">
-											<div class="basket__delete">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</div>
-											<div class="row">
-												<div class="basket__col-12 col col-lg-4 d-none d-md-block">
-													<div class="basket__title"><a class="text-body small" href="#">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design</a>
-													</div>
-												</div>
-												<div class="basket__col-12 col-xl-7 col">
-													<div class="row">
-														<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
-															<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-																 S
-															</div>
+								<div class="basket__items">
+									<div class="basket__item">
+										<div class="row">
+											<div class="col-md-auto">
+												<div class="row">
+													<div class="col-auto">
+														<div class="basket__img-wrap">
+															<!-- picture-->
+															<picture>
+																<!-- webp images-->
+																<source srcset="img/@2x/webp/prod-sm-1.webp " media="(min-width: 576px )" type="image/webp"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/webp/prod-sm-1.webp " type="image/webp"/>
+																<!-- /webp images -->
+																<source srcset="img/@2x/prod-sm-1.jpg" media="(min-width:  576px)" type="image/jpg"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/prod-sm-1.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-1.jpg" alt=""/>
+															</picture>
+															<!-- /picture-->
 														</div>
-														<div class="col text-lg-left text-center">
-															<div class="row align-items-center">
-																<div class="col-lg-auto col-md-12 col-auto mb-2">
-																	<div class="count-block">
-																		<div class="count-block__btn">-
-																		</div>
-																		<input class="form-control" type="number" value="2"/>
-																		<div class="count-block__btn">+
+													</div>
+													<div class="col d-md-none">
+														<div class="basket__title"><a class="text-body small" href="#">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design</a>
+														</div>
+														<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+															 S
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="basket__col col">
+												<div class="basket__delete">
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</div>
+												<div class="row">
+													<div class="basket__col-12 col col-lg-4 d-none d-md-block">
+														<div class="basket__title"><a class="text-body small" href="#">Вельветовые суженные книзу строгие брюки фиолетового цвета заниженного кроя live in motion design</a>
+														</div>
+													</div>
+													<div class="basket__col-12 col-xl-7 col">
+														<div class="row">
+															<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+																<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+																	 S
+																</div>
+															</div>
+															<div class="col text-lg-left text-center">
+																<div class="row align-items-center">
+																	<div class="col-auto mb-2">
+																		<div class="count-block">
+																			<div class="count-block__btn">-
+																			</div>
+																			<input class="form-control" type="number" value="2"/>
+																			<div class="count-block__btn">+
+																			</div>
 																		</div>
 																	</div>
+																	<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+																	<div class="col-auto strong mb-2">3000 ₽</div>
 																</div>
-																<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
-																<div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
 															</div>
 														</div>
 													</div>
@@ -179,68 +195,68 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- /+e.item-->
-								<div class="basket__item">
-									<div class="row">
-										<div class="col-md-auto">
-											<div class="row">
-												<div class="col-auto">
-													<div class="basket__img-wrap">
-														<!-- picture-->
-														<picture>
-															<!-- webp images-->
-															<source srcset="img/@2x/webp/prod-sm-2.webp " media="(min-width: 576px )" type="image/webp"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/webp/prod-sm-2.webp " type="image/webp"/>
-															<!-- /webp images -->
-															<source srcset="img/@2x/prod-sm-2.jpg" media="(min-width:  576px)" type="image/jpg"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/prod-sm-2.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-2.jpg" alt=""/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col d-md-none">
-													<div class="basket__title"><a class="text-body small" href="#">Футболка мужская &quot;Даунхилл&quot;  </a>
-													</div>
-													<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-														 S
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="basket__col col">
-											<div class="basket__delete">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</div>
-											<div class="row">
-												<div class="basket__col-12 col col-lg-4 d-none d-md-block">
-													<div class="basket__title"><a class="text-body small" href="#">Футболка мужская &quot;Даунхилл&quot;  </a>
-													</div>
-												</div>
-												<div class="basket__col-12 col-xl-7 col">
-													<div class="row">
-														<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
-															<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-																 S
-															</div>
+									<!-- /+e.item-->
+									<div class="basket__item">
+										<div class="row">
+											<div class="col-md-auto">
+												<div class="row">
+													<div class="col-auto">
+														<div class="basket__img-wrap">
+															<!-- picture-->
+															<picture>
+																<!-- webp images-->
+																<source srcset="img/@2x/webp/prod-sm-2.webp " media="(min-width: 576px )" type="image/webp"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/webp/prod-sm-2.webp " type="image/webp"/>
+																<!-- /webp images -->
+																<source srcset="img/@2x/prod-sm-2.jpg" media="(min-width:  576px)" type="image/jpg"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/prod-sm-2.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-2.jpg" alt=""/>
+															</picture>
+															<!-- /picture-->
 														</div>
-														<div class="col text-lg-left text-center">
-															<div class="row align-items-center">
-																<div class="col-lg-auto col-md-12 col-auto mb-2">
-																	<div class="count-block">
-																		<div class="count-block__btn">-
-																		</div>
-																		<input class="form-control" type="number" value="2"/>
-																		<div class="count-block__btn">+
+													</div>
+													<div class="col d-md-none">
+														<div class="basket__title"><a class="text-body small" href="#">Футболка мужская &quot;Даунхилл&quot;  </a>
+														</div>
+														<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+															 S
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="basket__col col">
+												<div class="basket__delete">
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</div>
+												<div class="row">
+													<div class="basket__col-12 col col-lg-4 d-none d-md-block">
+														<div class="basket__title"><a class="text-body small" href="#">Футболка мужская &quot;Даунхилл&quot;  </a>
+														</div>
+													</div>
+													<div class="basket__col-12 col-xl-7 col">
+														<div class="row">
+															<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+																<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+																	 S
+																</div>
+															</div>
+															<div class="col text-lg-left text-center">
+																<div class="row align-items-center">
+																	<div class="col-auto mb-2">
+																		<div class="count-block">
+																			<div class="count-block__btn">-
+																			</div>
+																			<input class="form-control" type="number" value="2"/>
+																			<div class="count-block__btn">+
+																			</div>
 																		</div>
 																	</div>
+																	<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+																	<div class="col-auto strong mb-2">3000 ₽</div>
 																</div>
-																<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
-																<div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
 															</div>
 														</div>
 													</div>
@@ -248,68 +264,68 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- /+e.item-->
-								<div class="basket__item">
-									<div class="row">
-										<div class="col-md-auto">
-											<div class="row">
-												<div class="col-auto">
-													<div class="basket__img-wrap">
-														<!-- picture-->
-														<picture>
-															<!-- webp images-->
-															<source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
-															<!-- /webp images -->
-															<source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col d-md-none">
-													<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-													</div>
-													<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-														 S
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="basket__col col">
-											<div class="basket__delete">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</div>
-											<div class="row">
-												<div class="basket__col-12 col col-lg-4 d-none d-md-block">
-													<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-													</div>
-												</div>
-												<div class="basket__col-12 col-xl-7 col">
-													<div class="row">
-														<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
-															<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-																 S
-															</div>
+									<!-- /+e.item-->
+									<div class="basket__item">
+										<div class="row">
+											<div class="col-md-auto">
+												<div class="row">
+													<div class="col-auto">
+														<div class="basket__img-wrap">
+															<!-- picture-->
+															<picture>
+																<!-- webp images-->
+																<source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
+																<!-- /webp images -->
+																<source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
+															</picture>
+															<!-- /picture-->
 														</div>
-														<div class="col text-lg-left text-center">
-															<div class="row align-items-center">
-																<div class="col-lg-auto col-md-12 col-auto mb-2">
-																	<div class="count-block">
-																		<div class="count-block__btn">-
-																		</div>
-																		<input class="form-control" type="number" value="2"/>
-																		<div class="count-block__btn">+
+													</div>
+													<div class="col d-md-none">
+														<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+														</div>
+														<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+															 S
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="basket__col col">
+												<div class="basket__delete">
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</div>
+												<div class="row">
+													<div class="basket__col-12 col col-lg-4 d-none d-md-block">
+														<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+														</div>
+													</div>
+													<div class="basket__col-12 col-xl-7 col">
+														<div class="row">
+															<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+																<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+																	 S
+																</div>
+															</div>
+															<div class="col text-lg-left text-center">
+																<div class="row align-items-center">
+																	<div class="col-auto mb-2">
+																		<div class="count-block">
+																			<div class="count-block__btn">-
+																			</div>
+																			<input class="form-control" type="number" value="2"/>
+																			<div class="count-block__btn">+
+																			</div>
 																		</div>
 																	</div>
+																	<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+																	<div class="col-auto strong mb-2">3000 ₽</div>
 																</div>
-																<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
-																<div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
 															</div>
 														</div>
 													</div>
@@ -317,68 +333,68 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- /+e.item-->
-								<div class="basket__item">
-									<div class="row">
-										<div class="col-md-auto">
-											<div class="row">
-												<div class="col-auto">
-													<div class="basket__img-wrap">
-														<!-- picture-->
-														<picture>
-															<!-- webp images-->
-															<source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
-															<!-- /webp images -->
-															<source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col d-md-none">
-													<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-													</div>
-													<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-														 S
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="basket__col col">
-											<div class="basket__delete">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</div>
-											<div class="row">
-												<div class="basket__col-12 col col-lg-4 d-none d-md-block">
-													<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-													</div>
-												</div>
-												<div class="basket__col-12 col-xl-7 col">
-													<div class="row">
-														<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
-															<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-																 S
-															</div>
+									<!-- /+e.item-->
+									<div class="basket__item">
+										<div class="row">
+											<div class="col-md-auto">
+												<div class="row">
+													<div class="col-auto">
+														<div class="basket__img-wrap">
+															<!-- picture-->
+															<picture>
+																<!-- webp images-->
+																<source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
+																<!-- /webp images -->
+																<source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
+															</picture>
+															<!-- /picture-->
 														</div>
-														<div class="col text-lg-left text-center">
-															<div class="row align-items-center">
-																<div class="col-lg-auto col-md-12 col-auto mb-2">
-																	<div class="count-block">
-																		<div class="count-block__btn">-
-																		</div>
-																		<input class="form-control" type="number" value="2"/>
-																		<div class="count-block__btn">+
+													</div>
+													<div class="col d-md-none">
+														<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+														</div>
+														<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+															 S
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="basket__col col">
+												<div class="basket__delete">
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</div>
+												<div class="row">
+													<div class="basket__col-12 col col-lg-4 d-none d-md-block">
+														<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+														</div>
+													</div>
+													<div class="basket__col-12 col-xl-7 col">
+														<div class="row">
+															<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+																<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+																	 S
+																</div>
+															</div>
+															<div class="col text-lg-left text-center">
+																<div class="row align-items-center">
+																	<div class="col-auto mb-2">
+																		<div class="count-block">
+																			<div class="count-block__btn">-
+																			</div>
+																			<input class="form-control" type="number" value="2"/>
+																			<div class="count-block__btn">+
+																			</div>
 																		</div>
 																	</div>
+																	<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+																	<div class="col-auto strong mb-2">3000 ₽</div>
 																</div>
-																<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
-																<div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
 															</div>
 														</div>
 													</div>
@@ -386,68 +402,68 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- /+e.item-->
-								<div class="basket__item">
-									<div class="row">
-										<div class="col-md-auto">
-											<div class="row">
-												<div class="col-auto">
-													<div class="basket__img-wrap">
-														<!-- picture-->
-														<picture>
-															<!-- webp images-->
-															<source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
-															<!-- /webp images -->
-															<source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col d-md-none">
-													<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-													</div>
-													<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-														 S
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="basket__col col">
-											<div class="basket__delete">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</div>
-											<div class="row">
-												<div class="basket__col-12 col col-lg-4 d-none d-md-block">
-													<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-													</div>
-												</div>
-												<div class="basket__col-12 col-xl-7 col">
-													<div class="row">
-														<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
-															<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-																 S
-															</div>
+									<!-- /+e.item-->
+									<div class="basket__item">
+										<div class="row">
+											<div class="col-md-auto">
+												<div class="row">
+													<div class="col-auto">
+														<div class="basket__img-wrap">
+															<!-- picture-->
+															<picture>
+																<!-- webp images-->
+																<source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
+																<!-- /webp images -->
+																<source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
+															</picture>
+															<!-- /picture-->
 														</div>
-														<div class="col text-lg-left text-center">
-															<div class="row align-items-center">
-																<div class="col-lg-auto col-md-12 col-auto mb-2">
-																	<div class="count-block">
-																		<div class="count-block__btn">-
-																		</div>
-																		<input class="form-control" type="number" value="2"/>
-																		<div class="count-block__btn">+
+													</div>
+													<div class="col d-md-none">
+														<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+														</div>
+														<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+															 S
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="basket__col col">
+												<div class="basket__delete">
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</div>
+												<div class="row">
+													<div class="basket__col-12 col col-lg-4 d-none d-md-block">
+														<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+														</div>
+													</div>
+													<div class="basket__col-12 col-xl-7 col">
+														<div class="row">
+															<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+																<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+																	 S
+																</div>
+															</div>
+															<div class="col text-lg-left text-center">
+																<div class="row align-items-center">
+																	<div class="col-auto mb-2">
+																		<div class="count-block">
+																			<div class="count-block__btn">-
+																			</div>
+																			<input class="form-control" type="number" value="2"/>
+																			<div class="count-block__btn">+
+																			</div>
 																		</div>
 																	</div>
+																	<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+																	<div class="col-auto strong mb-2">3000 ₽</div>
 																</div>
-																<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
-																<div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
 															</div>
 														</div>
 													</div>
@@ -455,68 +471,68 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- /+e.item-->
-								<div class="basket__item">
-									<div class="row">
-										<div class="col-md-auto">
-											<div class="row">
-												<div class="col-auto">
-													<div class="basket__img-wrap">
-														<!-- picture-->
-														<picture>
-															<!-- webp images-->
-															<source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
-															<!-- /webp images -->
-															<source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
-															<!-- crop 2x-->
-															<source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col d-md-none">
-													<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-													</div>
-													<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-														 S
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="basket__col col">
-											<div class="basket__delete">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</div>
-											<div class="row">
-												<div class="basket__col-12 col col-lg-4 d-none d-md-block">
-													<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
-													</div>
-												</div>
-												<div class="basket__col-12 col-xl-7 col">
-													<div class="row">
-														<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
-															<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
-																 S
-															</div>
+									<!-- /+e.item-->
+									<div class="basket__item">
+										<div class="row">
+											<div class="col-md-auto">
+												<div class="row">
+													<div class="col-auto">
+														<div class="basket__img-wrap">
+															<!-- picture-->
+															<picture>
+																<!-- webp images-->
+																<source srcset="img/@2x/webp/prod-sm-3.webp " media="(min-width: 576px )" type="image/webp"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/webp/prod-sm-3.webp " type="image/webp"/>
+																<!-- /webp images -->
+																<source srcset="img/@2x/prod-sm-3.jpg" media="(min-width:  576px)" type="image/jpg"/>
+																<!-- crop 2x-->
+																<source srcset="img/@1x/prod-sm-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/prod-sm-3.jpg" alt=""/>
+															</picture>
+															<!-- /picture-->
 														</div>
-														<div class="col text-lg-left text-center">
-															<div class="row align-items-center">
-																<div class="col-lg-auto col-md-12 col-auto mb-2">
-																	<div class="count-block">
-																		<div class="count-block__btn">-
-																		</div>
-																		<input class="form-control" type="number" value="2"/>
-																		<div class="count-block__btn">+
+													</div>
+													<div class="col d-md-none">
+														<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+														</div>
+														<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+															 S
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="basket__col col">
+												<div class="basket__delete">
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</div>
+												<div class="row">
+													<div class="basket__col-12 col col-lg-4 d-none d-md-block">
+														<div class="basket__title"><a class="text-body small" href="#">Худи женское &quot;organic design and the wooden architecture of russia&quot;  </a>
+														</div>
+													</div>
+													<div class="basket__col-12 col-xl-7 col">
+														<div class="row">
+															<div class="basket__col-12 col-xl-4 col-auto d-none d-md-block">
+																<div class="basket__size ttu small"><span class="text-secondary">Размер: </span> 
+																	 S
+																</div>
+															</div>
+															<div class="col text-lg-left text-center">
+																<div class="row align-items-center">
+																	<div class="col-auto mb-2">
+																		<div class="count-block">
+																			<div class="count-block__btn">-
+																			</div>
+																			<input class="form-control" type="number" value="2"/>
+																			<div class="count-block__btn">+
+																			</div>
 																		</div>
 																	</div>
+																	<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
+																	<div class="col-auto strong mb-2">3000 ₽</div>
 																</div>
-																<div class="col-md col-auto small mb-2">( 3000 ₽  X2 )</div>
-																<div class="col-lg-auto col-md-12 col-auto strong mb-2">3000 ₽</div>
 															</div>
 														</div>
 													</div>
@@ -524,14 +540,14 @@
 											</div>
 										</div>
 									</div>
+									<!-- /+e.item-->
 								</div>
-								<!-- /+e.item-->
 								<div class="basket__total">
 									<div class="row align-items-center">
 										<div class="col strong"> <span class="basket__total-title">Итого: </span> 
 											12567 ₽
 										</div>
-										<div class="col-md-auto"><a class="basket__btn btn-primary" href="#">Оформить заказ</a>
+										<div class="col-auto"><a class="basket__btn btn-primary" href="#">Оформить заказ</a>
 										</div>
 									</div>
 								</div>
@@ -564,8 +580,8 @@
 							<div class="s-payment__title"> К сожалению, при оплате вашего заказа <span class="text-danger">№ 18 </span>
 								произошла ошибка
 							</div>
-							<p class="warning">Пожалуйста, обратитесь за&nbsp;помощью к&nbsp;менеджеру,  по&nbsp;телефону <a href="tel:8007750077">8&nbsp;800 77&nbsp;500 77</a>
-								 либо заполнив форму обратной связи
+							<p class="warning">Пожалуйста, обратитесь за&nbsp;помощью к&nbsp;менеджеру  по&nbsp;телефону <a class="text-body strong" href="tel:8007750077">8&nbsp;800 77&nbsp;500 77</a>
+								 либо заполнив <a href="#">форму обратной связи</a>
 							</p>
 							<div class="s-payment__small">Будем рады помочь вам с решением возникшей проблемы!
 							</div>
@@ -575,8 +591,8 @@
 				<!-- end s-payment-->
 				<footer class="footer section block-with-lazy wow fadeInUp" data-wow-duration="1s">
 					<div class="container">
-						<div class="row">
-							<div class="col-xl-auto col-lg-4 col-md-5">
+						<div class="footer__row-main row">
+							<div class="col-xl-auto col-lg-4 col-md-6">
 								<!-- picture.lazy-->
 								<picture class="lazy">
 									<!-- webp images-->
@@ -627,13 +643,13 @@
 												</div>
 											</form>
 										</div>
-										<div class="small">Нажимая на&nbsp;кнопку &laquo;Подписаться&raquo; или &laquo;Отправить&raquo;, я&nbsp;даю согласие  на&nbsp;обработку своих персональных данных и&nbsp;соглашаюсь  с&nbsp; <a href="#">Политикой конфиденциальности</a>.</div>
+										<div class="small">Нажимая на&nbsp;кнопку &laquo;Подписаться&raquo; или &laquo;Отправить&raquo;, я&nbsp;даю согласие  на&nbsp;обработку своих персональных данных и&nbsp;соглашаюсь  с&nbsp; <a href="#">Политикой конфиденциальности</a></div>
 									</div>
 								</div>
 								<div class="row d-md-none d-lg-flex">
 									<div class="col-md">
 										<div class="footer__row row">
-											<div class="col-md-12 col-sm-6 col-auto"><a class="footer__btn-outline" href="#">Задать вопрос</a>
+											<div class="col-md-12 col-sm-6"><a class="footer__btn-outline" href="#">Задать вопрос</a>
 											</div>
 											<div class="col-md-12 col-sm-6 col">
 												<div class="soc"><a class="soc__item" href="#" target="_blank">
@@ -658,7 +674,7 @@
 							</div>
 						</div>
 					</div>
-				</footer><a class="btn-top btn-primary scroll-link d-none d-xxl-flex" href="#header"> 
+				</footer><a class="btn-top btn-primary scroll-link d-none d-xxxl-flex" href="#header"> 
 				<svg class="icon icon-top ">
 					<use xlink:href="img/svg/sprite.svg#top"></use>
 				</svg>Наверх</a>
@@ -666,7 +682,7 @@
 		</div>
 		<div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
 			<form>
-				<div class="section-title text-center">
+				<div class="section-title text-center pb-2">
 					<h2>Форма связи</h2>
 					<p>Оставьте ваши контактные данные и&nbsp;мы&nbsp;перезвоним  в&nbsp;ближайшее время</p>
 				</div>
@@ -694,13 +710,13 @@
 			<form>
 				<div class="section-title text-center">
 					<h2>Заявка <br> отправлена!</h2>
-					<p>В&nbsp;ближайшее время с&nbsp;вами свяжется наш менеджер и&nbsp;ответит на&nbsp;интересующие вопросы.</p>
+					<p class="thanks-text">В&nbsp;ближайшее время с&nbsp;вами свяжется наш менеджер и&nbsp;ответит на&nbsp;интересующие вопросы</p>
 				</div>
 				<button class="form-wrap__btn modal-close-js" type="button">Ок
 				</button>
 			</form>
 		</div>
-		<!-- #modal-thanks--><a class="popup-with-move-anim" href="#modal-thanks">modal-thanks</a>
+		<!-- #modal-thanks-->
 		<!-- modal-->
 		<script src="js/lazy.js"></script>
 		<script src="js/jquery.min.js"></script>

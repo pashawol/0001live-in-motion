@@ -1,10 +1,19 @@
 .s-advantages {
-	@include media-breakpoint-up(sm) {
-
-		padding-bottom: rem(100 /1);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(78);
+		padding-bottom: rem(92);
 	}
 
-	padding-bottom: rem(70);
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(58);
+		padding-bottom: 79px;
+	}
+
+	padding-top: rem(38);
+	padding-bottom: 65px;
+
+
+
 
 	.section-title {
 		padding-bottom: rem(50);
@@ -19,8 +28,16 @@
 
 	&__number {
 		border-bottom: 2px solid;
-		width: rem(90px);
+
+		@include media-breakpoint-up(md) {
+
+			height: 90px;
+			width: 90px;
+			font-size: 50px;
+		}
+
 		height: rem(90px);
+		width: rem(90px);
 
 		display: flex;
 		justify-content: center;
@@ -30,7 +47,7 @@
 		line-height: (60px / 50);
 		background-size: cover;
 
-		@include media-breakpoint-only(md) {
+		@include media-breakpoint-only(lg) {
 			width: 130px;
 			font-size: 64px;
 			height: 130px;

@@ -8,13 +8,14 @@
 		&-wrap {
 			@include media-breakpoint-up(md) {
 
-				margin-bottom: rem(20);
+				margin-bottom: rem(58);
+				padding-bottom: rem(72);
 			}
 
+			padding-bottom: rem(80);
 			padding-top: rem(30);
-			padding-bottom: rem(40);
 			padding-top: rem(10);
-			margin-bottom: rem(10);
+			margin-bottom: rem(70);
 
 			border-bottom: 1px solid rgba(51, 51, 51, .2);
 		}

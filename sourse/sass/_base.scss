@@ -2,9 +2,10 @@ html {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 }
-img{
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimizeSpeed;
+
+img {
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: optimizeSpeed;
 }
 
 .screen {
@@ -94,12 +95,29 @@ body {
 	}
 }
 
+:root {
+	--spt: #{rem(36)};
+
+	@include media-breakpoint-up(xl) {
+
+		--spb: 20px;
+	}
+
+	@include media-breakpoint-up(sm) {
+
+		--spb: #{rem(30)};
+	}
+
+
+	--spb: #{rem(36)};
+}
+
 .section {
 
 	@include bgs;
 
-	padding-top: rem(36);
-	padding-bottom: rem(30);
+	padding-top: var(--spt);
+	padding-bottom: var(--spb);
 
 	h2 {
 		@include media-breakpoint-up(lg) {
@@ -107,7 +125,7 @@ body {
 			font-size: 50px;
 		}
 
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(sm) {
 
 			font-size: 32px;
 		}
@@ -141,7 +159,14 @@ body {
 
 
 	padding-top: var(--pt);
-	padding-bottom: var(--pb);
+
+	@include media-breakpoint-up(lg) {
+
+		padding-bottom: calc(var(--spb) + #{rem(12px)});
+	}
+
+	padding-bottom: calc(var(--spb) + #{rem(8px)});
+
 }
 
 .section-title {
@@ -664,9 +689,25 @@ picture {
 }
 
 
+h1 {
+	@include media-breakpoint-up(sm) {
+
+		font-size: 64px !important;
+	}
+
+	font-size: 32px !important;
+
+
+}
 
 .page-title {
 	padding-bottom: rem(18);
+
+	.select2-results__option,
+	.select2-container--default .select2-selection--single {
+
+		text-transform: none;
+	}
 
 	h1 {
 		// min-width: rem(360);
@@ -726,17 +767,18 @@ picture {
 		width: auto;
 
 		&:not(.page-title__btn-head--sm) {
-				@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(sm) {
 
-					min-width: 110px;
-					font-size: 14px;
-					padding: 8px 5px;
-				}
-				min-width: rem(100);
-				font-size: 12px;
-				padding-left: 0;
-				padding-right: 0;
-				padding: 5px 1px;
+				min-width: 110px;
+				font-size: 14px;
+				padding: 8px 5px;
+			}
+
+			min-width: rem(100);
+			font-size: 12px;
+			padding-left: 0;
+			padding-right: 0;
+			padding: 5px 1px;
 
 		}
 
@@ -785,6 +827,7 @@ picture {
 				height: 39px;
 				padding: .2625rem .9rem;
 			}
+
 			padding: .6625rem .9rem;
 			// height: 54px;
 			min-height: 1px;
@@ -796,7 +839,7 @@ picture {
 }
 
 .catalog-page .select2-results__option {
-	text-transform: uppercase;
+	// text-transform: uppercase;
 }
 
 .catalog-page .select2-container--open .select2-dropdown--below {
@@ -822,8 +865,12 @@ button {
 		padding-top: rem(18);
 		padding-bottom: rem(18);
 	}
+
+	.section .basket {
+		padding-bottom: rem(40);
+	}
 }
 
 .section .basket {
-	padding-bottom: rem(40);
+	padding-bottom: rem(0);
 }

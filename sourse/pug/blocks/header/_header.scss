@@ -6,7 +6,12 @@
     min-height: rem(80);
   }
 
-  min-height: rem(150);
+  @include media-breakpoint-up(sm) {
+
+    min-height: 101px;
+  }
+
+  min-height:91px;
 
   @include media-breakpoint-up(lg) {}
 

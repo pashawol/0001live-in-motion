@@ -1,5 +1,29 @@
 .s-more {
+	+.container {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+		}
 
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(34);
+		}
+
+		margin-bottom: rem(76);
+
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(78);
+		padding-bottom: 40px;
+	}
+
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(70);
+		padding-bottom: 34px;
+	}
+
+	padding-top: 60px;
+	padding-bottom: 30px;
 
 	h2 {
 		padding-bottom: rem(20);

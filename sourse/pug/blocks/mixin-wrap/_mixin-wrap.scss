@@ -82,7 +82,8 @@
 
 
  .toggle-block {
-		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+ 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
  	// top: 100px !important;
  	&::before {
  		content: '';
@@ -194,13 +195,13 @@
  			// max-width: 498px;
  		}
 
- 	
+
  		padding-top: 33px;
  		padding-left: rem(55);
  		padding-right: rem(12);
  		padding-bottom: rem(40);
-		 overflow-y: auto;
-		 overflow-x: hidden;
+ 		overflow-y: auto;
+ 		overflow-x: hidden;
  		max-height: 100%;
  		z-index: 2;
  		background-color: #ffffff;
@@ -304,8 +305,8 @@
  		z-index: 20;
 
  		@include media-breakpoint-up(lg) {
-			 	top: rem(3);
-		 }
+ 			top: rem(3);
+ 		}
 
  		// right: 0;
  		right: -5px;
@@ -313,7 +314,7 @@
  		@include media-breakpoint-up(sm) {
 
  			right: -15px;
- 		
+
  		}
 
  		top: rem(28);
@@ -336,7 +337,12 @@
  	}
 
  	&__close-btn {
- 		margin-right: rem(35);
+ 		@include media-breakpoint-up(sm) {
+
+ 			margin-right: rem(35);
+ 		}
+
+ 		margin-right: rem(20);
 
  		.icon {
  			stroke: $body-color;

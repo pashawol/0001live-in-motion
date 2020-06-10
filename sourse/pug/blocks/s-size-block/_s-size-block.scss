@@ -1,21 +1,30 @@
 .s-size-block {
-	&__wrap{
+	&__wrap {
 		margin-left: auto;
 		margin-right: auto;
-		.col-lg-5{
+
+		.col-lg-5 {
 			max-width: 435px;
 			margin-bottom: 20px;
 		}
+
 		@include media-breakpoint-up(lg) {
 			max-width: none;
 
 		}
-		
-		@include media-breakpoint-up(sm) {
-			max-width: 652px;
+
+		@include media-breakpoint-up(sm) {}
+
+		@include media-breakpoint-only(md) {
+			.container {
+				max-width: 652px;
+
+
+			}
 		}
 
 	}
+
 	.section-title {
 		a {
 			display: inline-block;
@@ -26,6 +35,7 @@
 
 			@include media-breakpoint-up(lg) {
 				margin-top: rem(20);
+
 			}
 		}
 	}
@@ -36,7 +46,21 @@
 	}
 
 	&__foot2 {
-		max-width: rem(760);
+		@include media-breakpoint-up(xl) {
+
+			max-width: rem(760);
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 40px;
+
+		}
+
+		@include media-breakpoint-up(sm) {
+			padding-top: 20px;
+
+		}
+
 		padding-top: rem(20);
 
 		h2 {
@@ -200,11 +224,21 @@
 
 	@include media-breakpoint-up(xl) {}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+		// padding-bottom: rem(40);
+	}
 
 	@include media-breakpoint-up(md) {}
 
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+
+		padding-bottom: rem(40);
+	}
+
+	padding-bottom: rem(44);
+
+
+	// padding-bottom: rem(35);
 
 	@include media-breakpoint-up(xs) {}
 
@@ -233,8 +267,12 @@
 			margin-top: 60px;
 		}
 
+		&__table-container {
+			max-width: none !important;
+		}
+
 		// font-size:14;
-		
+
 		.btn-wrap {
 			justify-content: center;
 		}
@@ -258,11 +296,18 @@
 }
 
 .s-size-block-head {
-	margin-bottom: rem(75);
 
 	@include media-breakpoint-up(lg) {
 		text-align: left;
+		margin-bottom: 80px;
 	}
+
+	@include media-breakpoint-up(sm) {
+
+		margin-bottom: 70px;
+	}
+
+	margin-bottom: 62px;
 
 	text-align: center;
 
@@ -309,14 +354,17 @@
 	&__btn-head {
 		@extend .btn-outline;
 		@extend .btn-sm;
+
 		@include media-breakpoint-up(sm) {
-			
+
 			width: 165px;
 		}
-					@include media-breakpoint-down(xs) {
-						font-size: 12px;
-					padding: rem(5);
-					}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 12px;
+			padding: rem(5);
+		}
+
 		width: 100px;
 		margin-bottom: rem(20);
 		margin-left: 15px;

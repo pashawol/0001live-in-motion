@@ -1,3 +1,17 @@
+.container+.sOther {
+	@include media-breakpoint-up(lg) {
+
+		padding-top: 80px;
+	}
+
+	@include media-breakpoint-up(sm) {
+
+		padding-top: 70px;
+	}
+
+	padding-top: 60px;
+}
+
 .sOther {
 	p {
 		margin-left: auto;

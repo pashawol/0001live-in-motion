@@ -1,55 +1,76 @@
 .s-style {
 	text-align: center;
-	.section-title{
+
+	@include media-breakpoint-up(xl) {
+
+		padding-bottom: rem(10);
+	}
+
+	@include media-breakpoint-up(sm) {
+
+		padding-bottom: 12px;
+	}
+
+	// padding-bottom: rem(1);
+
+	.section-title {
 		padding-bottom: 15px;
 	}
-	&__col{
+
+	&__col {
 		// margin-bottom: rem(60);
 	}
-	&__col:nth-child(1) &__img-wrap::after{
+
+	&__col:nth-child(1) &__img-wrap::after {
 		// background: linear-gradient(0deg, rgba(50, 204, 145, 0.4), rgba(50, 204, 145, 0.4));
 	}
-	
-	&__col:nth-child(2) &__img-wrap::after{
+
+	&__col:nth-child(2) &__img-wrap::after {
 		// background: linear-gradient(0deg, rgba(225, 62, 175, 0.4), rgba(225, 62, 175, 0.4)); 
 
 	}
 
-	&__img-wrap{
+	&__img-wrap {
 		position: relative;
 		display: block;
 		margin-bottom: rem(20);
-		@include block(457,440);
-		picture{
+		@include block(457, 440);
+
+		picture {
 			@include mt;
-			&:nth-child(1){
+
+			&:nth-child(1) {
 				// opacity: 1;
 			}
-			
-			&:nth-child(2){
+
+			&:nth-child(2) {
 				opacity: 0;
 			}
 
 		}
-		&:hover{
-			picture{
 
-				&:nth-child(1){
+		&:hover {
+			picture {
+
+				&:nth-child(1) {
 					// opacity: 0;
-				} 
-				&:nth-child(2){
+				}
+
+				&:nth-child(2) {
 					opacity: 1;
 				}
 			}
 		}
-		picture{
+
+		picture {
 			position: absolute;
 			left: 0;
 			top: 0;
 			width: 100%;
 			height: 100%;
 		}
-		&::after{
+
+		&::after {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -60,21 +81,23 @@
 
 			@include mt;
 		}
-	 
-		&:hover{
+
+		&:hover {
 			@include media-breakpoint-up(xl) {
 
-				
-				&::after{
-				opacity: 1;
+
+				&::after {
+					opacity: 1;
+				}
 			}
-		}
-			.s-style__btn{
+
+			.s-style__btn {
 				opacity: 1;
 			}
 		}
 	}
-	&__btn{
+
+	&__btn {
 		@include a-cent;
 		@extend .btn-primary;
 		display: block;
@@ -84,36 +107,49 @@
 		opacity: 0;
 		z-index: 4;
 	}
-	.strong{
+
+	.strong {
 		line-height: 1.2;
 	}
-	
+
 	@include media-breakpoint-up(xl) {}
+
 	@include media-breakpoint-up(lg) {
-		.container{
+		.container {
 			max-width: (945px + $grid-gutter-width);
 		}
 	}
+
 	@include media-breakpoint-up(md) {}
+
 	@include media-breakpoint-up(sm) {}
+
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
+	@include media-breakpoint-between(md, xl) {}
+
+
 	//
 	@include media-breakpoint-only(xs) {}
+
 	@include media-breakpoint-only(sm) {}
+
 	@include media-breakpoint-only(md) {}
+
 	@include media-breakpoint-only(lg) {}
+
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
+
 	@include media-breakpoint-down(lg) {}
+
 	@include media-breakpoint-down(md) {}
+
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+
+	@include media-breakpoint-down(xs) {}
 
 }

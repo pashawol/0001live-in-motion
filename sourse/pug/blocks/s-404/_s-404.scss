@@ -3,7 +3,7 @@
 	padding-bottom: 0;
 
 	h1 {
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			max-width: none;
 
 		}
@@ -23,9 +23,14 @@
 	}
 
 	&__row {
+		@include media-breakpoint-up(lg) {
+
+			margin-bottom: rem(100px);
+		}
+
 		@include media-breakpoint-up(md) {
 
-			margin-bottom: 100px;
+			margin-bottom: rem(80px);
 
 			&--2 {
 				margin-bottom: 60px;
@@ -33,7 +38,7 @@
 			}
 		}
 
-		margin-bottom: rem(80);
+		margin-bottom: rem(70);
 	}
 
 	&__btn {

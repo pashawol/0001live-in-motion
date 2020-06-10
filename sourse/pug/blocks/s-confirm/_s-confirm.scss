@@ -1,14 +1,34 @@
 .s-confirm {
-	@include media-breakpoint-up(xl) { 
-		.basket{
+	@include media-breakpoint-up(lg) {
+
+		padding-bottom: rem(15);
+	}
+
+	@include media-breakpoint-up(sm) {
+
+		padding-bottom: rem(18);
+	}
+
+	padding-bottom: rem(34);
+
+	+.s-prod {
+		.section-title {
+			padding-top: 0;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		.basket {
 			padding-right: rem(40px);
 			padding-bottom: 0;
-		} 
+		}
 	}
-	&__right-col{
+
+	&__right-col {
 		margin-bottom: rem(35);
 	}
-	&__alert{
+
+	&__alert {
 		background-color: $teal;
 		color: #ffffff;
 		text-align: center;
@@ -16,21 +36,26 @@
 		padding: rem(30) 15px;
 		margin-bottom: 1.5rem;
 	}
-	&__total{
+
+	&__total {
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 		background-color: #ffffff;
 		margin-top: rem(25);
-		.row{
+
+		.row {
 			@include roww(5);
 		}
+
 		@include media-breakpoint-down(sm) {
-		width: 100%;
+			width: 100%;
 		}
+
 		@include media-breakpoint-up(md) {
-			.container{
+			.container {
 				// padding-left: 10px;
 				// padding-right: 10px;
 			}
+
 			// position: absolute;
 			position: relative;
 			// top: 0;
@@ -38,6 +63,7 @@
 			bottom: auto;
 			padding: rem(30) rem(5);
 		}
+
 		padding: rem(30) rem(0);
 		// border-top: 1px solid $body-color;
 		border: 1px solid $body-color;
@@ -46,40 +72,56 @@
 		background-color: #ffffff;
 		bottom: 0;
 		position: fixed;
-		.btn{
+
+		.btn {
 			width: 100%;
 		}
 	}
-	&__foot{
-		padding-top: rem(120);
+
+	&__foot {
+		@include media-breakpoint-up(lg) {
+
+			padding-top: rem(52);
+		}
+
+		@include media-breakpoint-up(md) {
+
+			padding-top: rem(57);
+		}
+
+		padding-top: rem(0);
+
 
 	}
-	&__foot-col{
-		p{
+
+	&__foot-col {
+		p {
 			padding-left: rem(34);
 			position: relative;
-			&::before{
+
+			&::before {
 				content: '';
 				position: absolute;
 				left: rem(5);
 				top: rem(8);
 				width: rem(5);
 				height: 84%;
-				border-left: 5px solid ;
+				border-left: 5px solid;
 			}
 		}
-		&:nth-child(1){
-			p{
-				&::before{
+
+		&:nth-child(1) {
+			p {
+				&::before {
 					border-left-color: $teal;
 				}
 			}
 		}
-		
-		&:nth-child(2){
-			p{
-				&::before{
-					border-left-color:  $pink;
+
+		&:nth-child(2) {
+			p {
+				&::before {
+					border-left-color: $pink;
 				}
 			}
 		}
@@ -87,31 +129,43 @@
 	}
 
 	@include media-breakpoint-up(xl) {}
+
 	@include media-breakpoint-up(lg) {}
+
 	@include media-breakpoint-up(md) {}
+
 	@include media-breakpoint-up(sm) {}
+
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
+	@include media-breakpoint-between(md, xl) {}
+
+
 	//
 	@include media-breakpoint-only(xs) {}
+
 	@include media-breakpoint-only(sm) {}
+
 	@include media-breakpoint-only(md) {}
+
 	@include media-breakpoint-only(lg) {}
+
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
+
 	@include media-breakpoint-down(lg) {}
+
 	@include media-breakpoint-down(md) {
 		.basket__img-wrap {
 			width: 5rem;
 		}
 	}
+
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+
+	@include media-breakpoint-down(xs) {}
 
 }

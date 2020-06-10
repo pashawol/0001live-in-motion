@@ -1,5 +1,15 @@
 .s-about-page {
-	padding-bottom: rem(8);
+	padding-bottom: rem(0);
+
+	.section {
+		padding-bottom: calc(var(--spb) + #{rem(22)});
+
+		&:last-child {
+			@include media-breakpoint-up(lg) {
+				padding-bottom: calc(var(--spb) - #{rem(2)});
+			}
+		}
+	}
 
 	&__col {
 		// flex: 0 0 48%;
@@ -49,6 +59,7 @@
 			// @include media-breakpoint-down(xs) {} 
 		}
 	}
+
 	@include media-breakpoint-up(xl) {
 
 		h2 {
