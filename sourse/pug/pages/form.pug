@@ -29,14 +29,20 @@ block pagecontent
 		.container 
 			.w-50
 				+form-wrap()
+					+input('Населённый пункт*')(required)
+						+e.btn-clear
+							img(src="img/svg/basket.svg", alt="")
+						+e.SPAN.valid-text Я думаю появление иконки  корзины можно замутить уже на внедрении
 					+input('Населённый пункт*')(required class="is-valid" value="is-valid")
+						+e.SPAN.valid-text valid text   
 						
 					+input('Населённый пункт*')(required class="is-invalid" value="is-invalid")
+						+e.SPAN.valid-text valid text
 						
-					+input('Населённый пункт*')(required class="is-invalid")
-						
-					+input('Населённый пункт*')(required)
 					+select("с 10:00 До 18:00, 350 ₽ ",' с 10:00 До 18:00, 350 ₽  2',' с 10:00 До 18:00, 350 ₽  3',' с 10:00 До 18:00, 350 ₽  4') 
+					+input('Населённый пункт*')(required class="is-invalid")
+						+e.SPAN.valid-text valid text
+						
 					button(type="submit") Submit
 
 					br
