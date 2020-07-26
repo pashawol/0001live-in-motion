@@ -874,3 +874,7 @@ button {
 .section .basket {
 	padding-bottom: rem(0);
 }
+
+.select2-container--default .select2-selection--single:focus{
+	border-color: #C8C8C8
+}

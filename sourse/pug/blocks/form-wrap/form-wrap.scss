@@ -71,7 +71,15 @@
 		min-height: 60px;
 		padding-top: ($input-padding-y * 1.4) ;
 		padding-bottom: ($input-padding-y * .6) ;
+		&:focus{
 
+			// caret-color : #4A008E;
+		}
+		&:not(.empty){
+			&:focus{
+				// caret-color : #107500;
+					}
+				}
 		//  outline: 0 !important;
 		resize: none;
 		//  text-transform: uppercase;
@@ -111,18 +119,18 @@
 	}
 	&__btn-clear{
 		position: absolute;
-		right: rem(21);
-		top: rem(15);
+		right: 21px;
+		top: 15px;
 		cursor: pointer;
 	}
 	&__btn-input{
 		position: absolute;
 		cursor: pointer;
-		top: rem(15);
+		top:  15px;
 		&--clear{
-			right: rem(57);
+			right: 57px;
 			img{
-				width: rem(13);
+				width: 13px;
 			}
 		}
 		&--search{
@@ -131,10 +139,11 @@
 	}
 }
 
+.empty .is-invalid:not(:focus) ~ .form-wrap__title,
 .empty .form-wrap__title {
 	// opacity: 0;
-	font-size: 14px;
-	top: 20px;
+	font-size: 14px !important;
+	top: 20px !important;
 	min-width: rem(200);
 	// background-color: #ffffff;
 
@@ -147,16 +156,14 @@
 	font-size: 10px;
 
 	position: absolute;
-	left: rem(14);
+	left: $input-btn-padding-x;
 	z-index: 5;
 	top: em(18);
 	pointer-events: none;
 	// line-height: 1;
 	@include mt;
 
-	span {
-		padding-left: rem(8);
-		padding-right: rem(8);
+	span { 
 		background-color: #fff;
 
 	}
@@ -207,18 +214,26 @@ input:focus {
 }
 
 .is-invalid {
-	color: $danger;
+	color: $danger !important;
 	~.form-wrap__valid-text,
 	+.form-wrap__title {
 		opacity: 1;
-		color: $danger;
+		color: $danger !important;
 	}
 }
 
 .is-valid { 
 		background-image: url(../img/svg/isvalid.svg) !important; 
  border-color: $success2 !important;
-	color: $success2;
+ color: $success2;
+ &:not(:focus){
+	 border-color: #C8C8C8 !important;
+	 color: #333333;
+	 &~.form-wrap__title{
+		color: #333333;
+
+	}
+	}
 	// color: $success;
 	~.form-wrap__valid-text,
 	+.form-wrap__title {

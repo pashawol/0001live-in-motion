@@ -424,8 +424,15 @@ var JSCCommon = {
 	},
 	inputLabel: function inputLabel() {
 		// для плаваюещего label
-		$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('.form-wrap__input-wrap').addClass('empty');
-		$('input, textarea').keyup(function () {
+		var input = 'input:empty, textarea:empty';
+		$(input).not('[type="radio"]').not('[type="checkbox"]').closest('.form-wrap__input-wrap').addClass('empty');
+		$(input).each(function () {
+			if ($(this).val().trim() !== '') {
+				$(this).closest('.form-wrap__input-wrap').removeClass('empty');
+			}
+		});
+		$('input:not(:empty), textarea:not(:empty)').removeClass('empty');
+		$(document).on('keyup input', 'input, textarea', function () {
 			if ($(this).val().trim() !== '') {
 				$(this).closest('.form-wrap__input-wrap').removeClass('empty');
 			} else {

@@ -29,24 +29,32 @@ block pagecontent
 		.container 
 			.w-50
 				+form-wrap()
+					.h1.ttu normal
+
+					+input('Населённый пункт*')(required)
+						+e.btn-clear.d-none
+							img(src="img/svg/basket.svg", alt="") 
+
+					.h1.ttu onclick
 					+input('Населённый пункт*')(required)
 						+e.btn-clear
-							img(src="img/svg/basket.svg", alt="")
-						+e.SPAN.valid-text Я думаю появление иконки  корзины можно замутить уже на внедрении
-					+input('Населённый пункт*')(required class="is-valid" value="is-valid")
-						+e.SPAN.valid-text valid text   
-						
-					+input('Населённый пункт*')(required class="is-invalid" value="is-invalid")
-						+e.SPAN.valid-text valid text
-						
-					+select("с 10:00 До 18:00, 350 ₽ ",' с 10:00 До 18:00, 350 ₽  2',' с 10:00 До 18:00, 350 ₽  3',' с 10:00 До 18:00, 350 ₽  4') 
-					+input('Населённый пункт*')(required class="is-invalid")
-						+e.SPAN.valid-text valid text
-						
-					button(type="submit") Submit
+							img(src="img/svg/basket.svg", alt="") 
+					.h1.ttu Fill
+					+input('Населённый пункт*')(value="цвет каретки такой же как цвет текста" required)
+						+e.btn-clear
+							img(src="img/svg/basket.svg", alt="") 
 
-					br
-					| ====================
-					+in-c("radio","","shipping-input")(checked data-tabs="#tab1" disabled)
-						+e.SPAN.text Доставка курьером
-						+e.SPAN.sub-text Заказ придёт по выбранному адресу
+
+					.h1.ttu confirm
+					+input('Населённый пункт*')(required class="is-valid" value="is-valid")
+						
+					.h1.ttu empty
+					+input('Населённый пункт*')(required class="is-invalid"  )  
+						
+					.h1.ttu error
+					+input('Населённый пункт*')(required class="is-invalid"  value="is-invalid"  ) 
+						+e.SPAN.valid-text valid text   
+
+					+select("с 10:00 До 18:00, 350 ₽ ",' с 10:00 До 18:00, 350 ₽  2',' с 10:00 До 18:00, 350 ₽  3',' с 10:00 До 18:00, 350 ₽  4') 
+			
+			
