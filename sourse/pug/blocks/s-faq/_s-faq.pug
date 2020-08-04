@@ -1,6 +1,6 @@
 
 mixin accord(t) 
-	+b.accord
+	+b.accord(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )
 		+e.head
 			+e.inner= t
 				+e.before
@@ -12,14 +12,14 @@ mixin s-faq()
 	// start s-faq
 	+b.SECTION.s-faq.section.block-with-lazy#s-faq&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )
 				h2 Ответы на частые вопросы 
 			+accord('Когда привезут мой заказ?')
 			+accord('Как происходит оплата?')
 			+accord('Поднимут ли заказ на этаж?')
 			+accord('Где взять чек и информацию об оплате?')
 			+accord('Что нужно для получения заказа?')
-			+e.foot-wrap
+			+e.foot-wrap(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )
 				+e.foot
 					.row
 						.col-lg-auto.col

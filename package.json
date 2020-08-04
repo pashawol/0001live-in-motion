@@ -9,11 +9,11 @@
   "author": "Khalunin Pavel",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.26.12",
     "colors": "^1.4.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -33,17 +33,17 @@
     "gulp-sass": "^4.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-svg-sprite": "^1.5.0",
-    "gulp-svgmin": "^2.2.0",
+    "gulp-svgmin": "^3.0.0",
     "gulp-tabify": "0.0.2",
     "gulp-uglify": "^3.0.2"
   },
   "optionalDependencies": {},
   "dependencies": {
-    "@babel/core": "^7.10.5",
+    "@babel/core": "^7.11.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-newer": "^1.4.0",
     "gulp-responsive": "^3.0.1",
-    "npm-check-updates": "^5.0.0"
+    "npm-check-updates": "^7.0.2"
   }
 }

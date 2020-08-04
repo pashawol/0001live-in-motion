@@ -4,16 +4,16 @@ mixin s-shipping()
 		.container
 			.row
 				.col.order-lg-last
-					+e.line-right
+					+e.line-right(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )
 						+e.img-wrap
 							img.res-i(src="img/@2x/box.png", alt="")
 				.col-lg-8
 					+b.section-title
-						h2 Удобная доставка
-					p Мы&nbsp;работаем с&nbsp;логистической компанией Boxberry, которая имеет филиалы более чем в&nbsp;470 городах России!
+						h2(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) Удобная доставка
+					p(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) Мы&nbsp;работаем с&nbsp;логистической компанией Boxberry, которая имеет филиалы более чем в&nbsp;470 городах России!
 					+e.row.row
 						mixin item(i,t)
-							+e.col.col-sm-6
+							+e.col.col-sm-6(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )
 								+e.icon-wrap
 									img.res-i(src=`img/svg/shipping-i-${i}.svg`, alt="")
 								+e.title= t
@@ -24,13 +24,13 @@ mixin s-shipping()
 							p В&nbsp;одном из&nbsp;пунктов  самовывоза или постаматов  &mdash;&nbsp;в&nbsp;России их&nbsp;более 100&nbsp;000,  выберите ближайший к&nbsp;вам
 			+e.warning
 				.row
-					.col-lg-6
+					.col-lg-6(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` )
 						.row
 							.col-sm-auto
 								img.res-i(src="img/svg/icon_warning.svg", alt="")
 
 							+e.d22.col.strong При получении товара, распакуйте  его и&nbsp;проверьте целостность!
-					+e.warning-col.col-lg-6 Все товары проверяются перед отправлением!
+					+e.warning-col.col-lg-6(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) Все товары проверяются перед отправлением!
 						br
 						| Наши менеджеры будут рады ответить  на&nbsp;ваши&nbsp;вопросы по&nbsp;телефону:
 						| 
