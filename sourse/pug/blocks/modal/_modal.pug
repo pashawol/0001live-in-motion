@@ -19,14 +19,14 @@ mixin modal()
 		+e.btn.modal-close-js(type="button") Ок
 	// #modal-thanks
 
-	//- a.popup-with-move-anim(href="#modal-thanks") modal-thanks
-	div(id="modal-map" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
-		+b.section-title.text-center.pb-2
-			h2 Пункт самовывоза 
-		+b.map-wrapper--sm 
-			<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2433.111009807263!2d30.998988315965182!3d52.42278625118135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x46d4684d2417419d%3A0x7a9fd4a48bc9a0e2!2z0YPQu9C40YbQsCDQk9Cw0LPQsNGA0LjQvdCwIDU3LCDQk9C-0LzQtdC70YwgMjQ2MDE3!3m2!1d52.422782999999995!2d31.001177!5e0!3m2!1sru!2sby!4v1570356769940!5m2!1sru!2sby"  allowfullscreen=""></iframe>
-		+b.map-caption
-			+e.inner
+	a.popup-with-move-anim(href="#modal-map") modal-map
+	div(id="modal-map" class="zoom-anim-dialog mfp-hide modal-win modal-win  modal-form" )
+		.modal-inner
+			+b.section-title.text-center.pb-2
+				h2 Пункт самовывоза 
+			+b.map-wrapper--sm 
+				<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2433.111009807263!2d30.998988315965182!3d52.42278625118135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x46d4684d2417419d%3A0x7a9fd4a48bc9a0e2!2z0YPQu9C40YbQsCDQk9Cw0LPQsNGA0LjQvdCwIDU3LCDQk9C-0LzQtdC70YwgMjQ2MDE3!3m2!1d52.422782999999995!2d31.001177!5e0!3m2!1sru!2sby!4v1570356769940!5m2!1sru!2sby"  allowfullscreen=""></iframe>
+			+b.map-caption 
 				+b.map-text-block
 					+e.title Москва, Волжский бульвар, квартал 4, строение 146,  д.114, корпус 2, офис 34
 					+e.alert Можно забрать 23 апреля, вторник
@@ -38,13 +38,14 @@ mixin modal()
 						.row
 							+e.col.col-auto.strong График работы:
 							+e.col.col-6  пн-пт: 10:00 - 20:00
-					+e.group
-						.strong.ttu.mb-2 Как добраться:
-						p Пункт выдачи находится на пересечении улиц Alta Street Boulevard Winewood. Доехав до этого перекрестка Вы сразу обнаружите здание банка.
-					+e.group
-						+e.group-link(href="#")
-							+icon("cil_map")
-							span Проложить маршрут
+					+e.right-groups
+						+e.group
+							.strong.ttu.mb-2 Как добраться:
+							p Пункт выдачи находится на пересечении улиц Alta Street Boulevard Winewood. Доехав до этого перекрестка Вы сразу обнаружите здание банка.
+						+e.group
+							+e.group-link(href="#")
+								+icon("cil_map")
+								span Проложить маршрут
 					+e.group
 						.strong.ttu.mb-2 способы оплаты:
 						ul
@@ -55,4 +56,21 @@ mixin modal()
 					+e.col.col-auto
 						+e.btn.btn-primary(type="button") Ок
 	// #modal-call
+
+	a.popup-with-move-anim(href="#modal-call-lg") modal-call-lg
+	+form-wrap()(id="modal-call-lg" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" )
+		.row
+			.col-md-6
+				+b.section-title.pb-2
+					h2 Задать вопрос
+					p Пожалуйста, оставьте свой вопрос. Мы ответим на него в ближайшее время
+			.w-100
+			.col-md-6
+				+input('Ваше имя*')
+				+input('Ваш телефон','tel')
+				+input('Ваш e-mail*','email')  
+			.col-md-6
+				+input('Ваш вопрос*','textarea')  
+		+e.btn.w-100(type="submit") Отправить
+	// #modal-call-lg
 	// modal

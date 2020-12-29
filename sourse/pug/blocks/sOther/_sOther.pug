@@ -9,18 +9,22 @@ mixin sOther()
 					h2 Другие ткани бренда&nbsp;Polartec®
 				
 			.row(class="wow fadeInUp" data-wow-duration=`${dur * 2}s` ) 
-				mixin col(i,t)
-					+e.col.col-sm.col-4(href="#")
+				mixin col(i,t,l="materila-logo.png")
+					+e.col.col-xl-4.col-4(href="#")
 						picture
 							source( srcset=`img/@2x/webp/material-${i}.webp`)
-							img.res-i(src=`img/@2x/material-${i}.jpg`, alt="")
+							img.res-i(src=`img/@2x/material-${i}.jpg` loading="lazy", alt="")
 						+e.logo
-							img(src="img/@2x/materila-logo.png", alt="")
+							img(src=`img/@2x/${l}` loading="lazy", alt="")
 						+e.title=t
-				+col("1",'POWER AIR ™')
-				+col("2",'WIND PRO ™')
-				+col("3",'HIGH LOFT ™')
-				+col("4",'THERMAL PRO ™')
-				+col("5",'DELTA ™')
+				+col("1",'THERMAL PRO ™')
+				+col("2",'DELTA ™')
+				+col("3",'Power Strech Pro ™')
+				+col("4",'ASTERIA ™','materila-logo-2.png')
+				+col("5",'Maestrale ™','materila-logo-2.png')
+				+col("6",'FULLMOOM ™','materila-logo-2.png')
+				+col("7",'ASTERIA PRO ™','materila-logo-2.png')
+				+col("8",'TAVOLARA 210 ™','materila-logo-2.png')
+				+col("9",'DWR M ™','materila-logo-2.png')
 
 	// end sOther

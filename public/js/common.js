@@ -349,12 +349,15 @@ var JSCCommon = {
 	// /CustomYoutubeBlock
 	inputMask: function inputMask() {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+]7 [(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7 (999) 999-99-99");
+		$('input[type="tel"]').attr("pattern", "[+]7 [(][0-9]{3}[)] [0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
+			mask: "+7 (999) 999-99-99",
+			showMaskOnHover: false
+		});
 	},
 	// /inputMask
 	moreLine: function moreLine() {
 		$('.text-more').moreLines({
-			linecount: 7,
+			linecount: 8,
 			buttontxtmore: "Подробнее",
 			// Add your inner text for button
 			buttontxtless: "Скрыть",
